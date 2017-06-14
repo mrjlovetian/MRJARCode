@@ -1,0 +1,6 @@
+framework module YHJQRCode {
+  umbrella header "YHJQRCode-umbrella.h"
+
+  export *
+  module * { export * }
+}

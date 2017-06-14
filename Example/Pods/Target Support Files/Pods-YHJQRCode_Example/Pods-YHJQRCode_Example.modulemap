@@ -1,0 +1,6 @@
+framework module Pods_YHJQRCode_Example {
+  umbrella header "Pods-YHJQRCode_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

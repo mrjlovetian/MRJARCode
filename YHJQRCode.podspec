@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'YHJQRCode'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of YHJQRCode.'
+  s.summary          = '集成扫码和生成二维码功能，添加必要的加密.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+TODO: 通过修改资源，对二维码添加logo，增加加密算法，这个库可能还有些问题等待修复，希望大家帮助找出，并给我发邮件消息.
                        DESC
 
   s.homepage         = 'https://github.com/mrjyuhongjiang/YHJQRCode'
