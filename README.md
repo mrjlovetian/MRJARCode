@@ -27,3 +27,5 @@ mrjyuhongjiang, mrjlovetian@gmail.com
 ## License
 
 YHJQRCode is available under the MIT license. See the LICENSE file for more info.
+
+
