@@ -9,40 +9,27 @@
 /* Begin PBXBuildFile section */
 		022D5ABC3B71E37EB3BA1F2577086563 /* RSAUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 6637A49273D69707FA5500D964B30AB6 /* RSAUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04F701C5CCB9CDCCFE978A4A936ABA74 /* YHJQRCodeTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E32F1D643F8380E107509F3E50E921A /* YHJQRCodeTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0EBFD466AB1780FC78D30724868DC2E9 /* KKCodeRightTop@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = FB98586A1A9B18C94D224ED80D07E38A /* KKCodeRightTop@2x.png */; };
 		140481A8DF765BD88930973CFC1B11EC /* UIImage+SGHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E33997D5521D33B5147FB3B6C77C7F /* UIImage+SGHelper.m */; };
-		3239F24D8178FBCFCF17D898CB5A2032 /* KKCodeRightBottom@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = 65E5A9F587DA4C7B5563F5C5222C7506 /* KKCodeRightBottom@3x.png */; };
 		32BEF441623D42FCF863DB54C2A2879F /* YHJQRCode-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BCD5DE2236C403DB0913D2F9725E1149 /* YHJQRCode-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37FC4F989CF05FE977069D1A588DF113 /* YHJQRCodeScanningView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DB9B0D3EE0EAE52C0F1B5618E35946 /* YHJQRCodeScanningView.m */; };
 		3A8612D360B8F701A3E0303DCDF98E79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		3DEE3BF21A1FCCBDA717490EEDCEE3E4 /* Pods-YHJQRCode_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 641B13C7E8EA90E19AA92209C5BBFBCD /* Pods-YHJQRCode_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45E182E760ED9EF7BC50D3A5949CAC8D /* RSAUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 593DE7356725D365186C438CF32CAE69 /* RSAUtil.m */; };
 		4A4AB578E004EEACB90E2E2222D8E2A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		4B38FD798FF48593A022920DBD31D5CE /* KKCodeLeftBottom@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 8E1F0B0A2B81DF4C58813FD092DDDC1F /* KKCodeLeftBottom@2x.png */; };
 		4B5683B7920E6E59F25ADC26FC80F907 /* Pods-YHJQRCode_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F95115D9453C799FD884516BFB1F70B /* Pods-YHJQRCode_Tests-dummy.m */; };
-		5DAE22E2D7350E946447AFABEF29C27E /* Root.plist in Sources */ = {isa = PBXBuildFile; fileRef = 8E759B3E2F8874F26D282E44BFC98036 /* Root.plist */; };
 		639BE9C4CA1F54F5BF11CA469937542C /* YHJQRCodeScanningVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFB320C6B85D9C735C2B5FB303F2450 /* YHJQRCodeScanningVC.m */; };
-		687174701BF1C9DEA6A9AC98EE124D58 /* KKCodeScanningLine@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 90288D8635EAF3AD9B88D30A38E99250 /* KKCodeScanningLine@2x.png */; };
-		6D31E5DA440EA235746CB04871FA8E01 /* KKCodeLeftTop@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 5D3DCA954D6117386313FA0FCF3992E5 /* KKCodeLeftTop@2x.png */; };
 		8CAE5A5DD0C14AABD0A317788CD2B303 /* QRCodeScanningVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 769593D58D6D1BB1788E7D2AE07C22B7 /* QRCodeScanningVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D202E32C91CEEE410697C0DEA2772D3 /* QRCodeScanningVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FD6F4E94D01A4C82E0490C12CF1126 /* QRCodeScanningVC.m */; };
 		8F2A03A8AADC6F225C403EA24868E477 /* YHJQRCode-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C32A831C0AC4A93331FFA80412DC5FC /* YHJQRCode-dummy.m */; };
 		97836573509BB50CE37616501557BFA2 /* YHJQRCodeScanningVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 67778C56E4A7CE514A37B03512FEFF22 /* YHJQRCodeScanningVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		98322D32A6B1B23242513BC92BD17DA1 /* Root.strings in Sources */ = {isa = PBXBuildFile; fileRef = E20C18372C3E478BDA99585AA0E26C5A /* Root.strings */; };
 		B8D35CA538A53B48B86142FE903A56B6 /* Pods-YHJQRCode_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CBF3BF2247EBB23AC12958F94E81E5A /* Pods-YHJQRCode_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BECE75E13CC4F60BAE9C35A181D3B81E /* YHJQRCodeScanningView.h in Headers */ = {isa = PBXBuildFile; fileRef = 350211AEA8D5CAF657EFD2B62B6F8271 /* YHJQRCodeScanningView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3BC46BE3E2AF12D248EFE904C0D58C1 /* YHJQRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF75E51D0F64375495334FF93A21B44 /* YHJQRCodeTool.m */; };
 		C4D359605FE766959A1AD5B5467D8C93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		CA53313ED0F0C85A4590E56B1476C4AA /* KKCodeRightTop@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = A40E383CB290C806D2807AF6C4703F48 /* KKCodeRightTop@3x.png */; };
-		CC871A62D758F56F7EE3072B1CA48604 /* KKCodeLeftTop@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = A2B68BFC7EA010C781F72AD203285F1A /* KKCodeLeftTop@3x.png */; };
-		CF34560B46397D2D583E1CED172DE859 /* KKCodeScanningLine@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = A9E82EFA920342515D40A6F0B4A8C744 /* KKCodeScanningLine@3x.png */; };
-		D0C288FAA64E425FD104ADD8489B9657 /* sound.caf in Sources */ = {isa = PBXBuildFile; fileRef = E0BDB0613AB72B0E68063014EED79C52 /* sound.caf */; };
 		E62DF5F911708A3FBD88855D5B70F514 /* YHJQRCodeConst.m in Sources */ = {isa = PBXBuildFile; fileRef = F817A2611C303DD5DCEB27E0F5786CAA /* YHJQRCodeConst.m */; };
 		E8B209549EF3582C42DF2DA2242CC89E /* YHJQRCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 683C4D4FA62BFBE634F8DB5A1B781B4E /* YHJQRCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC565B5E6ACCD15A9965333038AEE9CB /* Pods-YHJQRCode_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D7B5A60F8E4FDAFB46FC8D4DB4E0E1 /* Pods-YHJQRCode_Example-dummy.m */; };
-		F16A7EAFEB240F50A2D4AA15653B8347 /* KKCodeLeftBottom@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = B40789CC6D184079A9163D575CEE2B09 /* KKCodeLeftBottom@3x.png */; };
 		FB43ED518A1C3431330D237ACD5674A2 /* UIImage+SGHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 92DE3C86FAD5E8DE7D86CE500DD9DC22 /* UIImage+SGHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FCB7E53183379AFCECB4254119329394 /* KKCodeRightBottom@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 1D8D0D4664A49A23299EEC13CC7CBCF6 /* KKCodeRightBottom@2x.png */; };
 		FE4F3D4688CF11F837EC002A2C14264D /* YHJQRCodeConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C87095B0B90AD3A793B0A58F0FEF6F3 /* YHJQRCodeConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -60,61 +47,49 @@
 		022E89DA0B6A206BEED51C43B4F60BFB /* Pods-YHJQRCode_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YHJQRCode_Example.release.xcconfig"; sourceTree = "<group>"; };
 		0C32A831C0AC4A93331FFA80412DC5FC /* YHJQRCode-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YHJQRCode-dummy.m"; sourceTree = "<group>"; };
 		1C87095B0B90AD3A793B0A58F0FEF6F3 /* YHJQRCodeConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YHJQRCodeConst.h; sourceTree = "<group>"; };
-		1D8D0D4664A49A23299EEC13CC7CBCF6 /* KKCodeRightBottom@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "KKCodeRightBottom@2x.png"; sourceTree = "<group>"; };
 		1F95115D9453C799FD884516BFB1F70B /* Pods-YHJQRCode_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YHJQRCode_Tests-dummy.m"; sourceTree = "<group>"; };
 		350211AEA8D5CAF657EFD2B62B6F8271 /* YHJQRCodeScanningView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YHJQRCodeScanningView.h; sourceTree = "<group>"; };
 		396E2163FDDA62118DECEEE197E3877A /* Pods-YHJQRCode_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YHJQRCode_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3DF5DBB6B5E661EC4D21FA15BAF57F0A /* Pods-YHJQRCode_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YHJQRCode_Example-resources.sh"; sourceTree = "<group>"; };
-		505E138014A70F3BE5CCCF7D4DFFCD83 /* Pods_YHJQRCode_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_YHJQRCode_Tests.framework; path = "Pods-YHJQRCode_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		505E138014A70F3BE5CCCF7D4DFFCD83 /* Pods_YHJQRCode_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YHJQRCode_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		593DE7356725D365186C438CF32CAE69 /* RSAUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RSAUtil.m; sourceTree = "<group>"; };
 		5AACBA7FB8B932D0FF458455710E3535 /* Pods-YHJQRCode_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YHJQRCode_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5AFC1FB7B0A7B4B45B5CFAA1FE2080A6 /* Pods-YHJQRCode_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YHJQRCode_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		5D3DCA954D6117386313FA0FCF3992E5 /* KKCodeLeftTop@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "KKCodeLeftTop@2x.png"; sourceTree = "<group>"; };
 		641B13C7E8EA90E19AA92209C5BBFBCD /* Pods-YHJQRCode_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YHJQRCode_Example-umbrella.h"; sourceTree = "<group>"; };
 		64E33997D5521D33B5147FB3B6C77C7F /* UIImage+SGHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SGHelper.m"; sourceTree = "<group>"; };
-		65E5A9F587DA4C7B5563F5C5222C7506 /* KKCodeRightBottom@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "KKCodeRightBottom@3x.png"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6637A49273D69707FA5500D964B30AB6 /* RSAUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RSAUtil.h; sourceTree = "<group>"; };
-		672B6D8DEACA0926CB4BBAD62431355F /* YHJQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YHJQRCode.framework; path = YHJQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		672B6D8DEACA0926CB4BBAD62431355F /* YHJQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YHJQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67778C56E4A7CE514A37B03512FEFF22 /* YHJQRCodeScanningVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YHJQRCodeScanningVC.h; sourceTree = "<group>"; };
 		683C4D4FA62BFBE634F8DB5A1B781B4E /* YHJQRCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YHJQRCode.h; sourceTree = "<group>"; };
 		69862C68DFED187A1EAADC2BFFDEA7E8 /* YHJQRCode-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YHJQRCode-prefix.pch"; sourceTree = "<group>"; };
-		6CF0F0C0E7782510765AD6E85782445D /* Pods-YHJQRCode_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-YHJQRCode_Tests.modulemap"; sourceTree = "<group>"; };
+		6CF0F0C0E7782510765AD6E85782445D /* Pods-YHJQRCode_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-YHJQRCode_Tests.modulemap"; sourceTree = "<group>"; };
 		769593D58D6D1BB1788E7D2AE07C22B7 /* QRCodeScanningVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = QRCodeScanningVC.h; sourceTree = "<group>"; };
 		79B512BE81D0CD7C9A5FC401DB7939F6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CF75E51D0F64375495334FF93A21B44 /* YHJQRCodeTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YHJQRCodeTool.m; sourceTree = "<group>"; };
 		86DE69F218420CA1B0483682C12B7F67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A7B94E76B193E51F3C97060679D9472 /* Pods-YHJQRCode_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YHJQRCode_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8E1F0B0A2B81DF4C58813FD092DDDC1F /* KKCodeLeftBottom@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "KKCodeLeftBottom@2x.png"; sourceTree = "<group>"; };
 		8E32F1D643F8380E107509F3E50E921A /* YHJQRCodeTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YHJQRCodeTool.h; sourceTree = "<group>"; };
-		8E759B3E2F8874F26D282E44BFC98036 /* Root.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Root.plist; sourceTree = "<group>"; };
-		90288D8635EAF3AD9B88D30A38E99250 /* KKCodeScanningLine@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "KKCodeScanningLine@2x.png"; sourceTree = "<group>"; };
 		92DE3C86FAD5E8DE7D86CE500DD9DC22 /* UIImage+SGHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+SGHelper.h"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95FD6F4E94D01A4C82E0490C12CF1126 /* QRCodeScanningVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = QRCodeScanningVC.m; sourceTree = "<group>"; };
 		9CBF3BF2247EBB23AC12958F94E81E5A /* Pods-YHJQRCode_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YHJQRCode_Tests-umbrella.h"; sourceTree = "<group>"; };
-		A2B68BFC7EA010C781F72AD203285F1A /* KKCodeLeftTop@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "KKCodeLeftTop@3x.png"; sourceTree = "<group>"; };
-		A40E383CB290C806D2807AF6C4703F48 /* KKCodeRightTop@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "KKCodeRightTop@3x.png"; sourceTree = "<group>"; };
 		A8D7B5A60F8E4FDAFB46FC8D4DB4E0E1 /* Pods-YHJQRCode_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YHJQRCode_Example-dummy.m"; sourceTree = "<group>"; };
-		A9E82EFA920342515D40A6F0B4A8C744 /* KKCodeScanningLine@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "KKCodeScanningLine@3x.png"; sourceTree = "<group>"; };
 		AE7089BBBE71BC73A2E4625FA768E751 /* Pods-YHJQRCode_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YHJQRCode_Tests-resources.sh"; sourceTree = "<group>"; };
-		AF84D478766CF7E584CBB4B24A4F82D7 /* Pods-YHJQRCode_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-YHJQRCode_Example.modulemap"; sourceTree = "<group>"; };
-		B40789CC6D184079A9163D575CEE2B09 /* KKCodeLeftBottom@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "KKCodeLeftBottom@3x.png"; sourceTree = "<group>"; };
+		AF84D478766CF7E584CBB4B24A4F82D7 /* Pods-YHJQRCode_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-YHJQRCode_Example.modulemap"; sourceTree = "<group>"; };
 		B4DB9B0D3EE0EAE52C0F1B5618E35946 /* YHJQRCodeScanningView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YHJQRCodeScanningView.m; sourceTree = "<group>"; };
 		BCD5DE2236C403DB0913D2F9725E1149 /* YHJQRCode-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YHJQRCode-umbrella.h"; sourceTree = "<group>"; };
+		C282BC311EF260330070B608 /* KKQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = KKQRCode.bundle; sourceTree = "<group>"; };
 		CAFB320C6B85D9C735C2B5FB303F2450 /* YHJQRCodeScanningVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YHJQRCodeScanningVC.m; sourceTree = "<group>"; };
 		DB659FE23CC39C848F68C3758AD6E015 /* Pods-YHJQRCode_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YHJQRCode_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		E0BDB0613AB72B0E68063014EED79C52 /* sound.caf */ = {isa = PBXFileReference; includeInIndex = 1; path = sound.caf; sourceTree = "<group>"; };
-		E20C18372C3E478BDA99585AA0E26C5A /* Root.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Root.strings; path = en.lproj/Root.strings; sourceTree = "<group>"; };
 		E6AD5E8F800952AAAB44BC702FD75F40 /* Pods-YHJQRCode_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YHJQRCode_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		ED500DEA10FA002A970CCDF9104A2F7C /* Pods-YHJQRCode_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YHJQRCode_Example-frameworks.sh"; sourceTree = "<group>"; };
 		EDA94C835E8E5AF8B70E09E489815B8F /* Pods-YHJQRCode_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YHJQRCode_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		F036D08E2ABD2584A20281A2DB459211 /* YHJQRCode.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YHJQRCode.xcconfig; sourceTree = "<group>"; };
 		F66251DAD6E6CDD8541EDB32A6D9E7E4 /* Pods-YHJQRCode_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YHJQRCode_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		F678722DE54CEDCCDF2A57738A6BBF5E /* Pods_YHJQRCode_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_YHJQRCode_Example.framework; path = "Pods-YHJQRCode_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6ED38389E984A879A7547B9C6945BEA /* YHJQRCode.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = YHJQRCode.modulemap; sourceTree = "<group>"; };
+		F678722DE54CEDCCDF2A57738A6BBF5E /* Pods_YHJQRCode_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YHJQRCode_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6ED38389E984A879A7547B9C6945BEA /* YHJQRCode.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = YHJQRCode.modulemap; sourceTree = "<group>"; };
 		F817A2611C303DD5DCEB27E0F5786CAA /* YHJQRCodeConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YHJQRCodeConst.m; sourceTree = "<group>"; };
-		FB98586A1A9B18C94D224ED80D07E38A /* KKCodeRightTop@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "KKCodeRightTop@2x.png"; sourceTree = "<group>"; };
 		FF15130E54C73C1ABEAAE50F28F962E6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -234,39 +209,18 @@
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		98087EC79A9252D127B72E53BC1A1403 /* YHJQRCode.bundle */ = {
-			isa = PBXGroup;
-			children = (
-				8E1F0B0A2B81DF4C58813FD092DDDC1F /* KKCodeLeftBottom@2x.png */,
-				B40789CC6D184079A9163D575CEE2B09 /* KKCodeLeftBottom@3x.png */,
-				5D3DCA954D6117386313FA0FCF3992E5 /* KKCodeLeftTop@2x.png */,
-				A2B68BFC7EA010C781F72AD203285F1A /* KKCodeLeftTop@3x.png */,
-				1D8D0D4664A49A23299EEC13CC7CBCF6 /* KKCodeRightBottom@2x.png */,
-				65E5A9F587DA4C7B5563F5C5222C7506 /* KKCodeRightBottom@3x.png */,
-				FB98586A1A9B18C94D224ED80D07E38A /* KKCodeRightTop@2x.png */,
-				A40E383CB290C806D2807AF6C4703F48 /* KKCodeRightTop@3x.png */,
-				90288D8635EAF3AD9B88D30A38E99250 /* KKCodeScanningLine@2x.png */,
-				A9E82EFA920342515D40A6F0B4A8C744 /* KKCodeScanningLine@3x.png */,
-				8E759B3E2F8874F26D282E44BFC98036 /* Root.plist */,
-				3744E8AFFDEC7543B25C011C2590A0F8 /* Root.strings */,
-				E0BDB0613AB72B0E68063014EED79C52 /* sound.caf */,
-			);
-			name = YHJQRCode.bundle;
-			path = YHJQRCode.bundle;
-			sourceTree = "<group>";
-		};
 		A960587B546AB1B7E9209240B7530A61 /* YHJQRCode */ = {
 			isa = PBXGroup;
 			children = (
 				AFE1AA5FF55E1988DBFB45AC48D6AEA4 /* Classes */,
 			);
-			name = YHJQRCode;
 			path = YHJQRCode;
 			sourceTree = "<group>";
 		};
 		AFE1AA5FF55E1988DBFB45AC48D6AEA4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C282BC311EF260330070B608 /* KKQRCode.bundle */,
 				769593D58D6D1BB1788E7D2AE07C22B7 /* QRCodeScanningVC.h */,
 				95FD6F4E94D01A4C82E0490C12CF1126 /* QRCodeScanningVC.m */,
 				6637A49273D69707FA5500D964B30AB6 /* RSAUtil.h */,
@@ -282,9 +236,7 @@
 				B4DB9B0D3EE0EAE52C0F1B5618E35946 /* YHJQRCodeScanningView.m */,
 				8E32F1D643F8380E107509F3E50E921A /* YHJQRCodeTool.h */,
 				7CF75E51D0F64375495334FF93A21B44 /* YHJQRCodeTool.m */,
-				98087EC79A9252D127B72E53BC1A1403 /* YHJQRCode.bundle */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -453,21 +405,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B38FD798FF48593A022920DBD31D5CE /* KKCodeLeftBottom@2x.png in Sources */,
-				F16A7EAFEB240F50A2D4AA15653B8347 /* KKCodeLeftBottom@3x.png in Sources */,
-				6D31E5DA440EA235746CB04871FA8E01 /* KKCodeLeftTop@2x.png in Sources */,
-				CC871A62D758F56F7EE3072B1CA48604 /* KKCodeLeftTop@3x.png in Sources */,
-				FCB7E53183379AFCECB4254119329394 /* KKCodeRightBottom@2x.png in Sources */,
-				3239F24D8178FBCFCF17D898CB5A2032 /* KKCodeRightBottom@3x.png in Sources */,
-				0EBFD466AB1780FC78D30724868DC2E9 /* KKCodeRightTop@2x.png in Sources */,
-				CA53313ED0F0C85A4590E56B1476C4AA /* KKCodeRightTop@3x.png in Sources */,
-				687174701BF1C9DEA6A9AC98EE124D58 /* KKCodeScanningLine@2x.png in Sources */,
-				CF34560B46397D2D583E1CED172DE859 /* KKCodeScanningLine@3x.png in Sources */,
 				8D202E32C91CEEE410697C0DEA2772D3 /* QRCodeScanningVC.m in Sources */,
-				5DAE22E2D7350E946447AFABEF29C27E /* Root.plist in Sources */,
-				98322D32A6B1B23242513BC92BD17DA1 /* Root.strings in Sources */,
 				45E182E760ED9EF7BC50D3A5949CAC8D /* RSAUtil.m in Sources */,
-				D0C288FAA64E425FD104ADD8489B9657 /* sound.caf in Sources */,
 				140481A8DF765BD88930973CFC1B11EC /* UIImage+SGHelper.m in Sources */,
 				8F2A03A8AADC6F225C403EA24868E477 /* YHJQRCode-dummy.m in Sources */,
 				E62DF5F911708A3FBD88855D5B70F514 /* YHJQRCodeConst.m in Sources */,
@@ -487,18 +426,6 @@
 			targetProxy = 2B4CDEBB78ACD53A0BF585ACFEA89014 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		3744E8AFFDEC7543B25C011C2590A0F8 /* Root.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E20C18372C3E478BDA99585AA0E26C5A /* Root.strings */,
-			);
-			name = Root.strings;
-			path = .;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1DF9B1942B1BF69FEFC1B74748919717 /* Debug */ = {

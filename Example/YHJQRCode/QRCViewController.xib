@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRCViewController">
+            <connections>
+                <outlet property="codeView" destination="XZ8-4s-7fK" id="ngg-Gh-0t8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYs-3b-j3b">
+                    <rect key="frame" x="22" y="20" width="34" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="back"/>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="touchUpInside" id="Hl5-4l-Agq"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3N4-bd-gyL">
+                    <rect key="frame" x="45" y="597" width="31" height="30"/>
+                    <state key="normal" title="扫码"/>
+                    <connections>
+                        <action selector="qrcode:" destination="-1" eventType="touchUpInside" id="1pu-TJ-NPW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zc-I2-q9c">
+                    <rect key="frame" x="284" y="597" width="46" height="30"/>
+                    <state key="normal" title="二维码"/>
+                    <connections>
+                        <action selector="genderCode:" destination="-1" eventType="touchUpInside" id="esx-Oq-bB9"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XZ8-4s-7fK">
+                    <rect key="frame" x="67" y="102" width="240" height="240"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="3N4-bd-gyL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="45" id="JVH-CV-V0X"/>
+                <constraint firstAttribute="bottom" secondItem="3zc-I2-q9c" secondAttribute="bottom" constant="40" id="K3E-CR-aul"/>
+                <constraint firstAttribute="trailing" secondItem="3zc-I2-q9c" secondAttribute="trailing" constant="45" id="Lir-uO-Yob"/>
+                <constraint firstItem="3N4-bd-gyL" firstAttribute="baseline" secondItem="3zc-I2-q9c" secondAttribute="baseline" id="aYQ-P2-XwJ"/>
+                <constraint firstAttribute="bottom" secondItem="3N4-bd-gyL" secondAttribute="bottom" constant="40" id="rny-NG-GNs"/>
+            </constraints>
+            <point key="canvasLocation" x="35.5" y="53.5"/>
+        </view>
+    </objects>
+</document>
