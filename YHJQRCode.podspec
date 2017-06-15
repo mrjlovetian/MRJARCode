@@ -39,11 +39,11 @@ TODO: 通过修改资源，对二维码添加logo，增加加密算法，这个�
 
     s.resource      = 'YHJQRCode/Classes/KKQRCode.bundle'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+   s.public_header_files = 'Pod/Classes/**/*.h'
+   s.frameworks = 'UIKit', 'MapKit'
+   s.dependency 'AFNetworking', '~> 2.3'
 
-    s.source_files = 'YHJQRCode/**/*.{h,m}'
+#  s.source_files = 'YHJQRCode/**/*.{h,m}'
 
 
 end
