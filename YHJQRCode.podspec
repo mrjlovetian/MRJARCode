@@ -48,4 +48,5 @@ TODO: 通过修改资源，对二维码添加logo，增加加密算法，这个�
     s.subspec 'QRCode' do |ss|
         ss.source_files = 'YHJQRCode/Classes/*.{h.m}'
         ss.frameworks = 'QRCode'
+    end
 end
