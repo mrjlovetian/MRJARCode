@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YHJQRCode'
-  s.version          = '0.1.2'
+  s.version          = '0.1.4'
   s.summary          = '集成扫码和生成二维码功能，添加必要的加密.'
 
 # This description is used to generate tags and improve search results.
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 TODO: 通过修改资源，对二维码添加logo，增加加密算法，这个库可能还有些问题等待修复，希望大家帮助找出，并给我发邮件消息.
                        DESC
 
-  s.homepage         = 'https://github.com/mrjyuhongjiang/YHJARCode'
+  s.homepage         = 'https://github.com/mrjlovetian/YHJARCode'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'mrjyuhongjiang' => 'mrjlovetian@gmail.com' }
@@ -43,10 +43,7 @@ TODO: 通过修改资源，对二维码添加logo，增加加密算法，这个�
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 
+    s.source_files = 'YHJQRCode/**/*.{h,m}'
 
-#文件夹创建
-    s.subspec 'QRCode' do |ss|
-        ss.source_files = 'YHJQRCode/Classes/*.{h.m}'
-        ss.frameworks = 'QRCode'
-    end
+
 end
