@@ -30,12 +30,12 @@ TODO: 通过修改资源，对二维码添加logo，增加加密算法，这个�
 
   s.ios.deployment_target = '8.0'
 
-  # s.source_files = 'YHJQRCode/Classes/**/*'
+   s.source_files = 'YHJQRCode/**/*'
   
-  s.resource_bundles = {
-    'YHJQRCode' => ['Resources/Classes/YHJQRCode.bundle'],
+  #s.resource_bundles = {
+  #   'YHJQRCode' => ['Resources/YHJQRCode.bundle'],
   # 'YHJQRCode' => ['YHJQRCode/Assets/*.png']
-  }
+  # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
