@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YHJQRCode'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = '集成扫码和生成二维码功能，添加必要的加密.'
 
 # This description is used to generate tags and improve search results.
@@ -26,18 +26,26 @@ TODO: 通过修改资源，对二维码添加logo，增加加密算法，这个�
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'mrjyuhongjiang' => 'mrjlovetian@gmail.com' }
   s.source           = { :git => 'https://github.com/mrjlovetian/YHJARCode.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/MRJ_YU'
 
   s.ios.deployment_target = '8.0'
 
-   s.source_files = 'YHJQRCode/**/*'
+  # s.source_files = 'YHJQRCode/**/*'
   
-  #s.resource_bundles = {
-  #   'YHJQRCode' => ['Resources/YHJQRCode.bundle'],
+  # s.resource_bundles = {
+  #    'YHJQRCode' => ['YHJQRCode/KKQRCode/*.png'],
   # 'YHJQRCode' => ['YHJQRCode/Assets/*.png']
-  # }
+  #  }
+
+    s.resource      = 'YHJQRCode/Classes/KKQRCode.bundle'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+
+
+#文件夹创建
+    s.subspec 'QRCode' do |ss|
+        ss.source_files = 'YHJQRCode/Classes/*.{h.m}'
+        ss.frameworks = 'QRCode'
 end

@@ -79,7 +79,7 @@
 		AF84D478766CF7E584CBB4B24A4F82D7 /* Pods-YHJQRCode_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-YHJQRCode_Example.modulemap"; sourceTree = "<group>"; };
 		B4DB9B0D3EE0EAE52C0F1B5618E35946 /* YHJQRCodeScanningView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YHJQRCodeScanningView.m; sourceTree = "<group>"; };
 		BCD5DE2236C403DB0913D2F9725E1149 /* YHJQRCode-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YHJQRCode-umbrella.h"; sourceTree = "<group>"; };
-		C282BC311EF260330070B608 /* KKQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = KKQRCode.bundle; sourceTree = "<group>"; };
+		C282BC3C1EF280990070B608 /* YHJQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = YHJQRCode.bundle; sourceTree = "<group>"; };
 		CAFB320C6B85D9C735C2B5FB303F2450 /* YHJQRCodeScanningVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YHJQRCodeScanningVC.m; sourceTree = "<group>"; };
 		DB659FE23CC39C848F68C3758AD6E015 /* Pods-YHJQRCode_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YHJQRCode_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E6AD5E8F800952AAAB44BC702FD75F40 /* Pods-YHJQRCode_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YHJQRCode_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -220,7 +220,7 @@
 		AFE1AA5FF55E1988DBFB45AC48D6AEA4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C282BC311EF260330070B608 /* KKQRCode.bundle */,
+				C282BC3C1EF280990070B608 /* YHJQRCode.bundle */,
 				769593D58D6D1BB1788E7D2AE07C22B7 /* QRCodeScanningVC.h */,
 				95FD6F4E94D01A4C82E0490C12CF1126 /* QRCodeScanningVC.m */,
 				6637A49273D69707FA5500D964B30AB6 /* RSAUtil.h */,
