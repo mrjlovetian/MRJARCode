@@ -24,8 +24,13 @@ pod "YHJQRCode"
 
 余洪江, mrjlovetian@gmail.com
 
-## example image
-![Alt Text](http://www.sheawong.com/wp-content/uploads/2013/08/keephatin.gif)
+## Example image
+
+##二维码
+![Alt Text](https://github.com/mrjlovetian/YHJARCode/blob/master/Example/YHJQRCode/IMG_0130.PNG)
+
+##扫码
+![Alt Text](https://github.com/mrjlovetian/YHJARCode/blob/master/Example/YHJQRCode/IMG_0130.PNG)
 
 ## License
 
