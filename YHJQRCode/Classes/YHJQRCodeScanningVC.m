@@ -212,7 +212,7 @@
 #pragma mark - - - AVCaptureMetadataOutputObjectsDelegate
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
     // 0、扫描成功之后的提示音
-//    [self YHJ_playSoundEffect:@"sound" ofType:@"caf"];
+    [self YHJ_playSoundEffect:@"sound" ofType:@"caf"];
     
     // 1、如果扫描完成，停止会话
     [self.session stopRunning];
