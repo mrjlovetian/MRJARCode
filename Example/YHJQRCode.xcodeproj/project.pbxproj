@@ -26,6 +26,8 @@
 		C282BC391EF2608F0070B608 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C282BC341EF2608F0070B608 /* MainViewController.xib */; };
 		C282BC3A1EF2608F0070B608 /* QRCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C282BC361EF2608F0070B608 /* QRCViewController.m */; };
 		C282BC3B1EF2608F0070B608 /* QRCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C282BC371EF2608F0070B608 /* QRCViewController.xib */; };
+		C28486FF1EF7784900F0ED91 /* IMG_0129.PNG in Resources */ = {isa = PBXBuildFile; fileRef = C28486FD1EF7784900F0ED91 /* IMG_0129.PNG */; };
+		C28487001EF7784900F0ED91 /* IMG_0130.PNG in Resources */ = {isa = PBXBuildFile; fileRef = C28486FE1EF7784900F0ED91 /* IMG_0130.PNG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		C282BC351EF2608F0070B608 /* QRCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCViewController.h; sourceTree = "<group>"; };
 		C282BC361EF2608F0070B608 /* QRCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCViewController.m; sourceTree = "<group>"; };
 		C282BC371EF2608F0070B608 /* QRCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCViewController.xib; sourceTree = "<group>"; };
+		C28486FD1EF7784900F0ED91 /* IMG_0129.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0129.PNG; sourceTree = "<group>"; };
+		C28486FE1EF7784900F0ED91 /* IMG_0130.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0130.PNG; sourceTree = "<group>"; };
 		ECF72D393EF0833A6699D94D /* Pods_YHJQRCode_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YHJQRCode_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1C1C202BB609F227FFEDA0 /* Pods-YHJQRCode_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHJQRCode_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YHJQRCode_Example/Pods-YHJQRCode_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +141,8 @@
 		6003F593195388D20070C39A /* Example for YHJQRCode */ = {
 			isa = PBXGroup;
 			children = (
+				C28486FD1EF7784900F0ED91 /* IMG_0129.PNG */,
+				C28486FE1EF7784900F0ED91 /* IMG_0130.PNG */,
 				6003F59C195388D20070C39A /* YHJAppDelegate.h */,
 				6003F59D195388D20070C39A /* YHJAppDelegate.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
@@ -291,9 +297,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C282BC3B1EF2608F0070B608 /* QRCViewController.xib in Resources */,
+				C28486FF1EF7784900F0ED91 /* IMG_0129.PNG in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				C282BC391EF2608F0070B608 /* MainViewController.xib in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				C28487001EF7784900F0ED91 /* IMG_0130.PNG in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

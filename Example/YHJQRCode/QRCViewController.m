@@ -50,14 +50,14 @@
 
 - (IBAction)genderCode:(id)sender {
     NSDictionary *dic = @{@"name":@"mrjnumber", @"id":@"89701180595270098976", @"number":@"15757184409876sdfdhdbgd"};
-//    self.codeView.image = [KKQRCodeTool KKgenerateWithDefaultQRCodeData:dic imageViewWidth:240.0];
-//    self.codeView.image = [KKQRCodeTool KKgenerateWithLogoQRCodeData:dic logoImageName:@"share_kber" logoScaleToSuperView:0.1];
+    self.codeView.image = [YHJQRCodeTool YHJgenerateWithDefaultQRCodeData:dic imageViewWidth:240.0];
+    self.codeView.image = [YHJQRCodeTool YHJgenerateWithLogoQRCodeData:dic logoImageName:@"share_kber" logoScaleToSuperView:0.1];
     
 
     
     // 2、将二维码显示在UIImageView上
-    UIImage *image = [YHJQRCodeTool YHJgenerateWithColorQRCodeData:dic backgroundColor:[CIColor whiteColor] mainColor:[CIColor colorWithRed:0.3 green:0.2 blue:0.4]];
-    self.codeView.image = image;
+//    UIImage *image = [YHJQRCodeTool YHJgenerateWithColorQRCodeData:dic backgroundColor:[CIColor whiteColor] mainColor:[CIColor colorWithRed:0.3 green:0.2 blue:0.4]];
+//    self.codeView.image = image;
 }
 
 #pragma mark QRCodeScanningVCDelegate
