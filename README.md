@@ -27,7 +27,7 @@ pod "YHJQRCode"
 ## Example image
 
 ##二维码
-![Alt Text](https://github.com/mrjlovetian/YHJARCode/blob/master/Example/YHJQRCode/IMG_0130.PNG)
+![Alt Text](https://github.com/mrjlovetian/YHJARCode/blob/master/Example/YHJQRCode/IMG_0129.PNG)
 
 ##扫码
 ![Alt Text](https://github.com/mrjlovetian/YHJARCode/blob/master/Example/YHJQRCode/IMG_0130.PNG)
