@@ -11,14 +11,17 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface QRCodeScanningVC ()
-
+{
+    EncryptType _decodType;
+}
 @end
 
 @implementation QRCodeScanningVC
 
-- (id)initRuleState:(AuthorizationStateBlock)authorizationHander
+- (id)initRuleDecodeType:(EncryptType)decodType State:(AuthorizationStateBlock)authorizationHander
 {
     self = [super init];
+    _decodType = decodType;
     if (self) {
         [self getRuleState:^(AuthorizationState state) {
             authorizationHander(state);
@@ -58,13 +61,15 @@
 
 - (void)handleQRCresult:(id)result
 {
+    id resulta = [YHJQRCodeUtil decodeDataWithCodeStr:result EncryptType:_decodType];
+    
     NSDictionary *qrcdic = nil;
     NSError *err = nil;
-    if ([result isKindOfClass:[NSDictionary class]]) {
-        qrcdic = result;
-    }else if ([result isKindOfClass:[NSError class]])
+    if ([resulta isKindOfClass:[NSDictionary class]]) {
+        qrcdic = resulta;
+    }else if ([resulta isKindOfClass:[NSError class]])
     {
-        err = result;
+        err = resulta;
     }
     if ([self.delegate respondsToSelector:@selector(QRCodeScanningVCResult:error:)]) {
         [self.delegate QRCodeScanningVCResult:qrcdic error:err];
@@ -124,13 +129,13 @@
             }
         }
     } else {
-        UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"未检测到您的摄像头" preferredStyle:(UIAlertControllerStyleAlert)];
-        UIAlertAction *alertA = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
-            
-        }];
-        
-        [alertC addAction:alertA];
-        [self presentViewController:alertC animated:YES completion:nil];
+//        UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"未检测到您的摄像头" preferredStyle:(UIAlertControllerStyleAlert)];
+//        UIAlertAction *alertA = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+//            
+//        }];
+//        
+//        [alertC addAction:alertA];
+//        [self presentViewController:alertC animated:YES completion:nil];
     }
 }
 

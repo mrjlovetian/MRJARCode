@@ -13,6 +13,7 @@
 #import "YHJQRCodeConst.h"
 #import "UIImage+SGHelper.h"
 #import "RSAUtil.h"
+#import "NSBundle+YHJQRCode.h"
 
 @interface YHJQRCodeScanningVC () <AVCaptureMetadataOutputObjectsDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 /// 会话对象
@@ -51,8 +52,8 @@
 }
 
 - (void)setupNavigationBar {
-    self.navigationItem.title = @"扫一扫";
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"相册" style:(UIBarButtonItemStyleDone) target:self action:@selector(rightBarButtonItenAction)];
+    self.navigationItem.title = [NSBundle YHJQRCodeLocalizedStringForKey:YHJQRCodeChongqingjzb];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:[NSBundle YHJQRCodeLocalizedStringForKey:YHJQRCodeAlbum] style:(UIBarButtonItemStyleDone) target:self action:@selector(rightBarButtonItenAction)];
 }
 
 - (YHJQRCodeScanningView *)scanningView {
@@ -107,16 +108,16 @@
             [self presentViewController:imagePicker animated:YES completion:nil];
 
         } else if (status == PHAuthorizationStatusDenied) { // 用户拒绝当前应用访问相册
-            UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"提示" message:@"请去-> [设置 - 隐私 - 照片] 打开访问开关" preferredStyle:(UIAlertControllerStyleAlert)];
-            UIAlertAction *alertA = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+            UIAlertController *alertC = [UIAlertController alertControllerWithTitle:[NSBundle YHJQRCodeLocalizedStringForKey:YHJQRCodeMessage] message:[NSBundle YHJQRCodeLocalizedStringForKey:YHJQRCodeTeachOpen] preferredStyle:(UIAlertControllerStyleAlert)];
+            UIAlertAction *alertA = [UIAlertAction actionWithTitle:[NSBundle YHJQRCodeLocalizedStringForKey:YHJQRCodeSure] style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
                 
             }];
             
             [alertC addAction:alertA];
             [self presentViewController:alertC animated:YES completion:nil];
         } else if (status == PHAuthorizationStatusRestricted) {
-            UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"由于系统原因, 无法访问相册" preferredStyle:(UIAlertControllerStyleAlert)];
-            UIAlertAction *alertA = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+            UIAlertController *alertC = [UIAlertController alertControllerWithTitle:[NSBundle YHJQRCodeLocalizedStringForKey:YHJQRCodeLikeMessage] message:[NSBundle YHJQRCodeLocalizedStringForKey:YHJQRCodeDefinePhoto] preferredStyle:(UIAlertControllerStyleAlert)];
+            UIAlertAction *alertA = [UIAlertAction actionWithTitle:[NSBundle YHJQRCodeLocalizedStringForKey:YHJQRCodeSure] style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
                 
             }];
             

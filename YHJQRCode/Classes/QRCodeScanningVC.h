@@ -27,7 +27,7 @@ typedef void(^QRCodeScanningVCBlock)(id result, NSError *err);
 
 @interface QRCodeScanningVC : YHJQRCodeScanningVC
 
-- (id)initRuleState:(AuthorizationStateBlock)authorizationHander;
+- (id)initRuleDecodeType:(EncryptType)decodType State:(AuthorizationStateBlock)authorizationHander;
 
 @property (nonatomic, copy)QRCodeScanningVCBlock resultBlcok;
 

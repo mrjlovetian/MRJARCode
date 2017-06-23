@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "NSBundle+YHJQRCode.h"
 #import "QRCodeScanningVC.h"
 #import "RSAUtil.h"
 #import "UIImage+SGHelper.h"
@@ -18,6 +19,7 @@
 #import "YHJQRCodeScanningVC.h"
 #import "YHJQRCodeScanningView.h"
 #import "YHJQRCodeTool.h"
+#import "YHJQRCodeUtil.h"
 
 FOUNDATION_EXPORT double YHJQRCodeVersionNumber;
 FOUNDATION_EXPORT const unsigned char YHJQRCodeVersionString[];

@@ -11,6 +11,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "RSAUtil.h"
 #import "YHJQRCodeConst.h"
+#import "NSBundle+YHJQRCode.h"
 
 @implementation YHJQRCodeTool
 /**
@@ -19,7 +20,18 @@
  *  @param dataDic    传入你要生成二维码的数据
  *  @param imageViewWidth    图片的宽度
  */
-+ (UIImage *)YHJgenerateWithDefaultQRCodeData:(NSDictionary *)dataDic imageViewWidth:(CGFloat)imageViewWidth {
++ (UIImage *)YHJgenerateWithDefaultQRCodeData:(NSDictionary *)dataDic imageViewWidth:(CGFloat)imageViewWidth encryptType:(EncryptType)encryptType errorHandle:(ErrorHandle)errorHandle{
+    
+    if (![self verifyDicValid:dataDic]) {
+        errorHandle([NSBundle YHJQRCodeLocalizedStringForKey:YHJQRCodeDataError]);
+        return nil;
+    }
+    
+    if (![self verifyCodeWidth:imageViewWidth]) {
+        errorHandle([NSBundle YHJQRCodeLocalizedStringForKey:YHJQRCodeWidthError]);
+        return nil;
+    }
+    
     // 1、创建滤镜对象
     CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
     
@@ -27,9 +39,9 @@
     [filter setDefaults];
     
     // 2、设置数据
-    NSString *info = [RSAUtil encryptString:[self dictionaryToJson:dataDic] publicKey:YHJRSA_Public_key];//data;
+    NSString *info = [YHJQRCodeUtil dictionaryToJson:dataDic];//data;
     // 将字符串转换成
-    NSData *infoData = [info dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *infoData = [YHJQRCodeUtil encryptDicWithParmStr:info EncryptType:encryptType];
     
     // 通过KVC设置滤镜inputMessage数据
     [filter setValue:infoData forKeyPath:@"inputMessage"];
@@ -71,7 +83,23 @@
  *  @param logoImageName    logo的image名
  *  @param logoScaleToSuperView    logo相对于父视图的缩放比（取值范围：0-1，0，代表不显示，1，代表与父视图大小相同）
  */
-+ (UIImage *)YHJgenerateWithLogoQRCodeData:(NSDictionary *)dataDic logoImageName:(NSString *)logoImageName logoScaleToSuperView:(CGFloat)logoScaleToSuperView {
++ (UIImage *)YHJgenerateWithLogoQRCodeData:(NSDictionary *)dataDic logoImageName:(NSString *)logoImageName logoScaleToSuperView:(CGFloat)logoScaleToSuperView encryptType:(EncryptType)encryptType errorHandle:(ErrorHandle)errorHandle{
+    
+    if (![self verifyLogoImageValid:logoImageName]) {
+        errorHandle([NSBundle YHJQRCodeLocalizedStringForKey:YHJQRCodeLogoImageError]);
+        return nil;
+    }
+    
+    if (![self verifyLogoScale:logoScaleToSuperView]) {
+        errorHandle([NSBundle YHJQRCodeLocalizedStringForKey:YHJQRCodeLogoScaleError]);
+        return nil;
+    }
+    
+    if (![self verifyDicValid:dataDic]) {
+        errorHandle([NSBundle YHJQRCodeLocalizedStringForKey:YHJQRCodeDataError]);
+        return nil;
+    }
+    
     // 1、创建滤镜对象
     CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
     
@@ -79,9 +107,9 @@
     [filter setDefaults];
     
     // 2、设置数据
-    NSString *string_data = [RSAUtil encryptString:[self dictionaryToJson:dataDic] publicKey:YHJRSA_Public_key];//data;
+    NSString *string_data = [YHJQRCodeUtil dictionaryToJson:dataDic];//data;
     // 将字符串转换成 NSdata (虽然二维码本质上是字符串, 但是这里需要转换, 不转换就崩溃)
-    NSData *qrImageData = [string_data dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *qrImageData = [YHJQRCodeUtil encryptDicWithParmStr:string_data EncryptType:encryptType];
     
     // 设置过滤器的输入值, KVC赋值
     [filter setValue:qrImageData forKey:@"inputMessage"];
@@ -137,7 +165,7 @@
     [filter setDefaults];
     
     // 2、设置数据
-    NSString *string_data = [RSAUtil encryptString:[self dictionaryToJson:dataDic] publicKey:YHJRSA_Public_key];//data
+    NSString *string_data = [RSAUtil encryptString:[YHJQRCodeUtil dictionaryToJson:dataDic] publicKey:YHJRSA_Public_key];//data
     // 将字符串转换成 NSdata (虽然二维码本质上是字符串, 但是这里需要转换, 不转换就崩溃)
     NSData *qrImageData = [string_data dataUsingEncoding:NSUTF8StringEncoding];
     
@@ -211,14 +239,51 @@
     return [UIImage imageWithCIImage:colorImage];
 }
 
-///字典转json格式字符串：
-+ (NSString*)dictionaryToJson:(NSDictionary *)dic
+///判断传入的数据是否为有效的参数
++ (BOOL)verifyDicValid:(id)parmater
 {
-    if ([dic isKindOfClass:[NSDictionary class]]) {
-        NSError *parseError = nil;
-        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:&parseError];
-        return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    if ([parmater isKindOfClass:[NSDictionary class]]) {
+        return YES;
+    }else
+    {
+        NSLog(@"error 请传入有效的数据格式dic");
+        return NO;
     }
-    return @"";
+}
+
+///判断二维码宽度有效性
++ (BOOL)verifyCodeWidth:(CGFloat)codeWidth
+{
+    if (codeWidth > 0 && codeWidth < [UIScreen mainScreen].bounds.size.width) {
+        return YES;
+    }else
+    {
+        NSLog(@"error 生成二维码的图片大小超出范围");
+        return NO;
+    }
+}
+
+///判断图片的有效性
++ (BOOL)verifyLogoImageValid:(id)logoImage
+{
+    if ([logoImage isKindOfClass:[UIImage class]]) {
+        return YES;
+    }else
+    {
+        NSLog(@"error 请传入有效的图片 image");
+        return NO;
+    }
+}
+
+///logo比例大小
++ (BOOL)verifyLogoScale:(CGFloat)ogoScale
+{
+    if (ogoScale > 0 && ogoScale < 0.5) {
+        return YES;
+    }else
+    {
+        NSLog(@"error logo大小超出有效范围");
+        return NO;
+    }
 }
 @end

@@ -1,0 +1,19 @@
+"YHJQRCodeMessage" = "提示";
+"YHJQRCodeTeachOpen" = "請去-> [設置 - 隱私 - 照片] 打開訪問開關";
+"YHJQRCodeSure" = "確定";
+
+"YHJQRCodeLikeMessage" = "溫馨提示";
+"YHJQRCodeDefinePhoto" = "由於系統原因, 無法訪問相冊";
+"YHJQRCodeSure" = "確定";
+
+"YHJQRCodeScaning" = "將二維碼/條碼放入框內, 即可自動掃描";
+"YHJQRCodeOpenLight" = "打開照明燈";
+"YHJQRCodeCloseLight" = "關閉照明燈";
+
+"YHJQRCodeDataError" = "數據格式校驗失敗";
+"YHJQRCodeWidthError" = "生成二維碼大小超出有效範圍";
+"YHJQRCodeLogoImageError" = "logo格式校驗失敗，請傳入有效image";
+
+"YHJQRCodeLogoScaleError" = "生成logo比例失敗，請传入有效比例範圍（0~1.0）";
+"YHJQRCodeChongqingjzb" = "掃一掃";
+"YHJQRCodeAlbum" = "相冊";

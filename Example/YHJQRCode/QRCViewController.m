@@ -35,7 +35,7 @@
 }
 
 - (IBAction)qrcode:(id)sender {
-    QRCodeScanningVC *vc = [[QRCodeScanningVC alloc] initRuleState:^(AuthorizationState state) {
+    QRCodeScanningVC *vc = [[QRCodeScanningVC alloc] initRuleDecodeType:EncryptTypeNone State:^(AuthorizationState state) {
         if (state == AuthorizationStateDenied) {
             NSLog(@"哦吼，获取相机的权限被拒绝了！！！");
         }
@@ -50,8 +50,12 @@
 
 - (IBAction)genderCode:(id)sender {
     NSDictionary *dic = @{@"name":@"mrjnumber", @"id":@"89701180595270098976", @"number":@"15757184409876sdfdhdbgd"};
-    self.codeView.image = [YHJQRCodeTool YHJgenerateWithDefaultQRCodeData:dic imageViewWidth:240.0];
-    self.codeView.image = [YHJQRCodeTool YHJgenerateWithLogoQRCodeData:dic logoImageName:@"share_kber" logoScaleToSuperView:0.1];
+    self.codeView.image = [YHJQRCodeTool YHJgenerateWithDefaultQRCodeData:dic imageViewWidth:240.0 encryptType:EncryptTypeNone errorHandle:^(NSString *err) {
+        
+    }];
+    self.codeView.image = [YHJQRCodeTool YHJgenerateWithLogoQRCodeData:dic logoImageName:@"share_kber" logoScaleToSuperView:0.1 encryptType:EncryptTypeNone errorHandle:^(NSString *err) {
+        
+    }];
     
 
     
