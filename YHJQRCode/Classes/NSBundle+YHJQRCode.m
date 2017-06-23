@@ -10,17 +10,6 @@
 //#import "YHJQRCodeUtil.h"
 
 @implementation NSBundle (YHJQRCode)
-+ (instancetype)YHJQRCodeBundle
-{
-    static NSBundle *refreshBundle = nil;
-    if (refreshBundle == nil) {
-        // 这里不使用mainBundle是为了适配pod 1.x和0.x
-//        refreshBundle = [NSBundle mainBundle];
-        refreshBundle = [NSBundle mainBundle];
-    }
-    return refreshBundle;
-}
-
 + (NSString *)YHJQRCodeLocalizedStringForKey:(NSString *)key
 {
     return [self YHJQRCodeLocalizedStringForKey:key value:nil];
@@ -44,8 +33,7 @@
             language = @"en";
         }
         
-        // 从MJRefresh.bundle中查找资源
-        bundle = [NSBundle bundleWithPath:[[NSBundle YHJQRCodeBundle] pathForResource:language ofType:@"lproj"]];
+        bundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:language ofType:@"lproj" inDirectory:@"YHJQRCode.bundle"]];
     }
     value = [bundle localizedStringForKey:key value:value table:nil];
     return [[NSBundle mainBundle] localizedStringForKey:key value:value table:nil];

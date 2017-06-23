@@ -9,7 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface NSBundle (YHJQRCode)
-+ (instancetype)YHJQRCodeBundle;
-//+ (NSString *)topsQRCodeLocalizedStringForKey:(NSString *)key value:(NSString *)value;
 + (NSString *)YHJQRCodeLocalizedStringForKey:(NSString *)key;
 @end

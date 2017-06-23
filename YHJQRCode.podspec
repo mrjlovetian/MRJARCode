@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YHJQRCode'
-  s.version          = '0.2.0.2'
+  s.version          = '0.2.0.4'
   s.summary          = '集成扫码和生成二维码功能，添加必要的加密.'
 
 # This description is used to generate tags and improve search results.
