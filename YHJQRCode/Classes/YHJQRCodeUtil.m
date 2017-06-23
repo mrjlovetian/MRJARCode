@@ -43,13 +43,13 @@
         
     }else if (encryptType == EncryptTypeBase64)
     {
-        NSData *data = [[NSData alloc]initWithBase64EncodedString:result options:0];
+        NSData *data = [[NSData alloc]initWithBase64EncodedString:codeStr options:0];
         NSString *resultStr = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
         result = [YHJQRCodeUtil dictionaryWithJsonString:resultStr];
         
     }else if (encryptType == EncryptTypeRSA)
     {
-        NSString *resultStr = [RSAUtil decryptString:result privateKey:YHJRSA_Privite_key];
+        NSString *resultStr = [RSAUtil decryptString:codeStr privateKey:YHJRSA_Privite_key];
         result = [YHJQRCodeUtil dictionaryWithJsonString:resultStr];
     }
     
