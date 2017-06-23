@@ -20,6 +20,12 @@ it, simply add the following line to your Podfile:
 pod "YHJQRCode"
 ```
 
+##支持国际化
+新增国际化功能，更容易扩展
+
+##加密方法做拓展
+对二维码选择性加密，无加密方式，base64编码， ras加密方法
+
 ## Author
 
 余洪江, mrjlovetian@gmail.com
