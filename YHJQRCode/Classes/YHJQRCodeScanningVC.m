@@ -12,7 +12,6 @@
 #import "YHJQRCodeScanningView.h"
 #import "YHJQRCodeConst.h"
 #import "UIImage+SGHelper.h"
-#import "RSAUtil.h"
 #import "NSBundle+YHJQRCode.h"
 
 @interface YHJQRCodeScanningVC () <AVCaptureMetadataOutputObjectsDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
@@ -153,13 +152,13 @@
     for (int index = 0; index < [features count]; index ++) {
         CIQRCodeFeature *feature = [features objectAtIndex:index];
         NSString *scannedResult = feature.messageString;
-        NSString *resultStr = [RSAUtil decryptString:scannedResult privateKey:YHJRSA_Privite_key];
+//        NSString *resultStr = [RSAUtil decryptString:scannedResult privateKey:YHJRSA_Privite_key];
         
-        id result = [self dictionaryWithJsonString:resultStr];
+//        id result = [self dictionaryWithJsonString:resultStr];
         
         //YHJQRCodeLog(@"scannedResult - - %@", scannedResult);
         // 在此发通知，告诉子类二维码数据
-        [YHJQRCodeNotificationCenter postNotificationName:YHJQRCodeInformationFromeAibum object:result];
+        [YHJQRCodeNotificationCenter postNotificationName:YHJQRCodeInformationFromeAibum object:scannedResult];
     }
 }
 
@@ -226,19 +225,19 @@
         AVMetadataMachineReadableCodeObject *obj = metadataObjects[0];
         
         NSString *scannedResult = obj.stringValue;
-        NSString *resultStr = [RSAUtil decryptString:scannedResult privateKey:YHJRSA_Privite_key];
-        
-        id result = [self dictionaryWithJsonString:resultStr];
+//        NSString *resultStr = [RSAUtil decryptString:scannedResult privateKey:YHJRSA_Privite_key];
+//        
+//        id result = [self dictionaryWithJsonString:resultStr];
         
         // 在此发通知，告诉子类二维码数据
-        [YHJQRCodeNotificationCenter postNotificationName:YHJQRCodeInformationFromeScanning object:result];
+        [YHJQRCodeNotificationCenter postNotificationName:YHJQRCodeInformationFromeScanning object:scannedResult];
     }
 }
 
 /** 播放音效文件 */
 - (void)YHJ_playSoundEffect:(NSString *)name ofType:(NSString *)type {
     // 获取音效
-    NSString *audioFile = [[NSBundle mainBundle] pathForResource:name ofType:type];
+    NSString *audioFile = [[NSBundle mainBundle] pathForResource:name ofType:type inDirectory:@"YHJQRCode.bundle"];
     NSURL *fileUrl = [NSURL fileURLWithPath:audioFile];
     
     // 1、获得系统声音ID
