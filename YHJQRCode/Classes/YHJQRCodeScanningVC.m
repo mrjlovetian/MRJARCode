@@ -149,17 +149,22 @@
     
     // 取得识别结果
     NSArray *features = [detector featuresInImage:[CIImage imageWithCGImage:image.CGImage]];
-    for (int index = 0; index < [features count]; index ++) {
-        CIQRCodeFeature *feature = [features objectAtIndex:index];
-        NSString *scannedResult = feature.messageString;
-//        NSString *resultStr = [RSAUtil decryptString:scannedResult privateKey:YHJRSA_Privite_key];
-        
-//        id result = [self dictionaryWithJsonString:resultStr];
-        
-        //YHJQRCodeLog(@"scannedResult - - %@", scannedResult);
+    
+    if (features.count >0) {
+        for (int index = 0; index < [features count]; index ++) {
+            CIQRCodeFeature *feature = [features objectAtIndex:index];
+            NSString *scannedResult = feature.messageString;
+            // 在此发通知，告诉子类二维码数据
+            [YHJQRCodeNotificationCenter postNotificationName:YHJQRCodeInformationFromeAibum object:scannedResult];
+        }
+    }else
+    {
+        NSString *scannedResult = @"-1";
         // 在此发通知，告诉子类二维码数据
         [YHJQRCodeNotificationCenter postNotificationName:YHJQRCodeInformationFromeAibum object:scannedResult];
     }
+    
+    
 }
 
 - (void)setupYHJQRCodeScanning {
