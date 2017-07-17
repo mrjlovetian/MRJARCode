@@ -1,7 +1,7 @@
 PODS:
-  - YHJQRCode (0.2.0.2):
-    - YHJQRCode/Code (= 0.2.0.2)
-  - YHJQRCode/Code (0.2.0.2)
+  - YHJQRCode (0.2.0.8):
+    - YHJQRCode/Code (= 0.2.0.8)
+  - YHJQRCode/Code (0.2.0.8)
 
 DEPENDENCIES:
   - YHJQRCode (from `../`)
@@ -11,8 +11,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  YHJQRCode: d563907c5c63dbdbe056f0b2686f2345283b0c35
+  YHJQRCode: 22bc4295f56d5318ef7af7aa7146752fcbf30cd6
 
 PODFILE CHECKSUM: 1271d08750523d85ffdb24ceea8975f2e3b67a52
 
-COCOAPODS: 1.3.0.beta.1
+COCOAPODS: 1.2.1
