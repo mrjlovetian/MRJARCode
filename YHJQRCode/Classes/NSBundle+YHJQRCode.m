@@ -8,6 +8,7 @@
 
 #import "NSBundle+YHJQRCode.h"
 //#import "YHJQRCodeUtil.h"
+#import "YHJQRCodeScanningView.h"
 
 @implementation NSBundle (YHJQRCode)
 + (NSString *)YHJQRCodeLocalizedStringForKey:(NSString *)key
@@ -36,5 +37,18 @@
     
     value = [bundle localizedStringForKey:key value:value table:nil];
     return [[NSBundle mainBundle] localizedStringForKey:key value:value table:nil];
+}
+
+///加载pod资源相关资料
+///http://blog.xianqu.org/2015/08/pod-resources/
+
++ (NSBundle *)tops_LibraryBundle {
+    return [self bundleWithURL:[self tops_myLibraryBundleURL]];
+}
+
+
++ (NSURL *)tops_myLibraryBundleURL {
+    NSBundle *bundle = [NSBundle bundleForClass:[YHJQRCodeScanningView class]];
+    return [bundle URLForResource:@"TopsQRCode" withExtension:@"bundle"];
 }
 @end

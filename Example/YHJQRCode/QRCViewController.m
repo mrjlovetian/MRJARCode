@@ -40,7 +40,7 @@
             NSLog(@"哦吼，获取相机的权限被拒绝了！！！");
         }
     }];
-    vc.resultBlcok = ^(id result, NSError *err) {
+    vc.resultBlcok = ^(id result, NSError *err, UIViewController *vc) {
         NSLog(@"-=-=-==%@-=-=-=-=%@", result, err);
     };
     
@@ -65,7 +65,7 @@
 }
 
 #pragma mark QRCodeScanningVCDelegate
-- (void)QRCodeScanningVCResult:(id)result error:(NSError *)error
+- (void)QRCodeScanningVCResult:(id)result error:(NSError *)error qrc:(UIViewController *)vc
 {
 //    NSLog(@"********%@************%@", result, error);
 }

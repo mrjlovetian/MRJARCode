@@ -71,12 +71,12 @@
     {
         err = resulta;
     }
-    if ([self.delegate respondsToSelector:@selector(QRCodeScanningVCResult:error:)]) {
-        [self.delegate QRCodeScanningVCResult:qrcdic error:err];
+    if ([self.delegate respondsToSelector:@selector(QRCodeScanningVCResult:error:qrc:)]) {
+        [self.delegate QRCodeScanningVCResult:qrcdic error:err qrc:self];
     }
     
     if (self.resultBlcok) {
-        self.resultBlcok(qrcdic, err);
+        self.resultBlcok(qrcdic, err, self);
     }
     
     [self.navigationController popViewControllerAnimated:YES];

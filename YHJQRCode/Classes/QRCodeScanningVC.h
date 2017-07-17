@@ -17,13 +17,13 @@ typedef enum : NSUInteger {
 
 @protocol QRCodeScanningVCDelegate <NSObject>
 
-- (void)QRCodeScanningVCResult:(id)result error:(NSError *)error;
+- (void)QRCodeScanningVCResult:(id)result error:(NSError *)error qrc:(UIViewController *)vc;
 
 @end
 
 typedef void(^AuthorizationStateBlock)(AuthorizationState state);
 
-typedef void(^QRCodeScanningVCBlock)(id result, NSError *err);
+typedef void(^QRCodeScanningVCBlock)(id result, NSError *err, UIViewController *vc);
 
 @interface QRCodeScanningVC : YHJQRCodeScanningVC
 

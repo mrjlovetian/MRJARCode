@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YHJQRCode'
-  s.version          = '0.2.0.7'
+  s.version          = '0.2.0.8'
   s.summary          = '集成扫码和生成二维码功能，添加必要的加密.'
 
 # This description is used to generate tags and improve search results.
@@ -37,7 +37,7 @@ TODO: 通过修改资源，对二维码添加logo，增加加密算法，这个�
   #  }
 
 #资源文件引入
-    s.resource      = 'YHJQRCode/Classes/YHJQRCode.bundle'
+    s.resource      = 'YHJQRCode.bundle'
 
 #文件夹创建
     s.subspec 'Code' do |yy|
