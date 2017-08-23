@@ -7,7 +7,6 @@
 //
 
 #import "NSBundle+YHJQRCode.h"
-//#import "YHJQRCodeUtil.h"
 #import "YHJQRCodeScanningView.h"
 
 @implementation NSBundle (YHJQRCode)
