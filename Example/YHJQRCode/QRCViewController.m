@@ -7,7 +7,7 @@
 //
 
 #import "QRCViewController.h"
-#import "YHJQRCode.h"
+#import "MRJ_QRCode.h"
 #import "QRCodeScanningVC.h"
 
 @interface QRCViewController ()<QRCodeScanningVCDelegate>
@@ -50,17 +50,17 @@
 
 - (IBAction)genderCode:(id)sender {
     NSDictionary *dic = @{@"name":@"mrjnumber", @"id":@"89701180595270098976", @"number":@"15757184409876sdfdhdbgd"};
-    self.codeView.image = [YHJQRCodeTool YHJgenerateWithDefaultQRCodeData:dic imageViewWidth:240.0 encryptType:EncryptTypeNone errorHandle:^(NSString *err) {
+    self.codeView.image = [MRJ_QRCodeTool MRJ_generateWithDefaultQRCodeData:dic imageViewWidth:240.0 encryptType:EncryptTypeNone errorHandle:^(NSString *err) {
         
     }];
-    self.codeView.image = [YHJQRCodeTool YHJgenerateWithLogoQRCodeData:dic logoImageName:@"share_kber" logoScaleToSuperView:0.1 encryptType:EncryptTypeNone errorHandle:^(NSString *err) {
+    self.codeView.image = [MRJ_QRCodeTool MRJ_generateWithLogoQRCodeData:dic logoImageName:@"share_kber" logoScaleToSuperView:0.1 encryptType:EncryptTypeNone errorHandle:^(NSString *err) {
         
     }];
     
 
     
     // 2、将二维码显示在UIImageView上
-//    UIImage *image = [YHJQRCodeTool YHJgenerateWithColorQRCodeData:dic backgroundColor:[CIColor whiteColor] mainColor:[CIColor colorWithRed:0.3 green:0.2 blue:0.4]];
+//    UIImage *image = [MRJ_QRCodeTool MRJ_generateWithColorQRCodeData:dic backgroundColor:[CIColor whiteColor] mainColor:[CIColor colorWithRed:0.3 green:0.2 blue:0.4]];
 //    self.codeView.image = image;
 }
 

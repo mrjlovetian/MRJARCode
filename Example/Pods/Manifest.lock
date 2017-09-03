@@ -1,18 +1,18 @@
 PODS:
-  - YHJQRCode (0.2.0.8):
-    - YHJQRCode/Code (= 0.2.0.8)
-  - YHJQRCode/Code (0.2.0.8)
+  - MRJ_QRCode (0.3.0):
+    - MRJ_QRCode/Code (= 0.3.0)
+  - MRJ_QRCode/Code (0.3.0)
 
 DEPENDENCIES:
-  - YHJQRCode (from `../`)
+  - MRJ_QRCode (from `../`)
 
 EXTERNAL SOURCES:
-  YHJQRCode:
-    :path: "../"
+  MRJ_QRCode:
+    :path: ../
 
 SPEC CHECKSUMS:
-  YHJQRCode: 22bc4295f56d5318ef7af7aa7146752fcbf30cd6
+  MRJ_QRCode: 6a551542b49ce37ee5a33d0621d08325bae30678
 
-PODFILE CHECKSUM: 1271d08750523d85ffdb24ceea8975f2e3b67a52
+PODFILE CHECKSUM: 6dbd05df8831ab9ad3795c7448bc5edcd3d69798
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.1.1

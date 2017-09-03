@@ -1,0 +1,53 @@
+//
+//  MRJ_QRCodeTool.m
+//  Pods
+//
+//  Created by Mr on 2017/6/5.
+//
+//
+
+#import "NSBundle+MRJ_QRCode.h"
+#import "MRJ_QRCodeScanningView.h"
+
+@implementation NSBundle (MRJ_QRCode)
++ (NSString *)MRJ_QRCodeLocalizedStringForKey:(NSString *)key
+{
+    return [self MRJ_QRCodeLocalizedStringForKey:key value:nil];
+}
+
++ (NSString *)MRJ_QRCodeLocalizedStringForKey:(NSString *)key value:(NSString *)value
+{
+    NSBundle *bundle = nil;
+    // （iOS获取的语言字符串比较不稳定）目前框架只处理en、zh-Hans、zh-Hant三种情况，其他按照系统默认处理
+    NSString *language = [NSLocale preferredLanguages].firstObject;
+    if ([language hasPrefix:@"en"]) {
+        language = @"en";
+    } else if ([language hasPrefix:@"zh"]) {
+        if ([language rangeOfString:@"Hans"].location != NSNotFound) {
+            language = @"zh-Hans"; // 简体中文
+        } else { // zh-Hant\zh-HK\zh-TW
+            language = @"zh-Hant"; // 繁體中文
+        }
+    } else {
+        language = @"en";
+    }
+    
+    bundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:language ofType:@"lproj" inDirectory:@"MRJ_QRCode.bundle"]];
+    
+    value = [bundle localizedStringForKey:key value:value table:nil];
+    return [[NSBundle mainBundle] localizedStringForKey:key value:value table:nil];
+}
+
+///加载pod资源相关资料
+///http://blog.xianqu.org/2015/08/pod-resources/
+
++ (NSBundle *)tops_LibraryBundle {
+    return [self bundleWithURL:[self tops_myLibraryBundleURL]];
+}
+
+
++ (NSURL *)tops_myLibraryBundleURL {
+    NSBundle *bundle = [NSBundle bundleForClass:[MRJ_QRCodeScanningView class]];
+    return [bundle URLForResource:@"TopsQRCode" withExtension:@"bundle"];
+}
+@end

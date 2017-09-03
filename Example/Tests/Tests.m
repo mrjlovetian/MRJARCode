@@ -1,6 +1,6 @@
 //
-//  YHJQRCodeTests.m
-//  YHJQRCodeTests
+//  MRJ_QRCodeTests.m
+//  MRJ_QRCodeTests
 //
 //  Created by mrjyuhongjiang on 06/14/2017.
 //  Copyright (c) 2017 mrjyuhongjiang. All rights reserved.

@@ -1,6 +1,6 @@
 //
-//  YHJAppDelegate.h
-//  YHJQRCode
+//  MRJ_AppDelegate.h
+//  MRJ_QRCode
 //
 //  Created by mrjyuhongjiang on 06/14/2017.
 //  Copyright (c) 2017 mrjyuhongjiang. All rights reserved.
@@ -8,7 +8,7 @@
 
 @import UIKit;
 
-@interface YHJAppDelegate : UIResponder <UIApplicationDelegate>
+@interface MRJ_AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
