@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: 通过修改资源，对二维码添加logo，增加加密算法，这个库可能还有些问题等待修复，希望大家帮助找出，并给我发邮件消息.
                        DESC
 
-  s.homepage         = 'https://github.com/mrjlovetian/MRJ_ARCode'
+  s.homepage         = 'https://github.com/mrjlovetian/YHJARCode'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'mrjyuhongjiang' => 'mrjlovetian@gmail.com' }
-  s.source           = { :git => 'https://github.com/mrjlovetian/MRJ_ARCode.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/mrjlovetian/YHJARCode.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/MRJ_YU'
 
   s.ios.deployment_target = '8.0'
