@@ -41,12 +41,12 @@
 ///加载pod资源相关资料
 ///http://blog.xianqu.org/2015/08/pod-resources/
 
-+ (NSBundle *)tops_LibraryBundle {
-    return [self bundleWithURL:[self tops_myLibraryBundleURL]];
++ (NSBundle *)mrj_LibraryBundle {
+    return [self bundleWithURL:[self mrj_myLibraryBundleURL]];
 }
 
 
-+ (NSURL *)tops_myLibraryBundleURL {
++ (NSURL *)mrj_myLibraryBundleURL {
     NSBundle *bundle = [NSBundle bundleForClass:[MRJ_QRCodeScanningView class]];
     return [bundle URLForResource:@"TopsQRCode" withExtension:@"bundle"];
 }
