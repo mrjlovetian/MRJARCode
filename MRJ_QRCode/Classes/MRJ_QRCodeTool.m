@@ -23,12 +23,12 @@
 + (UIImage *)MRJ_generateWithDefaultQRCodeData:(NSDictionary *)dataDic imageViewWidth:(CGFloat)imageViewWidth encryptType:(EncryptType)encryptType errorHandle:(ErrorHandle)errorHandle{
     
     if (![self verifyDicValid:dataDic]) {
-        errorHandle([NSBundle MRJ_QRCodeLocalizedStringForKey:MRJ_QRCodeDataError]);
+        errorHandle([NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeDataError]);
         return nil;
     }
     
     if (![self verifyCodeWidth:imageViewWidth]) {
-        errorHandle([NSBundle MRJ_QRCodeLocalizedStringForKey:MRJ_QRCodeWidthError]);
+        errorHandle([NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeWidthError]);
         return nil;
     }
     
@@ -86,17 +86,17 @@
 + (UIImage *)MRJ_generateWithLogoQRCodeData:(NSDictionary *)dataDic logoImageName:(NSString *)logoImageName logoScaleToSuperView:(CGFloat)logoScaleToSuperView encryptType:(EncryptType)encryptType errorHandle:(ErrorHandle)errorHandle{
     
     if (![self verifyLogoImageValid:logoImageName]) {
-        errorHandle([NSBundle MRJ_QRCodeLocalizedStringForKey:MRJ_QRCodeLogoImageError]);
+        errorHandle([NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeLogoImageError]);
         return nil;
     }
     
     if (![self verifyLogoScale:logoScaleToSuperView]) {
-        errorHandle([NSBundle MRJ_QRCodeLocalizedStringForKey:MRJ_QRCodeLogoScaleError]);
+        errorHandle([NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeLogoScaleError]);
         return nil;
     }
     
     if (![self verifyDicValid:dataDic]) {
-        errorHandle([NSBundle MRJ_QRCodeLocalizedStringForKey:MRJ_QRCodeDataError]);
+        errorHandle([NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeDataError]);
         return nil;
     }
     

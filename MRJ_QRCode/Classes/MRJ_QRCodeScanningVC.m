@@ -51,8 +51,8 @@
 }
 
 - (void)setupNavigationBar {
-    self.navigationItem.title = [NSBundle MRJ_QRCodeLocalizedStringForKey:MRJ_QRCodeChongqingjzb];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:[NSBundle MRJ_QRCodeLocalizedStringForKey:MRJ_QRCodeAlbum] style:(UIBarButtonItemStyleDone) target:self action:@selector(rightBarButtonItenAction)];
+    self.navigationItem.title = [NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeChongqingjzb];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:[NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeAlbum] style:(UIBarButtonItemStyleDone) target:self action:@selector(rightBarButtonItenAction)];
 }
 
 - (MRJ_QRCodeScanningView *)scanningView {
@@ -107,16 +107,16 @@
             [self presentViewController:imagePicker animated:YES completion:nil];
 
         } else if (status == PHAuthorizationStatusDenied) { // 用户拒绝当前应用访问相册
-            UIAlertController *alertC = [UIAlertController alertControllerWithTitle:[NSBundle MRJ_QRCodeLocalizedStringForKey:MRJ_QRCodeMessage] message:[NSBundle MRJ_QRCodeLocalizedStringForKey:MRJ_QRCodeTeachOpen] preferredStyle:(UIAlertControllerStyleAlert)];
-            UIAlertAction *alertA = [UIAlertAction actionWithTitle:[NSBundle MRJ_QRCodeLocalizedStringForKey:MRJ_QRCodeSure] style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+            UIAlertController *alertC = [UIAlertController alertControllerWithTitle:[NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeMessage] message:[NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeTeachOpen] preferredStyle:(UIAlertControllerStyleAlert)];
+            UIAlertAction *alertA = [UIAlertAction actionWithTitle:[NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeSure] style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
                 
             }];
             
             [alertC addAction:alertA];
             [self presentViewController:alertC animated:YES completion:nil];
         } else if (status == PHAuthorizationStatusRestricted) {
-            UIAlertController *alertC = [UIAlertController alertControllerWithTitle:[NSBundle MRJ_QRCodeLocalizedStringForKey:MRJ_QRCodeLikeMessage] message:[NSBundle MRJ_QRCodeLocalizedStringForKey:MRJ_QRCodeDefinePhoto] preferredStyle:(UIAlertControllerStyleAlert)];
-            UIAlertAction *alertA = [UIAlertAction actionWithTitle:[NSBundle MRJ_QRCodeLocalizedStringForKey:MRJ_QRCodeSure] style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+            UIAlertController *alertC = [UIAlertController alertControllerWithTitle:[NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeLikeMessage] message:[NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeDefinePhoto] preferredStyle:(UIAlertControllerStyleAlert)];
+            UIAlertAction *alertA = [UIAlertAction actionWithTitle:[NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeSure] style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
                 
             }];
             
