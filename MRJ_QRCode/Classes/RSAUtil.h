@@ -26,4 +26,5 @@
 + (NSData *)decryptData:(NSData *)data publicKey:(NSString *)pubKey;
 + (NSString *)decryptString:(NSString *)str privateKey:(NSString *)privKey;
 + (NSData *)decryptData:(NSData *)data privateKey:(NSString *)privKey;
+
 @end

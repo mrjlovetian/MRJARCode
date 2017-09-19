@@ -11,8 +11,7 @@
 #import "MRJ_QRCodeConst.h"
 
 @implementation MRJ_QRCodeUtil
-+ (NSData *)encryptDicWithParmStr:(NSString *)parmStr EncryptType:(EncryptType)encryptType
-{
++ (NSData *)encryptDicWithParmStr:(NSString *)parmStr EncryptType:(EncryptType)encryptType{
     NSData *resultData = nil;
     if (encryptType == EncryptTypeNone) {
         resultData = [parmStr dataUsingEncoding:NSUTF8StringEncoding];
@@ -33,8 +32,7 @@
     return resultData;
 }
 
-+ (id)decodeDataWithCodeStr:(NSString *)codeStr  EncryptType:(EncryptType)encryptType;
-{
++ (id)decodeDataWithCodeStr:(NSString *)codeStr  EncryptType:(EncryptType)encryptType;{
     id result;
     
     if (encryptType == EncryptTypeNone) {
@@ -76,14 +74,44 @@
 }
 
 ///字典转json格式字符串：
-+ (NSString*)dictionaryToJson:(NSDictionary *)dic
-{
++ (NSString*)dictionaryToJson:(NSDictionary *)dic{
     if ([dic isKindOfClass:[NSDictionary class]]) {
         NSError *parseError = nil;
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:&parseError];
         return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
     return @"";
+}
+
+
+#pragma mark 图片处理
+/// 返回一张不超过屏幕尺寸的 image
++ (UIImage *)imageSizeWithScreenImage:(UIImage *)image {
+    CGFloat imageWidth = image.size.width;
+    CGFloat imageHeight = image.size.height;
+    CGFloat screenWidth = MRJ_QRCodeScreenWidth;
+    CGFloat screenHeight = MRJ_QRCodeScreenHeight;
+    
+    // 如果读取的二维码照片宽和高小于屏幕尺寸，直接返回原图片
+    if (imageWidth <= screenWidth && imageHeight <= screenHeight) {
+        return image;
+    }
+    
+    //MRJ_QRCodeLog(@"压缩前图片尺寸 － width：%.2f, height: %.2f", imageWidth, imageHeight);
+    CGFloat max = MAX(imageWidth, imageHeight);
+    // 如果是6plus等设备，比例应该是 3.0
+    CGFloat scale = max / (screenHeight * 2.0f);
+    //MRJ_QRCodeLog(@"压缩后图片尺寸 － width：%.2f, height: %.2f", imageWidth / scale, imageHeight / scale);
+    
+    return [self imageWithImage:image scaledToSize:CGSizeMake(imageWidth / scale, imageHeight / scale)];
+}
+/// 返回一张处理后的图片
++ (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)size {
+    UIGraphicsBeginImageContext(size);
+    [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
 }
 
 @end

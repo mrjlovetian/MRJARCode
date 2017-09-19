@@ -11,8 +11,8 @@
 #import <Photos/Photos.h>
 #import "MRJ_QRCodeScanningView.h"
 #import "MRJ_QRCodeConst.h"
-#import "UIImage+SGHelper.h"
 #import "NSBundle+MRJ_QRCode.h"
+#import "MRJ_QRCodeUtil.h"
 
 @interface MRJ_QRCodeScanningVC () <AVCaptureMetadataOutputObjectsDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 /// 会话对象
@@ -141,7 +141,7 @@
 #pragma mark - - - 从相册中识别二维码, 并进行界面跳转
 - (void)scanQRCodeFromPhotosInTheAlbum:(UIImage *)image {
     // 对选取照片的处理，如果选取的图片尺寸过大，则压缩选取图片，否则不作处理
-    image = [UIImage imageSizeWithScreenImage:image];
+    image = [MRJ_QRCodeUtil imageSizeWithScreenImage:image];
 
     // CIDetector(CIDetector可用于人脸识别)进行图片解析，从而使我们可以便捷的从相册中获取到二维码
     // 声明一个CIDetector，并设定识别类型 CIDetectorTypeQRCode
@@ -163,8 +163,6 @@
         // 在此发通知，告诉子类二维码数据
         [MRJ_QRCodeNotificationCenter postNotificationName:MRJ_QRCodeInformationFromeAibum object:scannedResult];
     }
-    
-    
 }
 
 - (void)setupMRJ_QRCodeScanning {
@@ -278,6 +276,7 @@ void soundCompleteCallback(SystemSoundID soundID, void *clientData){
     }
     return dic;
 }
+
 
 
 @end

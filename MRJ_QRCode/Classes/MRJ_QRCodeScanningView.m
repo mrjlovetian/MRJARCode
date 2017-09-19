@@ -28,6 +28,7 @@
 
 /** 扫描动画线(冲击波) 的高度 */
 static CGFloat const scanninglineHeight = 12;
+
 /** 扫描内容外部View的alpha值 */
 static CGFloat const scanBorderOutsideViewAlpha = 0.4;
 
@@ -44,7 +45,6 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
         
         // 布局扫描界面
         [self setupSubviews];
-
     }
     return self;
 }
@@ -194,6 +194,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
         button.selected = NO;
     }
 }
+
 - (void)turnOnLight:(BOOL)on {
     self.device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     if ([_device hasTorch]) {
@@ -224,7 +225,6 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
 #pragma mark - - - 添加定时器
 - (void)addTimer {
     [self addScanningline];
-    
     self.timer = [NSTimer scheduledTimerWithTimeInterval:MRJ_QRCodeScanningLineAnimation target:self selector:@selector(timeAction) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
 }

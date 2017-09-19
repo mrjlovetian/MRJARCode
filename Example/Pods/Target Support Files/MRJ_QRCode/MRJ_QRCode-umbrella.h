@@ -1,5 +1,13 @@
 #ifdef __OBJC__
 #import <UIKit/UIKit.h>
+#else
+#ifndef FOUNDATION_EXPORT
+#if defined(__cplusplus)
+#define FOUNDATION_EXPORT extern "C"
+#else
+#define FOUNDATION_EXPORT extern
+#endif
+#endif
 #endif
 
 #import "MRJ_QRCode.h"
@@ -11,7 +19,6 @@
 #import "NSBundle+MRJ_QRCode.h"
 #import "QRCodeScanningVC.h"
 #import "RSAUtil.h"
-#import "UIImage+SGHelper.h"
 
 FOUNDATION_EXPORT double MRJ_QRCodeVersionNumber;
 FOUNDATION_EXPORT const unsigned char MRJ_QRCodeVersionString[];

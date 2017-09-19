@@ -12,7 +12,6 @@
 
 #endif /* MRJ_QRCode_h */
 
-#import "UIImage+SGHelper.h"
 #import "MRJ_QRCodeTool.h"
 #import "MRJ_QRCodeConst.h"
 #import "MRJ_QRCodeUtil.h"

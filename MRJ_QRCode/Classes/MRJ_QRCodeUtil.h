@@ -27,4 +27,8 @@ typedef enum : NSUInteger {
 
 ///字典转json格式字符串：
 + (NSString*)dictionaryToJson:(NSDictionary *)dic;
+
+/// 返回一张不超过屏幕尺寸的 image
++ (UIImage *)imageSizeWithScreenImage:(UIImage *)image;
+
 @end

@@ -13,6 +13,7 @@
 typedef enum : NSUInteger {
     AuthorizationStateAllowed  =  1,
     AuthorizationStateDenied,
+    AuthorizationStateAlbumDenied
 } AuthorizationState;
 
 @protocol QRCodeScanningVCDelegate <NSObject>
