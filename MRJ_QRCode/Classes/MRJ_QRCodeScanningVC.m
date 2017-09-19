@@ -253,6 +253,7 @@
     // 2、播放音频
     AudioServicesPlaySystemSound(soundID); // 播放音效
 }
+
 /** 播放完成回调函数 */
 void soundCompleteCallback(SystemSoundID soundID, void *clientData){
     //MRJ_QRCodeLog(@"播放完成...");
@@ -276,8 +277,6 @@ void soundCompleteCallback(SystemSoundID soundID, void *clientData){
     }
     return dic;
 }
-
-
 
 @end
 

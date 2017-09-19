@@ -95,10 +95,6 @@
                     if (authorizationHander) {
                         authorizationHander(AuthorizationStateAllowed);
                     }
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        QRCodeScanningVC *vc = [[QRCodeScanningVC alloc] init];
-                        [self.navigationController pushViewController:vc animated:YES];
-                    });
                     
                     MRJ_QRCodeLog(@"当前线程 - - %@", [NSThread currentThread]);
                     // 用户第一次同意了访问相机权限
