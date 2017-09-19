@@ -1,7 +1,7 @@
 PODS:
-  - MRJ_QRCode (0.2.9.2):
-    - MRJ_QRCode/Code (= 0.2.9.2)
-  - MRJ_QRCode/Code (0.2.9.2)
+  - MRJ_QRCode (0.2.9.3):
+    - MRJ_QRCode/Code (= 0.2.9.3)
+  - MRJ_QRCode/Code (0.2.9.3)
 
 DEPENDENCIES:
   - MRJ_QRCode (from `../`)
@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  MRJ_QRCode: 9e0cb4afa9a0c5f5ec023552748678b26552c1d7
+  MRJ_QRCode: 3bb0dd4b472f2210217bdc20dadcb30a02be5456
 
 PODFILE CHECKSUM: 6dbd05df8831ab9ad3795c7448bc5edcd3d69798
 

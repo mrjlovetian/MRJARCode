@@ -30,10 +30,8 @@
         language = @"en";
     }
     
-    bundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:language ofType:@"lproj" inDirectory:@"MRJ_QRCode.bundle"]];
-    
-    value = [bundle localizedStringForKey:key value:value table:nil];
-    return [[NSBundle mainBundle] localizedStringForKey:key value:value table:nil];
+    bundle = [NSBundle bundleWithPath:[[self mrj_LibraryBundle] pathForResource:language ofType:@"lproj"]];
+    return [bundle localizedStringForKey:key value:value table:nil];
 }
 
 ///加载pod资源相关资料
@@ -42,10 +40,9 @@
     return [self bundleWithURL:[self mrj_myLibraryBundleURL]];
 }
 
-
 + (NSURL *)mrj_myLibraryBundleURL {
     NSBundle *bundle = [NSBundle bundleForClass:[MRJ_QRCodeScanningView class]];
-    return [bundle URLForResource:@"TopsQRCode" withExtension:@"bundle"];
+    return [bundle URLForResource:@"MRJ_QRCode" withExtension:@"bundle"];
 }
 
 @end

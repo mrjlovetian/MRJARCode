@@ -13,4 +13,6 @@
 ///通过固定的宏寻找对应的资源，（国际化处理）
 + (NSString *)mrj_QRCodeLocalizedStringForKey:(NSString *)key;
 
++ (NSBundle *)mrj_LibraryBundle;
+
 @end

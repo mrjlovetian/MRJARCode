@@ -140,7 +140,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     // 左上侧的image
     CGFloat margin = 7;
     
-    UIImage *left_image = [UIImage imageNamed:@"MRJ_QRCode.bundle/MRJ_CodeLeftTop"];
+    UIImage *left_image = [UIImage imageNamed:[[NSBundle mrj_LibraryBundle] pathForResource:@"MRJ_CodeLeftTop@2x" ofType:@"png"]];
     UIImageView *left_imageView = [[UIImageView alloc] init];
     CGFloat left_imageViewX = CGRectGetMinX(scanContent_layer.frame) - left_image.size.width * 0.5 + margin;
     CGFloat left_imageViewY = CGRectGetMinY(scanContent_layer.frame) - left_image.size.width * 0.5 + margin;
@@ -151,7 +151,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     [self.tempLayer addSublayer:left_imageView.layer];
     
     // 右上侧的image
-    UIImage *right_image = [UIImage imageNamed:@"MRJ_QRCode.bundle/MRJ_CodeRightTop"];
+    UIImage *right_image = [UIImage imageNamed:[[NSBundle mrj_LibraryBundle] pathForResource:@"MRJ_CodeRightTop@2x" ofType:@"png"]];
     UIImageView *right_imageView = [[UIImageView alloc] init];
     CGFloat right_imageViewX = CGRectGetMaxX(scanContent_layer.frame) - right_image.size.width * 0.5 - margin;
     CGFloat right_imageViewY = left_imageView.frame.origin.y;
@@ -162,7 +162,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     [self.tempLayer addSublayer:right_imageView.layer];
     
     // 左下侧的image
-    UIImage *left_image_down = [UIImage imageNamed:@"MRJ_QRCode.bundle/MRJ_CodeLeftBottom"];
+    UIImage *left_image_down = [UIImage imageNamed:[[NSBundle mrj_LibraryBundle] pathForResource:@"MRJ_CodeLeftBottom@2x" ofType:@"png"]];
     UIImageView *left_imageView_down = [[UIImageView alloc] init];
     CGFloat left_imageView_downX = left_imageView.frame.origin.x;
     CGFloat left_imageView_downY = CGRectGetMaxY(scanContent_layer.frame) - left_image_down.size.width * 0.5 - margin;
@@ -173,7 +173,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     [self.tempLayer addSublayer:left_imageView_down.layer];
     
     // 右下侧的image
-    UIImage *right_image_down = [UIImage imageNamed:@"MRJ_QRCode.bundle/MRJ_CodeRightBottom"];
+    UIImage *right_image_down = [UIImage imageNamed:[[NSBundle mrj_LibraryBundle] pathForResource:@"MRJ_CodeRightBottom@2x" ofType:@"png"]];
     UIImageView *right_imageView_down = [[UIImageView alloc] init];
     CGFloat right_imageView_downX = right_imageView.frame.origin.x;
     CGFloat right_imageView_downY = left_imageView_down.frame.origin.y;
@@ -211,7 +211,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
 - (UIImageView *)scanningline {
     if (!_scanningline) {
         _scanningline = [[UIImageView alloc] init];
-        _scanningline.image = [UIImage imageNamed:@"MRJ_QRCode.bundle/MRJ_CodeScanningLine"];
+        _scanningline.image = [UIImage imageNamed:[[NSBundle mrj_LibraryBundle] pathForResource:@"MRJ_CodeScanningLine@2x"ofType:@"png"]];
         _scanningline.frame = CGRectMake(scanContent_X * 0.5, scanContent_Y, self.frame.size.width - scanContent_X , scanninglineHeight);
     }
     return _scanningline;
