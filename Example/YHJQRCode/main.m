@@ -7,11 +7,11 @@
 //
 
 @import UIKit;
-#import "MRJ_AppDelegate.h"
+#import "YHJAppDelegate.h"
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([MRJ_AppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([YHJAppDelegate class]));
     }
 }

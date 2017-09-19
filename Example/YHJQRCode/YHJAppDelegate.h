@@ -8,7 +8,7 @@
 
 @import UIKit;
 
-@interface MRJ_AppDelegate : UIResponder <UIApplicationDelegate>
+@interface YHJAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

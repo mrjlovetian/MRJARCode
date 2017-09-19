@@ -6,10 +6,10 @@
 //  Copyright (c) 2017 mrjyuhongjiang. All rights reserved.
 //
 
-#import "MRJ_AppDelegate.h"
+#import "YHJAppDelegate.h"
 #import "MainViewController.h"
 
-@implementation MRJ_AppDelegate
+@implementation YHJAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
