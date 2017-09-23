@@ -49,7 +49,6 @@
     // 3、获得滤镜输出的图像
     CIImage *outputImage = [filter outputImage];
     
-    
     return [MRJ_QRCodeTool createNonInterpolatedUIImageFormCIImage:outputImage withSize:imageViewWidth];
 }
 
@@ -199,11 +198,10 @@
 }
 
 ///判断传入的数据是否为有效的参数
-+ (BOOL)verifyDicValid:(id)parmater{
++ (BOOL)verifyDicValid:(id)parmater {
     if ([parmater isKindOfClass:[NSDictionary class]]) {
         return YES;
-    }else
-    {
+    } else {
         NSLog(@"error 请传入有效的数据格式dic");
         return NO;
     }
@@ -213,8 +211,7 @@
 + (BOOL)verifyCodeWidth:(CGFloat)codeWidth{
     if (codeWidth > 0 && codeWidth < [UIScreen mainScreen].bounds.size.width) {
         return YES;
-    }else
-    {
+    } else {
         NSLog(@"error 生成二维码的图片大小超出范围");
         return NO;
     }
@@ -224,8 +221,7 @@
 + (BOOL)verifyLogoImageValid:(id)logoImage{
     if ([logoImage isKindOfClass:[UIImage class]]) {
         return YES;
-    }else
-    {
+    } else {
         NSLog(@"error 请传入有效的图片 image");
         return NO;
     }
@@ -235,8 +231,7 @@
 + (BOOL)verifyLogoScale:(CGFloat)ogoScale{
     if (ogoScale > 0 && ogoScale < 0.5) {
         return YES;
-    }else
-    {
+    }else{
         NSLog(@"error logo大小超出有效范围");
         return NO;
     }

@@ -53,20 +53,16 @@
 
 ///扫码成功操作
 - (void)MRJ_QRCodeInformationFromeScanning:(NSNotification *)noti {
-//    MRJ_QRCodeLog(@"noti - - %@", noti);
-    
     [self handleQRCresult:noti.object];
 }
 
-- (void)handleQRCresult:(id)result
-{
+- (void)handleQRCresult:(id)result {
     NSDictionary *qrcdic = nil;
     NSError *err = nil;
     id resulta = [MRJ_QRCodeUtil decodeDataWithCodeStr:result EncryptType:_decodType];
     if ([result integerValue] == -1) {
         err = [[NSError alloc] initWithDomain:@"error image core" code:-1 userInfo:nil];
-    }else
-    {
+    } else {
         if ([resulta isKindOfClass:[NSDictionary class]]) {
             qrcdic = resulta;
         }else if ([resulta isKindOfClass:[NSError class]])
@@ -81,11 +77,9 @@
     if (self.resultBlcok) {
         self.resultBlcok(qrcdic, err, self);
     }
-    
 }
 
-- (void)getRuleState:(AuthorizationStateBlock)authorizationHander
-{
+- (void)getRuleState:(AuthorizationStateBlock)authorizationHander {
     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     if (device) {
         AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];

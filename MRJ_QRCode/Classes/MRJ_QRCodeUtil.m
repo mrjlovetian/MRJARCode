@@ -11,7 +11,7 @@
 #import "MRJ_QRCodeConst.h"
 
 @implementation MRJ_QRCodeUtil
-+ (NSData *)encryptDicWithParmStr:(NSString *)parmStr EncryptType:(EncryptType)encryptType{
++ (NSData *)encryptDicWithParmStr:(NSString *)parmStr EncryptType:(EncryptType)encryptType {
     NSData *resultData = nil;
     if (encryptType == EncryptTypeNone) {
         resultData = [parmStr dataUsingEncoding:NSUTF8StringEncoding];
@@ -37,20 +37,15 @@
     
     if (encryptType == EncryptTypeNone) {
         result = [MRJ_QRCodeUtil dictionaryWithJsonString:codeStr];
-        
-        
-    }else if (encryptType == EncryptTypeBase64)
-    {
+    }else if (encryptType == EncryptTypeBase64) {
         NSData *data = [[NSData alloc]initWithBase64EncodedString:codeStr options:0];
         NSString *resultStr = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
         result = [MRJ_QRCodeUtil dictionaryWithJsonString:resultStr];
         
-    }else if (encryptType == EncryptTypeRSA)
-    {
+    }else if (encryptType == EncryptTypeRSA){
         NSString *resultStr = [RSAUtil decryptString:codeStr privateKey:MRJ_RSA_Privite_key];
         result = [MRJ_QRCodeUtil dictionaryWithJsonString:resultStr];
     }
-    
     return result;
 }
 
@@ -62,19 +57,16 @@
     }
     NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
     NSError *err;
-    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData
-                                                        options:NSJSONReadingMutableContainers
-                                                          error:&err];
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&err];
     
     if(err) {
-        
         return err;
     }
     return dic;
 }
 
 ///字典转json格式字符串：
-+ (NSString*)dictionaryToJson:(NSDictionary *)dic{
++ (NSString*)dictionaryToJson:(NSDictionary *)dic {
     if ([dic isKindOfClass:[NSDictionary class]]) {
         NSError *parseError = nil;
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:&parseError];

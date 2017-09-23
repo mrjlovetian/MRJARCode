@@ -42,7 +42,6 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
 - (instancetype)initWithFrame:(CGRect)frame layer:(CALayer *)layer {
     if (self = [super initWithFrame:frame]) {
         self.tempLayer = layer;
-        
         // 布局扫描界面
         [self setupSubviews];
     }
