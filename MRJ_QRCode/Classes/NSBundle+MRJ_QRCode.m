@@ -29,7 +29,6 @@
     } else {
         language = @"en";
     }
-    
     bundle = [NSBundle bundleWithPath:[[self mrj_LibraryBundle] pathForResource:language ofType:@"lproj"]];
     return [bundle localizedStringForKey:key value:value table:nil];
 }

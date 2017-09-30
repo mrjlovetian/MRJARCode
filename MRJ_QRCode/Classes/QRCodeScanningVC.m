@@ -28,8 +28,7 @@
                 // 注册观察者
                 [MRJ_QRCodeNotificationCenter addObserver:self selector:@selector(MRJ_QRCodeInformationFromeAibum:) name:MRJ_QRCodeInformationFromeAibum object:nil];
                 [MRJ_QRCodeNotificationCenter addObserver:self selector:@selector(MRJ_QRCodeInformationFromeScanning:) name:MRJ_QRCodeInformationFromeScanning object:nil];
-            }else
-            {
+            } else {
                 NSLog(@"这是未获得状态");
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     [self dismissViewControllerAnimated:YES completion:^{
@@ -47,7 +46,6 @@
 }
 
 - (void)MRJ_QRCodeInformationFromeAibum:(NSNotification *)noti {
-    
     [self handleQRCresult:noti.object];
 }
 
@@ -65,15 +63,13 @@
     } else {
         if ([resulta isKindOfClass:[NSDictionary class]]) {
             qrcdic = resulta;
-        }else if ([resulta isKindOfClass:[NSError class]])
-        {
+        }else if ([resulta isKindOfClass:[NSError class]]) {
             err = resulta;
         }
     }
     if ([self.delegate respondsToSelector:@selector(QRCodeScanningVCResult:error:qrc:)]) {
         [self.delegate QRCodeScanningVCResult:qrcdic error:err qrc:self];
     }
-    
     if (self.resultBlcok) {
         self.resultBlcok(qrcdic, err, self);
     }
@@ -113,7 +109,6 @@
                 NSLog(@"未获得权限");
                 authorizationHander(AuthorizationStateDenied);
             }
-            
         } else if (status == AVAuthorizationStatusRestricted) {
             NSLog(@"因为系统原因, 无法访问相册");
             if (authorizationHander) {
