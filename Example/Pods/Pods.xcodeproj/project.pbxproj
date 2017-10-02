@@ -16,7 +16,7 @@
 		3829A149B503A14DC7F0D0D3433D7DEC /* MRJ_QRCodeScanningVC.h in Headers */ = {isa = PBXBuildFile; fileRef = B325481EB8300832F0CE376A32419333 /* MRJ_QRCodeScanningVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A8612D360B8F701A3E0303DCDF98E79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		4B5683B7920E6E59F25ADC26FC80F907 /* Pods-YHJQRCode_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F95115D9453C799FD884516BFB1F70B /* Pods-YHJQRCode_Tests-dummy.m */; };
-		5DE36E4A7C537B2DD64C40A9A721D61F /* RSAUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E8365E123A3A45A6623E4F0EFE6691 /* RSAUtil.m */; };
+		5DE36E4A7C537B2DD64C40A9A721D61F /* MRJRSAUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E8365E123A3A45A6623E4F0EFE6691 /* MRJRSAUtil.m */; };
 		6275F62B22957A6427E45C4A4F91C002 /* MRJ_QRCodeScanningVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F7B698F3C2E01A35B47858C22A28D4 /* MRJ_QRCodeScanningVC.m */; };
 		6428649D056B9B6107990C13F132059F /* MRJ_QRCode-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E435255625CE0B0FB8D8D54571AA1B82 /* MRJ_QRCode-dummy.m */; };
 		76C2189EADB050000E9E273D6AA31DAE /* MRJ_QRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D084E7EF8AFA222A801C9944DA0D637 /* MRJ_QRCodeTool.m */; };
@@ -29,7 +29,7 @@
 		A3B3993193CCE49A25D7B6B2B19CF5B9 /* MRJ_QRCodeScanningView.h in Headers */ = {isa = PBXBuildFile; fileRef = 763CD94B7098DD7CB1F4877AC755BA3D /* MRJ_QRCodeScanningView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5D88ACF81901D88AA435056D425FC7B /* MRJ_QRCodeConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D6D50DA51EEDBF2D4E31C2889F573A2 /* MRJ_QRCodeConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB5D7ADF7EE17F8DAC11D39EFDB4B6C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		B467B7AB0F684AB2F7E66189962E8760 /* RSAUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 2233083E76A0A5613D480282A0FA2BCD /* RSAUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B467B7AB0F684AB2F7E66189962E8760 /* MRJRSAUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 2233083E76A0A5613D480282A0FA2BCD /* MRJRSAUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B8D35CA538A53B48B86142FE903A56B6 /* Pods-YHJQRCode_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CBF3BF2247EBB23AC12958F94E81E5A /* Pods-YHJQRCode_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D2FC40BE3D1629CCA4FFB64D5EA6EE93 /* MRJ_QRCodeUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB128DE0F329E8FB4FC1A8855C98EB7 /* MRJ_QRCodeUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE47C4AE2F716F8E086EFEF0E3147A63 /* MRJ_QRCode.h in Headers */ = {isa = PBXBuildFile; fileRef = DE25A08685AEAAB469C3EFAFB8FB382B /* MRJ_QRCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -52,7 +52,7 @@
 		157F1949A61C69C9EE0EB5D13DE5C52D /* MRJ_QRCode-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRJ_QRCode-umbrella.h"; sourceTree = "<group>"; };
 		1F95115D9453C799FD884516BFB1F70B /* Pods-YHJQRCode_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YHJQRCode_Tests-dummy.m"; sourceTree = "<group>"; };
 		2170B1E9E6ED68D895318A1E268FA884 /* MRJ_QRCode-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRJ_QRCode-prefix.pch"; sourceTree = "<group>"; };
-		2233083E76A0A5613D480282A0FA2BCD /* RSAUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RSAUtil.h; path = MRJ_QRCode/Classes/RSAUtil.h; sourceTree = "<group>"; };
+		2233083E76A0A5613D480282A0FA2BCD /* MRJRSAUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRJRSAUtil.h; path = MRJ_QRCode/Classes/MRJRSAUtil.h; sourceTree = "<group>"; };
 		2572F60876FC9AA3AFAD67E935B166CC /* QRCodeScanningVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeScanningVC.h; path = MRJ_QRCode/Classes/QRCodeScanningVC.h; sourceTree = "<group>"; };
 		34B471FDAB0BDE60DD4B9BD7A06BA729 /* QRCodeScanningVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCodeScanningVC.m; path = MRJ_QRCode/Classes/QRCodeScanningVC.m; sourceTree = "<group>"; };
 		396E2163FDDA62118DECEEE197E3877A /* Pods-YHJQRCode_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YHJQRCode_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -64,27 +64,27 @@
 		62F7B698F3C2E01A35B47858C22A28D4 /* MRJ_QRCodeScanningVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRJ_QRCodeScanningVC.m; path = MRJ_QRCode/Classes/MRJ_QRCodeScanningVC.m; sourceTree = "<group>"; };
 		641B13C7E8EA90E19AA92209C5BBFBCD /* Pods-YHJQRCode_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YHJQRCode_Example-umbrella.h"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6CF0F0C0E7782510765AD6E85782445D /* Pods-YHJQRCode_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-YHJQRCode_Tests.modulemap"; sourceTree = "<group>"; };
+		6CF0F0C0E7782510765AD6E85782445D /* Pods-YHJQRCode_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-YHJQRCode_Tests.modulemap"; sourceTree = "<group>"; };
 		763CD94B7098DD7CB1F4877AC755BA3D /* MRJ_QRCodeScanningView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRJ_QRCodeScanningView.h; path = MRJ_QRCode/Classes/MRJ_QRCodeScanningView.h; sourceTree = "<group>"; };
 		86DE69F218420CA1B0483682C12B7F67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A7B94E76B193E51F3C97060679D9472 /* Pods-YHJQRCode_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YHJQRCode_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8D6D50DA51EEDBF2D4E31C2889F573A2 /* MRJ_QRCodeConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRJ_QRCodeConst.h; path = MRJ_QRCode/Classes/MRJ_QRCodeConst.h; sourceTree = "<group>"; };
-		92E8365E123A3A45A6623E4F0EFE6691 /* RSAUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RSAUtil.m; path = MRJ_QRCode/Classes/RSAUtil.m; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		92E8365E123A3A45A6623E4F0EFE6691 /* MRJRSAUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRJRSAUtil.m; path = MRJ_QRCode/Classes/MRJRSAUtil.m; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93F6F6063478D81D2566A03F5744B9C0 /* MRJ_QRCodeScanningView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRJ_QRCodeScanningView.m; path = MRJ_QRCode/Classes/MRJ_QRCodeScanningView.m; sourceTree = "<group>"; };
-		9C7020C0CA39D0EC6FA0B2C43BA1B5FA /* MRJ_QRCode.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MRJ_QRCode.modulemap; sourceTree = "<group>"; };
+		9C7020C0CA39D0EC6FA0B2C43BA1B5FA /* MRJ_QRCode.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MRJ_QRCode.modulemap; sourceTree = "<group>"; };
 		9CBF3BF2247EBB23AC12958F94E81E5A /* Pods-YHJQRCode_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YHJQRCode_Tests-umbrella.h"; sourceTree = "<group>"; };
-		A229573019AB52DF7E2BC041392457D0 /* Pods_YHJQRCode_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_YHJQRCode_Example.framework; path = "Pods-YHJQRCode_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A229573019AB52DF7E2BC041392457D0 /* Pods_YHJQRCode_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YHJQRCode_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8D7B5A60F8E4FDAFB46FC8D4DB4E0E1 /* Pods-YHJQRCode_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YHJQRCode_Example-dummy.m"; sourceTree = "<group>"; };
 		AE7089BBBE71BC73A2E4625FA768E751 /* Pods-YHJQRCode_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YHJQRCode_Tests-resources.sh"; sourceTree = "<group>"; };
-		AF84D478766CF7E584CBB4B24A4F82D7 /* Pods-YHJQRCode_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-YHJQRCode_Example.modulemap"; sourceTree = "<group>"; };
+		AF84D478766CF7E584CBB4B24A4F82D7 /* Pods-YHJQRCode_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-YHJQRCode_Example.modulemap"; sourceTree = "<group>"; };
 		B325481EB8300832F0CE376A32419333 /* MRJ_QRCodeScanningVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRJ_QRCodeScanningVC.h; path = MRJ_QRCode/Classes/MRJ_QRCodeScanningVC.h; sourceTree = "<group>"; };
 		B796091AFFF823F774BCB1F96F955442 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B8A5A9D9E0B06A1D5F64F1FB251B2239 /* Pods_YHJQRCode_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_YHJQRCode_Tests.framework; path = "Pods-YHJQRCode_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8A5A9D9E0B06A1D5F64F1FB251B2239 /* Pods_YHJQRCode_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YHJQRCode_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BB21EC5157DEB2ABB2955237B05B3F /* MRJ_QRCodeUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRJ_QRCodeUtil.m; path = MRJ_QRCode/Classes/MRJ_QRCodeUtil.m; sourceTree = "<group>"; };
 		CBA8CC5C9605297994E33CE452638927 /* MRJ_QRCodeConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRJ_QRCodeConst.m; path = MRJ_QRCode/Classes/MRJ_QRCodeConst.m; sourceTree = "<group>"; };
 		CCF9D72B665384F4535899E5445B59BF /* MRJ_QRCode.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = MRJ_QRCode.bundle; sourceTree = "<group>"; };
-		DB28921C77C5B5085F982A7B8B98F950 /* MRJ_QRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MRJ_QRCode.framework; path = MRJ_QRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB28921C77C5B5085F982A7B8B98F950 /* MRJ_QRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRJ_QRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB659FE23CC39C848F68C3758AD6E015 /* Pods-YHJQRCode_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YHJQRCode_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DE25A08685AEAAB469C3EFAFB8FB382B /* MRJ_QRCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRJ_QRCode.h; path = MRJ_QRCode/Classes/MRJ_QRCode.h; sourceTree = "<group>"; };
 		E435255625CE0B0FB8D8D54571AA1B82 /* MRJ_QRCode-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MRJ_QRCode-dummy.m"; sourceTree = "<group>"; };
@@ -153,8 +153,8 @@
 				F5475B23A41B317C3C78AEAA3A05C174 /* NSBundle+MRJ_QRCode.m */,
 				2572F60876FC9AA3AFAD67E935B166CC /* QRCodeScanningVC.h */,
 				34B471FDAB0BDE60DD4B9BD7A06BA729 /* QRCodeScanningVC.m */,
-				2233083E76A0A5613D480282A0FA2BCD /* RSAUtil.h */,
-				92E8365E123A3A45A6623E4F0EFE6691 /* RSAUtil.m */,
+				2233083E76A0A5613D480282A0FA2BCD /* MRJRSAUtil.h */,
+				92E8365E123A3A45A6623E4F0EFE6691 /* MRJRSAUtil.m */,
 			);
 			name = Code;
 			sourceTree = "<group>";
@@ -289,7 +289,7 @@
 				D2FC40BE3D1629CCA4FFB64D5EA6EE93 /* MRJ_QRCodeUtil.h in Headers */,
 				957358AD302B8EFB8DCAD2638B8AAFFA /* NSBundle+MRJ_QRCode.h in Headers */,
 				220217A0211B91B551899041E816FC1D /* QRCodeScanningVC.h in Headers */,
-				B467B7AB0F684AB2F7E66189962E8760 /* RSAUtil.h in Headers */,
+				B467B7AB0F684AB2F7E66189962E8760 /* MRJRSAUtil.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +433,7 @@
 				312514D67B11EE793961F23B719836A7 /* MRJ_QRCodeUtil.m in Sources */,
 				2961231FEE06C568D0A307AE9A62CC98 /* NSBundle+MRJ_QRCode.m in Sources */,
 				9973146DCA6FE92C46116BA30E3738FD /* QRCodeScanningVC.m in Sources */,
-				5DE36E4A7C537B2DD64C40A9A721D61F /* RSAUtil.m in Sources */,
+				5DE36E4A7C537B2DD64C40A9A721D61F /* MRJRSAUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

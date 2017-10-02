@@ -7,7 +7,7 @@
 //
 
 #import "MRJ_QRCodeUtil.h"
-#import "RSAUtil.h"
+#import "MRJRSAUtil.h"
 #import "MRJ_QRCodeConst.h"
 
 @implementation MRJ_QRCodeUtil
@@ -24,13 +24,13 @@
         NSData *nsdataFromBase64Data = [nsdataFromBase64String base64EncodedDataWithOptions:0];
         resultData = nsdataFromBase64Data;
     } else {
-        NSString *string_data = [RSAUtil encryptString:parmStr publicKey:MRJ_RSA_Public_key];
+        NSString *string_data = [MRJRSAUtil encryptString:parmStr publicKey:MRJ_RSA_Public_key];
         resultData = [string_data dataUsingEncoding:NSUTF8StringEncoding];
     }
     return resultData;
 }
 
-+ (id)decodeDataWithCodeStr:(NSString *)codeStr  EncryptType:(EncryptType)encryptType;{
++ (id)decodeDataWithCodeStr:(NSString *)codeStr  EncryptType:(EncryptType)encryptType {
     id result;
     if (encryptType == EncryptTypeNone) {
         result = [MRJ_QRCodeUtil dictionaryWithJsonString:codeStr];
@@ -39,7 +39,7 @@
         NSString *resultStr = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
         result = [MRJ_QRCodeUtil dictionaryWithJsonString:resultStr];
     } else if (encryptType == EncryptTypeRSA){
-        NSString *resultStr = [RSAUtil decryptString:codeStr privateKey:MRJ_RSA_Privite_key];
+        NSString *resultStr = [MRJRSAUtil decryptString:codeStr privateKey:MRJ_RSA_Privite_key];
         result = [MRJ_QRCodeUtil dictionaryWithJsonString:resultStr];
     }
     return result;
@@ -88,6 +88,7 @@
     //MRJ_QRCodeLog(@"压缩后图片尺寸 － width：%.2f, height: %.2f", imageWidth / scale, imageHeight / scale);
     return [self imageWithImage:image scaledToSize:CGSizeMake(imageWidth / scale, imageHeight / scale)];
 }
+
 /// 返回一张处理后的图片
 + (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)size {
     UIGraphicsBeginImageContext(size);

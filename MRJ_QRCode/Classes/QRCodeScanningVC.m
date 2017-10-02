@@ -10,15 +10,14 @@
 #import "MRJ_QRCodeConst.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface QRCodeScanningVC (){
-    
+@interface QRCodeScanningVC () {
     EncryptType _decodType;
 }
 @end
 
 @implementation QRCodeScanningVC
 
-- (id)initRuleDecodeType:(EncryptType)decodType State:(AuthorizationStateBlock)authorizationHander{
+- (id)initRuleDecodeType:(EncryptType)decodType State:(AuthorizationStateBlock)authorizationHander {
     self = [super init];
     _decodType = decodType;
     if (self) {
@@ -85,16 +84,13 @@
                     if (authorizationHander) {
                         authorizationHander(AuthorizationStateAllowed);
                     }
-                    
                     MRJ_QRCodeLog(@"当前线程 - - %@", [NSThread currentThread]);
                     // 用户第一次同意了访问相机权限
                     MRJ_QRCodeLog(@"用户第一次同意了访问相机权限");
-                    
                 } else {
                     if (authorizationHander) {
                         authorizationHander(AuthorizationStateDenied);
                     }
-                    
                     // 用户第一次拒绝了访问相机权限
                     MRJ_QRCodeLog(@"用户第一次拒绝了访问相机权限");
                 }
@@ -103,26 +99,19 @@
             if (authorizationHander) {
                 authorizationHander(AuthorizationStateAllowed);
             }
-
         } else if (status == AVAuthorizationStatusDenied) { // 用户拒绝当前应用访问相机
             if (authorizationHander) {
-                NSLog(@"未获得权限");
+                MRJ_QRCodeLog(@"未获得权限");
                 authorizationHander(AuthorizationStateDenied);
             }
         } else if (status == AVAuthorizationStatusRestricted) {
-            NSLog(@"因为系统原因, 无法访问相册");
+            MRJ_QRCodeLog(@"因为系统原因, 无法访问相册");
             if (authorizationHander) {
                 authorizationHander(AuthorizationStateAlbumDenied);
             }
         }
     } else {
-//        UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"未检测到您的摄像头" preferredStyle:(UIAlertControllerStyleAlert)];
-//        UIAlertAction *alertA = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
-//            
-//        }];
-//        
-//        [alertC addAction:alertA];
-//        [self presentViewController:alertC animated:YES completion:nil];
+        MRJ_QRCodeLog(@"未检测到您的摄像头");
     }
 }
 

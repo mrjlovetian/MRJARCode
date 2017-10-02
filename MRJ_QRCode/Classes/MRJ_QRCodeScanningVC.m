@@ -42,7 +42,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
     self.view.backgroundColor = [UIColor clearColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self setupNavigationBar];
@@ -117,7 +116,9 @@
         }
     }
 }
+
 #pragma mark - - - UIImagePickerControllerDelegate
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     [self.view addSubview:self.scanningView];
     [self dismissViewControllerAnimated:YES completion:^{
@@ -131,6 +132,7 @@
 }
 
 #pragma mark - - - 从相册中识别二维码, 并进行界面跳转
+
 - (void)scanQRCodeFromPhotosInTheAlbum:(UIImage *)image {
     // 对选取照片的处理，如果选取的图片尺寸过大，则压缩选取图片，否则不作处理
     image = [MRJ_QRCodeUtil imageSizeWithScreenImage:image];
@@ -194,13 +196,10 @@
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
     // 0、扫描成功之后的提示音
     [self MRJ__playSoundEffect:@"sound" ofType:@"caf"];
-    
     // 1、如果扫描完成，停止会话
     [self.session stopRunning];
-    
     // 2、删除预览图层
     [self.previewLayer removeFromSuperlayer];
-    
     // 3、设置界面显示扫描结果
     if (metadataObjects.count > 0) {
         AVMetadataMachineReadableCodeObject *obj = metadataObjects[0];
@@ -215,20 +214,16 @@
     // 获取音效
     NSString *audioFile = [[NSBundle mainBundle] pathForResource:name ofType:type inDirectory:@"MRJ_QRCode.bundle"];
     NSURL *fileUrl = [NSURL fileURLWithPath:audioFile];
-    
     // 1、获得系统声音ID
     SystemSoundID soundID = 0;
-    
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)(fileUrl), &soundID);
-    
     AudioServicesAddSystemSoundCompletion(soundID, NULL, NULL, soundCompleteCallback, NULL);
-    
     // 2、播放音频
     AudioServicesPlaySystemSound(soundID); // 播放音效
 }
 
 /** 播放完成回调函数 */
-void soundCompleteCallback(SystemSoundID soundID, void *clientData){
+void soundCompleteCallback(SystemSoundID soundID, void *clientData) {
     //MRJ_QRCodeLog(@"播放完成...");
 }
 

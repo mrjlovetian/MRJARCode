@@ -10,11 +10,11 @@
 #import "MRJ_QRCodeScanningView.h"
 
 @implementation NSBundle (MRJ_QRCode)
-+ (NSString *)mrj_QRCodeLocalizedStringForKey:(NSString *)key{
++ (NSString *)mrj_QRCodeLocalizedStringForKey:(NSString *)key {
     return [self mrj_QRCodeLocalizedStringForKey:key value:nil];
 }
 
-+ (NSString *)mrj_QRCodeLocalizedStringForKey:(NSString *)key value:(NSString *)value{
++ (NSString *)mrj_QRCodeLocalizedStringForKey:(NSString *)key value:(NSString *)value {
     NSBundle *bundle = nil;
     // （iOS获取的语言字符串比较不稳定）目前框架只处理en、zh-Hans、zh-Hant三种情况，其他按照系统默认处理
     NSString *language = [NSLocale preferredLanguages].firstObject;

@@ -9,7 +9,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RSAUtil : NSObject
+@interface MRJRSAUtil : NSObject
 
 // return base64 encoded string
 + (NSString *)encryptString:(NSString *)str publicKey:(NSString *)pubKey;

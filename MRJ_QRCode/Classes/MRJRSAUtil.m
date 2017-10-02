@@ -6,13 +6,13 @@
 //  Copyright © 2017年 余洪江. All rights reserved.
 //
 
-#import "RSAUtil.h"
+#import "MRJRSAUtil.h"
 #import <Security/Security.h>
-@interface RSAUtil ()
+@interface MRJRSAUtil ()
 
 @end
 
-@implementation RSAUtil
+@implementation MRJRSAUtil
 
 /*
  static NSString *base64_encode(NSString *str){
@@ -124,7 +124,7 @@ static NSData *base64_decode(NSString *str){
     
     // This will be base64 encoded, decode it.
     NSData *data = base64_decode(key);
-    data = [RSAUtil stripPublicKeyHeader:data];
+    data = [MRJRSAUtil stripPublicKeyHeader:data];
     if(!data){
         return nil;
     }
@@ -186,7 +186,7 @@ static NSData *base64_decode(NSString *str){
     
     // This will be base64 encoded, decode it.
     NSData *data = base64_decode(key);
-    data = [RSAUtil stripPrivateKeyHeader:data];
+    data = [MRJRSAUtil stripPrivateKeyHeader:data];
     if(!data){
         return nil;
     }
@@ -274,7 +274,7 @@ static NSData *base64_decode(NSString *str){
 }
 
 + (NSString *)encryptString:(NSString *)str privateKey:(NSString *)privKey{
-    NSData *data = [RSAUtil encryptData:[str dataUsingEncoding:NSUTF8StringEncoding] privateKey:privKey];
+    NSData *data = [MRJRSAUtil encryptData:[str dataUsingEncoding:NSUTF8StringEncoding] privateKey:privKey];
     NSString *ret = base64_encode_data(data);
     return ret;
 }
@@ -283,11 +283,11 @@ static NSData *base64_decode(NSString *str){
     if(!data || !privKey){
         return nil;
     }
-    SecKeyRef keyRef = [RSAUtil addPrivateKey:privKey];
+    SecKeyRef keyRef = [MRJRSAUtil addPrivateKey:privKey];
     if(!keyRef){
         return nil;
     }
-    return [RSAUtil encryptData:data withKeyRef:keyRef];
+    return [MRJRSAUtil encryptData:data withKeyRef:keyRef];
 }
 
 + (NSData *)decryptData:(NSData *)data withKeyRef:(SecKeyRef) keyRef{
@@ -346,7 +346,7 @@ static NSData *base64_decode(NSString *str){
 
 + (NSString *)decryptString:(NSString *)str privateKey:(NSString *)privKey{
     NSData *data = [[NSData alloc] initWithBase64EncodedString:str options:NSDataBase64DecodingIgnoreUnknownCharacters];
-    data = [RSAUtil decryptData:data privateKey:privKey];
+    data = [MRJRSAUtil decryptData:data privateKey:privKey];
     NSString *ret = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     return ret;
 }
@@ -355,11 +355,11 @@ static NSData *base64_decode(NSString *str){
     if(!data || !privKey){
         return nil;
     }
-    SecKeyRef keyRef = [RSAUtil addPrivateKey:privKey];
+    SecKeyRef keyRef = [MRJRSAUtil addPrivateKey:privKey];
     if(!keyRef){
         return nil;
     }
-    return [RSAUtil decryptData:data withKeyRef:keyRef];
+    return [MRJRSAUtil decryptData:data withKeyRef:keyRef];
 }
 
 /* END: Encryption & Decryption with RSA private key */
@@ -367,7 +367,7 @@ static NSData *base64_decode(NSString *str){
 /* START: Encryption & Decryption with RSA public key */
 
 + (NSString *)encryptString:(NSString *)str publicKey:(NSString *)pubKey{
-    NSData *data = [RSAUtil encryptData:[str dataUsingEncoding:NSUTF8StringEncoding] publicKey:pubKey];
+    NSData *data = [MRJRSAUtil encryptData:[str dataUsingEncoding:NSUTF8StringEncoding] publicKey:pubKey];
     NSString *ret = base64_encode_data(data);
     return ret;
 }
@@ -376,16 +376,16 @@ static NSData *base64_decode(NSString *str){
     if(!data || !pubKey){
         return nil;
     }
-    SecKeyRef keyRef = [RSAUtil addPublicKey:pubKey];
+    SecKeyRef keyRef = [MRJRSAUtil addPublicKey:pubKey];
     if(!keyRef){
         return nil;
     }
-    return [RSAUtil encryptData:data withKeyRef:keyRef];
+    return [MRJRSAUtil encryptData:data withKeyRef:keyRef];
 }
 
 + (NSString *)decryptString:(NSString *)str publicKey:(NSString *)pubKey{
     NSData *data = [[NSData alloc] initWithBase64EncodedString:str options:NSDataBase64DecodingIgnoreUnknownCharacters];
-    data = [RSAUtil decryptData:data publicKey:pubKey];
+    data = [MRJRSAUtil decryptData:data publicKey:pubKey];
     NSString *ret = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     return ret;
 }
@@ -394,11 +394,11 @@ static NSData *base64_decode(NSString *str){
     if(!data || !pubKey){
         return nil;
     }
-    SecKeyRef keyRef = [RSAUtil addPublicKey:pubKey];
+    SecKeyRef keyRef = [MRJRSAUtil addPublicKey:pubKey];
     if(!keyRef){
         return nil;
     }
-    return [RSAUtil decryptData:data withKeyRef:keyRef];
+    return [MRJRSAUtil decryptData:data withKeyRef:keyRef];
 }
 
 /* END: Encryption & Decryption with RSA public key */

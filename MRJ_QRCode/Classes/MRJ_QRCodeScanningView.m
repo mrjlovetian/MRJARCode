@@ -184,6 +184,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
 }
 
 #pragma mark - - - 照明灯的点击事件
+
 - (void)light_buttonAction:(UIButton *)button {
     if (button.selected == NO) { // 点击打开照明灯
         [self turnOnLight:YES];
@@ -222,12 +223,15 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
 }
 
 #pragma mark - - - 添加定时器
+
 - (void)addTimer {
     [self addScanningline];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:MRJ_QRCodeScanningLineAnimation target:self selector:@selector(timeAction) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
 }
+
 #pragma mark - - - 移除定时器
+
 - (void)removeTimer {
     [self.timer invalidate];
     self.timer = nil;
@@ -236,11 +240,10 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
 }
 
 #pragma mark - - - 执行定时器方法
+
 - (void)timeAction {
     __block CGRect frame = _scanningline.frame;
-    
     static BOOL flag = YES;
-    
     if (flag) {
         frame.origin.y = scanContent_Y;
         flag = NO;

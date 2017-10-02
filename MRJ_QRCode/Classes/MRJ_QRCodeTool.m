@@ -9,7 +9,7 @@
 #import "MRJ_QRCodeTool.h"
 #import <CoreImage/CoreImage.h>
 #import <AVFoundation/AVFoundation.h>
-#import "RSAUtil.h"
+#import "MRJRSAUtil.h"
 #import "MRJ_QRCodeConst.h"
 #import "NSBundle+MRJ_QRCode.h"
 
@@ -72,7 +72,7 @@
  *  @param logoImageName    logo的image名
  *  @param logoScaleToSuperView    logo相对于父视图的缩放比（取值范围：0-1，0，代表不显示，1，代表与父视图大小相同）
  */
-+ (UIImage *)MRJ_generateWithLogoQRCodeData:(NSDictionary *)dataDic logoImageName:(NSString *)logoImageName logoScaleToSuperView:(CGFloat)logoScaleToSuperView encryptType:(EncryptType)encryptType errorHandle:(ErrorHandle)errorHandle{
++ (UIImage *)MRJ_generateWithLogoQRCodeData:(NSDictionary *)dataDic logoImageName:(NSString *)logoImageName logoScaleToSuperView:(CGFloat)logoScaleToSuperView encryptType:(EncryptType)encryptType errorHandle:(ErrorHandle)errorHandle {
     if (![self verifyLogoImageValid:logoImageName]) {
         errorHandle([NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeLogoImageError]);
         return nil;
@@ -134,7 +134,7 @@
     // 恢复滤镜的默认属性
     [filter setDefaults];
     // 2、设置数据
-    NSString *string_data = [RSAUtil encryptString:[MRJ_QRCodeUtil dictionaryToJson:dataDic] publicKey:MRJ_RSA_Public_key];//data
+    NSString *string_data = [MRJRSAUtil encryptString:[MRJ_QRCodeUtil dictionaryToJson:dataDic] publicKey:MRJ_RSA_Public_key];//data
     // 将字符串转换成 NSdata (虽然二维码本质上是字符串, 但是这里需要转换, 不转换就崩溃)
     NSData *qrImageData = [string_data dataUsingEncoding:NSUTF8StringEncoding];
     // 设置过滤器的输入值, KVC赋值
@@ -168,7 +168,7 @@
 }
 
 ///判断二维码宽度有效性
-+ (BOOL)verifyCodeWidth:(CGFloat)codeWidth{
++ (BOOL)verifyCodeWidth:(CGFloat)codeWidth {
     if (codeWidth > 0 && codeWidth < [UIScreen mainScreen].bounds.size.width) {
         return YES;
     } else {
@@ -178,7 +178,7 @@
 }
 
 ///判断图片的有效性
-+ (BOOL)verifyLogoImageValid:(id)logoImage{
++ (BOOL)verifyLogoImageValid:(id)logoImage {
     if ([logoImage isKindOfClass:[UIImage class]]) {
         return YES;
     } else {
@@ -188,7 +188,7 @@
 }
 
 ///logo比例大小
-+ (BOOL)verifyLogoScale:(CGFloat)ogoScale{
++ (BOOL)verifyLogoScale:(CGFloat)ogoScale {
     if (ogoScale > 0 && ogoScale < 0.5) {
         return YES;
     } else {
