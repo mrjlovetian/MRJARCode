@@ -60,10 +60,10 @@
     if ([result integerValue] == -1) {
         err = [[NSError alloc] initWithDomain:@"error image core" code:-1 userInfo:nil];
     } else {
-        if ([resulta isKindOfClass:[NSDictionary class]]) {
-            qrcdic = resulta;
-        }else if ([resulta isKindOfClass:[NSError class]]) {
+        if ([resulta isKindOfClass:[NSError class]]) {
             err = resulta;
+        } else {
+            qrcdic = resulta;
         }
     }
     if ([self.delegate respondsToSelector:@selector(QRCodeScanningVCResult:error:qrc:)]) {
