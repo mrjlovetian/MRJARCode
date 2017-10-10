@@ -32,6 +32,9 @@
 
 + (id)decodeDataWithCodeStr:(NSString *)codeStr  EncryptType:(EncryptType)encryptType {
     id result;
+    if ([codeStr hasPrefix:@"http"]) {
+        return codeStr;
+    }
     if (encryptType == EncryptTypeNone) {
         result = [MRJ_QRCodeUtil dictionaryWithJsonString:codeStr];
     } else if (encryptType == EncryptTypeBase64) {

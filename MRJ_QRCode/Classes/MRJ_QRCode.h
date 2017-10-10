@@ -15,4 +15,4 @@
 #import "MRJ_QRCodeTool.h"
 #import "MRJ_QRCodeConst.h"
 #import "MRJ_QRCodeUtil.h"
-#import "MRJ_QRCodeScanningVC.h"
+#import "QRCodeScanningVC.h"
