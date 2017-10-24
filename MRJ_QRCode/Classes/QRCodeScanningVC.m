@@ -48,7 +48,7 @@
     [self handleQRCresult:noti.object];
 }
 
-///扫码成功操作
+/// 扫码成功操作
 - (void)MRJ_QRCodeInformationFromeScanning:(NSNotification *)noti {
     [self handleQRCresult:noti.object];
 }

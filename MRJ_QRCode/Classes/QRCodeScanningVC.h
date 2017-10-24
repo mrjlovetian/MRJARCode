@@ -24,18 +24,14 @@ typedef enum : NSUInteger {
 
 ///获取验证状态
 typedef void(^AuthorizationStateBlock)(AuthorizationState state);
-
 ///扫码结果返回
 typedef void(^QRCodeScanningVCBlock)(id result, NSError *err, UIViewController *vc);
-
 @interface QRCodeScanningVC : MRJ_QRCodeScanningVC
 
 ///初始化方法
 - (id)initRuleDecodeType:(EncryptType)decodType State:(AuthorizationStateBlock)authorizationHander;
-
 ///结果回调
 @property (nonatomic, copy)QRCodeScanningVCBlock resultBlcok;
-
 ///扫码代理方法
 @property (nonatomic, weak)id <QRCodeScanningVCDelegate> delegate;
 

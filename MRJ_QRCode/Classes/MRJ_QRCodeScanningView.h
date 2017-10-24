@@ -17,6 +17,7 @@
  *  @param layer     父视图 layer
  */
 - (instancetype)initWithFrame:(CGRect)frame layer:(CALayer *)layer;
+
 /**
  *  类方法创建MRJ_QRCodeScanningView
  *
