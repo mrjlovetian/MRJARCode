@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 
 typedef enum : NSUInteger {
-    EncryptTypeNone = 0,///没有加密方式
-    EncryptTypeBase64,///base64
-    EncryptTypeRSA,///非对称加密
+    EncryptTypeNone = 0,    ///没有加密方式
+    EncryptTypeBase64,      ///base64
+    EncryptTypeRSA,         ///非对称加密
 } EncryptType;
 
 @interface MRJ_QRCodeUtil : NSObject

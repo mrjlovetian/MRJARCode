@@ -20,7 +20,7 @@
  *  @param dataDic    传入你要生成二维码的数据
  *  @param imageViewWidth    图片的宽度
  */
-+ (UIImage *)MRJ_generateWithDefaultQRCodeData:(NSDictionary *)dataDic imageViewWidth:(CGFloat)imageViewWidth encryptType:(EncryptType)encryptType errorHandle:(ErrorHandle)errorHandle{
++ (UIImage *)MRJ_generateWithDefaultQRCodeData:(NSDictionary *)dataDic imageViewWidth:(CGFloat)imageViewWidth encryptType:(EncryptType)encryptType errorHandle:(ErrorHandle)errorHandle {
     if (![self verifyDicValid:dataDic]) {
         errorHandle([NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeDataError]);
         return nil;
