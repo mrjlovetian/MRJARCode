@@ -11,6 +11,7 @@
 #import "MRJ_QRCodeConst.h"
 
 @implementation MRJ_QRCodeUtil
+
 + (NSData *)encryptDicWithParmStr:(NSString *)parmStr EncryptType:(EncryptType)encryptType {
     NSData *resultData = nil;
     if (encryptType == EncryptTypeNone) {

@@ -12,6 +12,7 @@
 typedef void(^ErrorHandle)(NSString *err);
 
 @interface MRJ_QRCodeTool : NSObject
+
 /** 生成一张普通的二维码 */
 + (UIImage *)MRJ_generateWithDefaultQRCodeData:(NSDictionary *)dataDic imageViewWidth:(CGFloat)imageViewWidth encryptType:(EncryptType)encryptType errorHandle:(ErrorHandle)errorHandle;
 

@@ -15,6 +15,7 @@
 #import "MRJ_QRCodeUtil.h"
 
 @interface MRJ_QRCodeScanningVC () <AVCaptureMetadataOutputObjectsDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+
 /// 会话对象
 @property (nonatomic, strong) AVCaptureSession *session;
 /// 图层类
