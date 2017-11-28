@@ -10,8 +10,9 @@
 
 @interface NSBundle (MRJ_QRCode)
 
-///通过固定的宏寻找对应的资源，（国际化处理）
+/// 通过固定的宏寻找对应的资源，（国际化处理）
 + (NSString *)mrj_QRCodeLocalizedStringForKey:(NSString *)key;
+
 + (NSBundle *)mrj_LibraryBundle;
 
 @end

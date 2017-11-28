@@ -10,6 +10,7 @@
 #import "MRJ_QRCodeScanningView.h"
 
 @implementation NSBundle (MRJ_QRCode)
+
 + (NSString *)mrj_QRCodeLocalizedStringForKey:(NSString *)key {
     return [self mrj_QRCodeLocalizedStringForKey:key value:nil];
 }

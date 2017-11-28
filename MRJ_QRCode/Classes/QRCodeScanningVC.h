@@ -30,6 +30,7 @@ typedef void(^QRCodeScanningVCBlock)(id result, NSError *err, UIViewController *
 
 ///初始化方法
 - (id)initRuleDecodeType:(EncryptType)decodType State:(AuthorizationStateBlock)authorizationHander;
+
 ///结果回调
 @property (nonatomic, copy)QRCodeScanningVCBlock resultBlcok;
 ///扫码代理方法
