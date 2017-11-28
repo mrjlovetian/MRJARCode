@@ -142,7 +142,7 @@
     // 取得识别结果
     NSArray *features = [detector featuresInImage:[CIImage imageWithCGImage:image.CGImage]];
     
-    if (features.count >0) {
+    if (features.count > 0) {
         for (int index = 0; index < [features count]; index ++) {
             CIQRCodeFeature *feature = [features objectAtIndex:index];
             NSString *scannedResult = feature.messageString;

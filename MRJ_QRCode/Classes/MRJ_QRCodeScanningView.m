@@ -270,6 +270,4 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     }
 }
 
-
 @end
-
