@@ -209,7 +209,7 @@
     }
 }
 
-/** 播放音效文件 */
+/// 播放音效文件
 - (void)MRJ__playSoundEffect:(NSString *)name ofType:(NSString *)type {
     // 获取音效
     NSString *audioFile = [[NSBundle mainBundle] pathForResource:name ofType:type inDirectory:@"MRJ_QRCode.bundle"];
@@ -222,12 +222,12 @@
     AudioServicesPlaySystemSound(soundID); // 播放音效
 }
 
-/** 播放完成回调函数 */
+/// 播放完成回调函数
 void soundCompleteCallback(SystemSoundID soundID, void *clientData) {
     //MRJ_QRCodeLog(@"播放完成...");
 }
 
-///json格式字符串转字典：
+/// json格式字符串转字典：
 - (id)dictionaryWithJsonString:(NSString *)jsonString {
     if (jsonString == nil) {
         return nil;

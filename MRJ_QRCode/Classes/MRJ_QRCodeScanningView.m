@@ -26,10 +26,10 @@
 
 @implementation MRJ_QRCodeScanningView
 
-/** 扫描动画线(冲击波) 的高度 */
+/// 扫描动画线(冲击波) 的高度
 static CGFloat const scanninglineHeight = 12;
 
-/** 扫描内容外部View的alpha值 */
+/// 扫描内容外部View的alpha值
 static CGFloat const scanBorderOutsideViewAlpha = 0.4;
 
 - (CALayer *)tempLayer {

@@ -48,7 +48,7 @@
     return result;
 }
 
-///json格式字符串转字典：
+/// json格式字符串转字典：
 + (id)dictionaryWithJsonString:(NSString *)jsonString {
      if (jsonString == nil) {
         return nil;
@@ -62,7 +62,7 @@
     return dic;
 }
 
-///字典转json格式字符串：
+/// 字典转json格式字符串：
 + (NSString*)dictionaryToJson:(NSDictionary *)dic {
     if ([dic isKindOfClass:[NSDictionary class]]) {
         NSError *parseError = nil;

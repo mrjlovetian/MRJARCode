@@ -14,6 +14,7 @@
 #import "NSBundle+MRJ_QRCode.h"
 
 @implementation MRJ_QRCodeTool
+
 /**
  *  生成一张普通的二维码
  *
@@ -44,7 +45,7 @@
     return [MRJ_QRCodeTool createNonInterpolatedUIImageFormCIImage:outputImage withSize:imageViewWidth];
 }
 
-/** 根据CIImage生成指定大小的UIImage */
+/// 根据CIImage生成指定大小的UIImage
 + (UIImage *)createNonInterpolatedUIImageFormCIImage:(CIImage *)image withSize:(CGFloat)size {
     CGRect extent = CGRectIntegral(image.extent);
     CGFloat scale = MIN(size/CGRectGetWidth(extent), size/CGRectGetHeight(extent));
@@ -167,7 +168,7 @@
     }
 }
 
-///判断二维码宽度有效性
+/// 判断二维码宽度有效性
 + (BOOL)verifyCodeWidth:(CGFloat)codeWidth {
     if (codeWidth > 0 && codeWidth < [UIScreen mainScreen].bounds.size.width) {
         return YES;
@@ -177,7 +178,7 @@
     }
 }
 
-///判断图片的有效性
+/// 判断图片的有效性
 + (BOOL)verifyLogoImageValid:(id)logoImage {
     if ([logoImage isKindOfClass:[UIImage class]]) {
         return YES;
@@ -187,7 +188,7 @@
     }
 }
 
-///logo比例大小
+/// logo比例大小
 + (BOOL)verifyLogoScale:(CGFloat)ogoScale {
     if (ogoScale > 0 && ogoScale < 0.5) {
         return YES;
