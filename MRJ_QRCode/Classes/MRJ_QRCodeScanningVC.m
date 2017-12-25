@@ -21,6 +21,7 @@
 /// 图层类
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *previewLayer;
 @property (nonatomic, strong) MRJ_QRCodeScanningView *scanningView;
+
 @end
 
 @implementation MRJ_QRCodeScanningVC

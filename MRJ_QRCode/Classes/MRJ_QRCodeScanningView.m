@@ -17,6 +17,7 @@
 #define scanContent_X self.frame.size.width * 0.15
 
 @interface MRJ_QRCodeScanningView ()
+
 @property (nonatomic, strong) AVCaptureDevice *device;
 @property (nonatomic, strong) CALayer *tempLayer;
 @property (nonatomic, strong) UIImageView *scanningline;
@@ -66,6 +67,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     [self.tempLayer addSublayer:scanContent_layer];
     
 #pragma mark - - - 扫描外部View的创建
+    
     // 顶部layer的创建
     CALayer *top_layer = [[CALayer alloc] init];
     CGFloat top_layerX = 0;

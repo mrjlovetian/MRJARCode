@@ -318,7 +318,7 @@ static NSData *base64_decode(NSString *str){
             NSLog(@"SecKeyEncrypt fail. Error Code: %d", status);
             ret = nil;
             break;
-        }else{
+        } else {
             //the actual decrypted data is in the middle, locate it!
             int idxFirstZero = -1;
             int idxNextZero = (int)outlen;

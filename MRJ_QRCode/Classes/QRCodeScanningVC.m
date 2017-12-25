@@ -13,6 +13,7 @@
 @interface QRCodeScanningVC () {
     EncryptType _decodType;
 }
+
 @end
 
 @implementation QRCodeScanningVC
