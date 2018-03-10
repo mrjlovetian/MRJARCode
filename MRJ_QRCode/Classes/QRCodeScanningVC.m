@@ -29,7 +29,7 @@
                 [MRJ_QRCodeNotificationCenter addObserver:self selector:@selector(MRJ_QRCodeInformationFromeAibum:) name:MRJ_QRCodeInformationFromeAibum object:nil];
                 [MRJ_QRCodeNotificationCenter addObserver:self selector:@selector(MRJ_QRCodeInformationFromeScanning:) name:MRJ_QRCodeInformationFromeScanning object:nil];
             } else {
-                NSLog(@"这是未获得状态");
+                MRJ_QRCodeLog(@"这是未获得状态");
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     [self dismissViewControllerAnimated:YES completion:^{
                         

@@ -54,7 +54,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
 }
 
 - (void)setupSubviews {
-    // 扫描内容的创建
+    /// 扫描内容的创建
     CALayer *scanContent_layer = [[CALayer alloc] init];
     CGFloat scanContent_layerX = scanContent_X;
     CGFloat scanContent_layerY = scanContent_Y;
@@ -68,7 +68,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     
 #pragma mark - - - 扫描外部View的创建
     
-    // 顶部layer的创建
+    /// 顶部layer的创建
     CALayer *top_layer = [[CALayer alloc] init];
     CGFloat top_layerX = 0;
     CGFloat top_layerY = 0;
@@ -78,7 +78,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     top_layer.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:scanBorderOutsideViewAlpha].CGColor;
     [self.layer addSublayer:top_layer];
     
-    // 左侧layer的创建
+    /// 左侧layer的创建
     CALayer *left_layer = [[CALayer alloc] init];
     CGFloat left_layerX = 0;
     CGFloat left_layerY = scanContent_layerY;
@@ -88,7 +88,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     left_layer.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:scanBorderOutsideViewAlpha].CGColor;
     [self.layer addSublayer:left_layer];
     
-    // 右侧layer的创建
+    /// 右侧layer的创建
     CALayer *right_layer = [[CALayer alloc] init];
     CGFloat right_layerX = CGRectGetMaxX(scanContent_layer.frame);
     CGFloat right_layerY = scanContent_layerY;
@@ -98,7 +98,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     right_layer.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:scanBorderOutsideViewAlpha].CGColor;
     [self.layer addSublayer:right_layer];
     
-    // 下面layer的创建
+    /// 下面layer的创建
     CALayer *bottom_layer = [[CALayer alloc] init];
     CGFloat bottom_layerX = 0;
     CGFloat bottom_layerY = CGRectGetMaxY(scanContent_layer.frame);
@@ -108,7 +108,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     bottom_layer.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:scanBorderOutsideViewAlpha].CGColor;
     [self.layer addSublayer:bottom_layer];
     
-    // 提示Label
+    /// 提示Label
     UILabel *promptLabel = [[UILabel alloc] init];
     promptLabel.backgroundColor = [UIColor clearColor];
     CGFloat promptLabelX = 0;
@@ -122,7 +122,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     promptLabel.text = [NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeScaning];
     [self addSubview:promptLabel];
     
-    // 添加闪光灯按钮
+    /// 添加闪光灯按钮
     UIButton *light_button = [[UIButton alloc] init];
     CGFloat light_buttonX = 0;
     CGFloat light_buttonY = CGRectGetMaxY(promptLabel.frame) + scanContent_X * 0.5;
@@ -138,7 +138,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     [self addSubview:light_button];
     
 #pragma mark - - - 扫描边角imageView的创建
-    // 左上侧的image
+    /// 左上侧的image
     CGFloat margin = 7;
     
     UIImage *left_image = [UIImage imageNamed:[[NSBundle mrj_LibraryBundle] pathForResource:@"MRJ_CodeLeftTop@2x" ofType:@"png"]];
@@ -151,7 +151,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     left_imageView.image = left_image;
     [self.tempLayer addSublayer:left_imageView.layer];
     
-    // 右上侧的image
+    /// 右上侧的image
     UIImage *right_image = [UIImage imageNamed:[[NSBundle mrj_LibraryBundle] pathForResource:@"MRJ_CodeRightTop@2x" ofType:@"png"]];
     UIImageView *right_imageView = [[UIImageView alloc] init];
     CGFloat right_imageViewX = CGRectGetMaxX(scanContent_layer.frame) - right_image.size.width * 0.5 - margin;
@@ -162,7 +162,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     right_imageView.image = right_image;
     [self.tempLayer addSublayer:right_imageView.layer];
     
-    // 左下侧的image
+    /// 左下侧的image
     UIImage *left_image_down = [UIImage imageNamed:[[NSBundle mrj_LibraryBundle] pathForResource:@"MRJ_CodeLeftBottom@2x" ofType:@"png"]];
     UIImageView *left_imageView_down = [[UIImageView alloc] init];
     CGFloat left_imageView_downX = left_imageView.frame.origin.x;
@@ -173,7 +173,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     left_imageView_down.image = left_image_down;
     [self.tempLayer addSublayer:left_imageView_down.layer];
     
-    // 右下侧的image
+    /// 右下侧的image
     UIImage *right_image_down = [UIImage imageNamed:[[NSBundle mrj_LibraryBundle] pathForResource:@"MRJ_CodeRightBottom@2x" ofType:@"png"]];
     UIImageView *right_imageView_down = [[UIImageView alloc] init];
     CGFloat right_imageView_downX = right_imageView.frame.origin.x;

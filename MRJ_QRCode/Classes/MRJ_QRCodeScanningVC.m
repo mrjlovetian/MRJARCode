@@ -20,6 +20,7 @@
 @property (nonatomic, strong) AVCaptureSession *session;
 /// 图层类
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *previewLayer;
+/// 扫码视图
 @property (nonatomic, strong) MRJ_QRCodeScanningView *scanningView;
 
 @end
