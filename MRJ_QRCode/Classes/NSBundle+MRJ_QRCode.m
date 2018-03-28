@@ -34,7 +34,7 @@
     return [bundle localizedStringForKey:key value:value table:nil];
 }
 
-///加载pod资源相关资料
+/// 加载pod资源相关资料
 ///http://blog.xianqu.org/2015/08/pod-resources/
 + (NSBundle *)mrj_LibraryBundle {
     return [self bundleWithURL:[self mrj_myLibraryBundleURL]];

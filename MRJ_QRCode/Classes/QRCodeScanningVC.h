@@ -9,7 +9,7 @@
 #import "MRJ_QRCodeScanningVC.h"
 #import "MRJ_QRCode.h"
 
-///获取相机的权限状态
+/// 获取相机的权限状态
 typedef enum : NSUInteger {
     AuthorizationStateAllowed  =  1,
     AuthorizationStateDenied,
@@ -22,19 +22,19 @@ typedef enum : NSUInteger {
 
 @end
 
-///获取验证状态
+/// 获取验证状态
 typedef void(^AuthorizationStateBlock)(AuthorizationState state);
-///扫码结果返回
+/// 扫码结果返回
 typedef void(^QRCodeScanningVCBlock)(id result, NSError *err, UIViewController *vc);
 @interface QRCodeScanningVC : MRJ_QRCodeScanningVC
 
-///初始化方法
+/// 初始化方法
 - (id)initRuleDecodeType:(EncryptType)decodType State:(AuthorizationStateBlock)authorizationHander;
 
-///结果回调
+/// 结果回调
 @property (nonatomic, copy) QRCodeScanningVCBlock resultBlcok;
 
-///扫码代理方法
+/// 扫码代理方法
 @property (nonatomic, weak) id <QRCodeScanningVCDelegate> delegate;
 
 @end

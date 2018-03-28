@@ -85,11 +85,11 @@
     if (imageWidth <= screenWidth && imageHeight <= screenHeight) {
         return image;
     }
-    //MRJ_QRCodeLog(@"压缩前图片尺寸 － width：%.2f, height: %.2f", imageWidth, imageHeight);
+    /// MRJ_QRCodeLog(@"压缩前图片尺寸 － width：%.2f, height: %.2f", imageWidth, imageHeight);
     CGFloat max = MAX(imageWidth, imageHeight);
     // 如果是6plus等设备，比例应该是 3.0
     CGFloat scale = max / (screenHeight * 2.0f);
-    //MRJ_QRCodeLog(@"压缩后图片尺寸 － width：%.2f, height: %.2f", imageWidth / scale, imageHeight / scale);
+    /// MRJ_QRCodeLog(@"压缩后图片尺寸 － width：%.2f, height: %.2f", imageWidth / scale, imageHeight / scale);
     return [self imageWithImage:image scaledToSize:CGSizeMake(imageWidth / scale, imageHeight / scale)];
 }
 

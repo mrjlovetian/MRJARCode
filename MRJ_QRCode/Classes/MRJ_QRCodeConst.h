@@ -18,13 +18,13 @@
 #define MRJ_QRCodeScreenWidth [UIScreen mainScreen].bounds.size.width
 #define MRJ_QRCodeScreenHeight [UIScreen mainScreen].bounds.size.height
 
-/** 二维码冲击波动画时间 */
+/// 二维码冲击波动画时间
 UIKIT_EXTERN CGFloat const MRJ_QRCodeScanningLineAnimation;
 
-/** 扫描得到的二维码信息 */
+/// 扫描得到的二维码信息
 UIKIT_EXTERN NSString *const MRJ_QRCodeInformationFromeScanning;
 
-/** 从相册里得到的二维码信息 */
+/// 从相册里得到的二维码信息
 UIKIT_EXTERN NSString *const MRJ_QRCodeInformationFromeAibum;
 
 ///公钥

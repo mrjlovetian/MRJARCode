@@ -20,6 +20,6 @@ typedef void(^ErrorHandle)(NSString *err);
 + (UIImage *)MRJ_generateWithLogoQRCodeData:(NSDictionary *)dataDic logoImageName:(NSString *)logoImageName logoScaleToSuperView:(CGFloat)logoScaleToSuperView encryptType:(EncryptType)encryptType errorHandle:(ErrorHandle)errorHandle;
 
 /** 生成一张彩色的二维码 */
-//+ (UIImage *)MRJ_generateWithColorQRCodeData:(NSDictionary *)dataDic backgroundColor:(CIColor *)backgroundColor mainColor:(CIColor *)mainColor;
++ (UIImage *)MRJ_generateWithColorQRCodeData:(NSDictionary *)dataDic backgroundColor:(CIColor *)backgroundColor mainColor:(CIColor *)mainColor;
 
 @end
