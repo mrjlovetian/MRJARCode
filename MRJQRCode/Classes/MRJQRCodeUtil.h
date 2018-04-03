@@ -1,5 +1,5 @@
 //
-//  MRJ_QRCodeUtil.h
+//  MRJQRCodeUtil.h
 //  Pods
 //
 //  Created by Mr on 2017/6/23.
@@ -14,7 +14,7 @@ typedef enum : NSUInteger {
     EncryptTypeRSA,             /// 非对称加密
 } EncryptType;
 
-@interface MRJ_QRCodeUtil : NSObject
+@interface MRJQRCodeUtil : NSObject
 
 /// 数据加密
 + (NSData *)encryptDicWithParmStr:(NSString *)parmStr EncryptType:(EncryptType)encryptType;

@@ -1,6 +1,6 @@
 //
-//  MRJ_QRCodeScanningView.h
-//  MRJ_QRCodeExample
+//  MRJQRCodeScanningView.h
+//  MRJQRCodeExample
 //
 //  Created by Mr on 2017/6/5.
 //  Copyright © 2017年 余洪江. All rights reserved.
@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MRJ_QRCodeScanningView : UIView
+@interface MRJQRCodeScanningView : UIView
 
 /**
- *  对象方法创建MRJ_QRCodeScanningView
+ *  对象方法创建MRJQRCodeScanningView
  *
  *  @param frame     frame
  *  @param layer     父视图 layer
@@ -19,7 +19,7 @@
 - (instancetype)initWithFrame:(CGRect)frame layer:(CALayer *)layer;
 
 /**
- *  类方法创建MRJ_QRCodeScanningView
+ *  类方法创建MRJQRCodeScanningView
  *
  *  @param frame     frame
  *  @param layer     父视图 layer

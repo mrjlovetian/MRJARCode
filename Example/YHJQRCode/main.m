@@ -1,6 +1,6 @@
 //
 //  main.m
-//  MRJ_QRCode
+//  MRJQRCode
 //
 //  Created by mrjyuhongjiang on 06/14/2017.
 //  Copyright (c) 2017 mrjyuhongjiang. All rights reserved.

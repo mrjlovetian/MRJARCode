@@ -1,0 +1,6 @@
+framework module MRJQRCode {
+  umbrella header "MRJQRCode-umbrella.h"
+
+  export *
+  module * { export * }
+}

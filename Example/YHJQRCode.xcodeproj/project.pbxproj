@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0AFB08C41F5BB8760072A8E0 /* MRJ_QRCode.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 0AFB08C31F5BB8760072A8E0 /* MRJ_QRCode.podspec */; };
+		0AFB08C41F5BB8760072A8E0 /* MRJQRCode.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 0AFB08C31F5BB8760072A8E0 /* MRJQRCode.podspec */; };
 		2F60498646BDB3324FF3DBAF /* Pods_YHJQRCode_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF72D393EF0833A6699D94D /* Pods_YHJQRCode_Tests.framework */; };
 		59C07FF0A6AC4515E3C47153 /* Pods_YHJQRCode_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A9B35978CC4D8AA9D3B769 /* Pods_YHJQRCode_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -42,7 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0AFB08C31F5BB8760072A8E0 /* MRJ_QRCode.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MRJ_QRCode.podspec; path = ../MRJ_QRCode.podspec; sourceTree = "<group>"; };
+		0AFB08C31F5BB8760072A8E0 /* MRJQRCode.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MRJQRCode.podspec; path = ../MRJQRCode.podspec; sourceTree = "<group>"; };
 		0D0963DD7853CA52F67380B6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		32C105B45782F1E9E9489037 /* Pods-YHJQRCode_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHJQRCode_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-YHJQRCode_Example/Pods-YHJQRCode_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* YHJQRCode_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YHJQRCode_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,7 +193,7 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				0AFB08C31F5BB8760072A8E0 /* MRJ_QRCode.podspec */,
+				0AFB08C31F5BB8760072A8E0 /* MRJQRCode.podspec */,
 				AA26C8948DE8D179FE7C7063 /* README.md */,
 				0D0963DD7853CA52F67380B6 /* LICENSE */,
 			);
@@ -301,7 +301,7 @@
 				C28486FF1EF7784900F0ED91 /* IMG_0129.PNG in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				C282BC391EF2608F0070B608 /* MainViewController.xib in Resources */,
-				0AFB08C41F5BB8760072A8E0 /* MRJ_QRCode.podspec in Resources */,
+				0AFB08C41F5BB8760072A8E0 /* MRJQRCode.podspec in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				C28487001EF7784900F0ED91 /* IMG_0130.PNG in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
@@ -376,9 +376,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-YHJQRCode_Example/Pods-YHJQRCode_Example-resources.sh",
+				"${PODS_ROOT}/../../MRJQRCode.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -392,11 +395,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-YHJQRCode_Example/Pods-YHJQRCode_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/MRJ_QRCode/MRJ_QRCode.framework",
+				"${BUILT_PRODUCTS_DIR}/MRJQRCode/MRJQRCode.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MRJ_QRCode.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MRJQRCode.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

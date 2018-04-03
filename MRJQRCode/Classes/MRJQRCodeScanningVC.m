@@ -1,31 +1,31 @@
 //
-//  MRJ_QRCodeScanningVC.m
-//  MRJ_QRCodeExample
+//  MRJQRCodeScanningVC.m
+//  MRJQRCodeExample
 //
 //  Created by Mr on 2017/6/5.
 //  Copyright © 2017年 余洪江. All rights reserved.
 //
 
-#import "MRJ_QRCodeScanningVC.h"
+#import "MRJQRCodeScanningVC.h"
 #import <AVFoundation/AVFoundation.h>
 #import <Photos/Photos.h>
-#import "MRJ_QRCodeScanningView.h"
-#import "MRJ_QRCodeConst.h"
-#import "NSBundle+MRJ_QRCode.h"
-#import "MRJ_QRCodeUtil.h"
+#import "MRJQRCodeScanningView.h"
+#import "MRJQRCodeConst.h"
+#import "NSBundle+MRJQRCode.h"
+#import "MRJQRCodeUtil.h"
 
-@interface MRJ_QRCodeScanningVC () <AVCaptureMetadataOutputObjectsDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface MRJQRCodeScanningVC () <AVCaptureMetadataOutputObjectsDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 /// 会话对象
 @property (nonatomic, strong) AVCaptureSession *session;
 /// 图层类
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *previewLayer;
 /// 扫码视图
-@property (nonatomic, strong) MRJ_QRCodeScanningView *scanningView;
+@property (nonatomic, strong) MRJQRCodeScanningView *scanningView;
 
 @end
 
-@implementation MRJ_QRCodeScanningVC
+@implementation MRJQRCodeScanningVC
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -38,7 +38,7 @@
 }
 
 - (void)dealloc {
-    MRJ_QRCodeLog(@"MRJ_QRCodeScanningVC - dealloc");
+    MRJQRCodeLog(@"MRJQRCodeScanningVC - dealloc");
     [self removeScanningView];
 }
 
@@ -49,17 +49,17 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self setupNavigationBar];
     [self.view addSubview:self.scanningView];
-    [self setupMRJ_QRCodeScanning];
+    [self setupMRJQRCodeScanning];
 }
 
 - (void)setupNavigationBar {
-    self.navigationItem.title = [NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeChongqingjzb];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:[NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeAlbum] style:(UIBarButtonItemStyleDone) target:self action:@selector(rightBarButtonItenAction)];
+    self.navigationItem.title = [NSBundle QRCodeLocalizedStringForKey:MRJQRCodeChongqingjzb];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:[NSBundle QRCodeLocalizedStringForKey:MRJQRCodeAlbum] style:(UIBarButtonItemStyleDone) target:self action:@selector(rightBarButtonItenAction)];
 }
 
-- (MRJ_QRCodeScanningView *)scanningView {
+- (MRJQRCodeScanningView *)scanningView {
     if (!_scanningView) {
-        _scanningView = [MRJ_QRCodeScanningView scanningViewWithFrame:self.view.bounds layer:self.view.layer];
+        _scanningView = [MRJQRCodeScanningView scanningViewWithFrame:self.view.bounds layer:self.view.layer];
     }
     return _scanningView;
 }
@@ -104,15 +104,15 @@
             imagePicker.delegate = self;
             [self presentViewController:imagePicker animated:YES completion:nil];
         } else if (status == PHAuthorizationStatusDenied) { // 用户拒绝当前应用访问相册
-            UIAlertController *alertC = [UIAlertController alertControllerWithTitle:[NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeMessage] message:[NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeTeachOpen] preferredStyle:(UIAlertControllerStyleAlert)];
-            UIAlertAction *alertA = [UIAlertAction actionWithTitle:[NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeSure] style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+            UIAlertController *alertC = [UIAlertController alertControllerWithTitle:[NSBundle QRCodeLocalizedStringForKey:MRJQRCodeMessage] message:[NSBundle QRCodeLocalizedStringForKey:MRJQRCodeTeachOpen] preferredStyle:(UIAlertControllerStyleAlert)];
+            UIAlertAction *alertA = [UIAlertAction actionWithTitle:[NSBundle QRCodeLocalizedStringForKey:MRJQRCodeSure] style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
                 
             }];
             [alertC addAction:alertA];
             [self presentViewController:alertC animated:YES completion:nil];
         } else if (status == PHAuthorizationStatusRestricted) {
-            UIAlertController *alertC = [UIAlertController alertControllerWithTitle:[NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeLikeMessage] message:[NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeDefinePhoto] preferredStyle:(UIAlertControllerStyleAlert)];
-            UIAlertAction *alertA = [UIAlertAction actionWithTitle:[NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeSure] style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+            UIAlertController *alertC = [UIAlertController alertControllerWithTitle:[NSBundle QRCodeLocalizedStringForKey:MRJQRCodeLikeMessage] message:[NSBundle QRCodeLocalizedStringForKey:MRJQRCodeDefinePhoto] preferredStyle:(UIAlertControllerStyleAlert)];
+            UIAlertAction *alertA = [UIAlertAction actionWithTitle:[NSBundle QRCodeLocalizedStringForKey:MRJQRCodeSure] style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
             }];
             [alertC addAction:alertA];
             [self presentViewController:alertC animated:YES completion:nil];
@@ -138,7 +138,7 @@
 
 - (void)scanQRCodeFromPhotosInTheAlbum:(UIImage *)image {
     // 对选取照片的处理，如果选取的图片尺寸过大，则压缩选取图片，否则不作处理
-    image = [MRJ_QRCodeUtil imageSizeWithScreenImage:image];
+    image = [MRJQRCodeUtil imageSizeWithScreenImage:image];
     // CIDetector(CIDetector可用于人脸识别)进行图片解析，从而使我们可以便捷的从相册中获取到二维码
     // 声明一个CIDetector，并设定识别类型 CIDetectorTypeQRCode
     CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeQRCode context:nil options:@{ CIDetectorAccuracy : CIDetectorAccuracyHigh }];
@@ -150,16 +150,16 @@
             CIQRCodeFeature *feature = [features objectAtIndex:index];
             NSString *scannedResult = feature.messageString;
             // 在此发通知，告诉子类二维码数据
-            [MRJ_QRCodeNotificationCenter postNotificationName:MRJ_QRCodeInformationFromeAibum object:scannedResult];
+            [MRJQRCodeNotificationCenter postNotificationName:MRJQRCodeInformationFromeAibum object:scannedResult];
         }
     } else {
         NSString *scannedResult = @"-1";
         // 在此发通知，告诉子类二维码数据
-        [MRJ_QRCodeNotificationCenter postNotificationName:MRJ_QRCodeInformationFromeAibum object:scannedResult];
+        [MRJQRCodeNotificationCenter postNotificationName:MRJQRCodeInformationFromeAibum object:scannedResult];
     }
 }
 
-- (void)setupMRJ_QRCodeScanning {
+- (void)setupMRJQRCodeScanning {
     // 1、获取摄像设备
     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     // 2、创建输入流
@@ -198,7 +198,7 @@
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
     // 0、扫描成功之后的提示音
-    [self MRJ__playSoundEffect:@"sound" ofType:@"caf"];
+    [self playSoundEffect:@"sound" ofType:@"caf"];
     // 1、如果扫描完成，停止会话
     [self.session stopRunning];
     // 2、删除预览图层
@@ -208,14 +208,14 @@
         AVMetadataMachineReadableCodeObject *obj = metadataObjects[0];
         NSString *scannedResult = obj.stringValue;
         // 在此发通知，告诉子类二维码数据
-        [MRJ_QRCodeNotificationCenter postNotificationName:MRJ_QRCodeInformationFromeScanning object:scannedResult];
+        [MRJQRCodeNotificationCenter postNotificationName:MRJQRCodeInformationFromeScanning object:scannedResult];
     }
 }
 
 /// 播放音效文件
-- (void)MRJ__playSoundEffect:(NSString *)name ofType:(NSString *)type {
+- (void)playSoundEffect:(NSString *)name ofType:(NSString *)type {
     // 获取音效
-    NSString *audioFile = [[NSBundle mainBundle] pathForResource:name ofType:type inDirectory:@"MRJ_QRCode.bundle"];
+    NSString *audioFile = [[NSBundle mainBundle] pathForResource:name ofType:type inDirectory:@"MRJQRCode.bundle"];
     NSURL *fileUrl = [NSURL fileURLWithPath:audioFile];
     // 1、获得系统声音ID
     SystemSoundID soundID = 0;
@@ -227,7 +227,7 @@
 
 /// 播放完成回调函数
 void soundCompleteCallback(SystemSoundID soundID, void *clientData) {
-    //MRJ_QRCodeLog(@"播放完成...");
+    //MRJQRCodeLog(@"播放完成...");
 }
 
 /// json格式字符串转字典：

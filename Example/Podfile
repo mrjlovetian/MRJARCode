@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'YHJQRCode_Example' do
-  pod 'MRJ_QRCode', :path => '../'
+  pod 'MRJQRCode', :path => '../'
 
   target 'YHJQRCode_Tests' do
     inherit! :search_paths

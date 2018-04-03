@@ -1,6 +1,0 @@
-framework module MRJ_QRCode {
-  umbrella header "MRJ_QRCode-umbrella.h"
-
-  export *
-  module * { export * }
-}

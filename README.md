@@ -1,9 +1,9 @@
-# MRJ_QRCode
+# MRJQRCode
 
-[![CI Status](http://img.shields.io/travis/mrjyuhongjiang/MRJ_QRCode.svg?style=flat)](https://travis-ci.org/mrjyuhongjiang/MRJ_QRCode)
-[![Version](https://img.shields.io/cocoapods/v/MRJ_QRCode.svg?style=flat)](http://cocoapods.org/pods/MRJ_QRCode)
-[![License](https://img.shields.io/cocoapods/l/MRJ_QRCode.svg?style=flat)](http://cocoapods.org/pods/MRJ_QRCode)
-[![Platform](https://img.shields.io/cocoapods/p/MRJ_QRCode.svg?style=flat)](http://cocoapods.org/pods/MRJ_QRCode)
+[![CI Status](http://img.shields.io/travis/mrjyuhongjiang/MRJQRCode.svg?style=flat)](https://travis-ci.org/mrjyuhongjiang/MRJQRCode)
+[![Version](https://img.shields.io/cocoapods/v/MRJQRCode.svg?style=flat)](http://cocoapods.org/pods/MRJQRCode)
+[![License](https://img.shields.io/cocoapods/l/MRJQRCode.svg?style=flat)](http://cocoapods.org/pods/MRJQRCode)
+[![Platform](https://img.shields.io/cocoapods/p/MRJQRCode.svg?style=flat)](http://cocoapods.org/pods/MRJQRCode)
 
 ## Example
 
@@ -13,11 +13,11 @@ To run the [example project](https://github.com/mrjlovetian/QRCODE), clone the r
 
 ## Installation
 
-MRJ_QRCode is available through [CocoaPods](http://cocoapods.org). To install
+MRJQRCode is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "MRJ_QRCode"
+pod "MRJQRCode"
 ```
 
 ## Support for internationalization
@@ -33,14 +33,14 @@ MRJ, mrjlovetian@gmail.com
 ## Example image
 
 ## qrcode
-![Alt Text](https://github.com/mrjlovetian/MRJ_ARCode/blob/master/Example/MRJ_QRCode/IMG_0129.PNG)
+![Alt Text](https://github.com/mrjlovetian/MRJARCode/blob/master/Example/MRJQRCode/IMG_0129.PNG)
 
 ## decode
-![Alt Text](https://github.com/mrjlovetian/MRJ_ARCode/blob/master/Example/MRJ_QRCode/IMG_0130.PNG)
+![Alt Text](https://github.com/mrjlovetian/MRJARCode/blob/master/Example/MRJQRCode/IMG_0130.PNG)
 
 ## License
 
-MRJ_QRCode is available under the MIT license. See the LICENSE file for more info.
+MRJQRCode is available under the MIT license. See the LICENSE file for more info.
 
 
 ## 列子
@@ -50,10 +50,10 @@ MRJ_QRCode is available under the MIT license. See the LICENSE file for more inf
 
 ## 载入使用
 
-MRJ_QRCode 可用通过 [CocoaPods](http://cocoapods.org). 添加到项目, 简单的配置项目Podfile:
+MRJQRCode 可用通过 [CocoaPods](http://cocoapods.org). 添加到项目, 简单的配置项目Podfile:
 
 ```ruby
-pod "MRJ_QRCode"
+pod "MRJQRCode"
 ```
 
 ## 国际化
@@ -69,12 +69,12 @@ pod "MRJ_QRCode"
 ## 实例图片
 
 ## 二维码生成
-![Alt Text](https://github.com/mrjlovetian/MRJ_ARCode/blob/master/Example/MRJ_QRCode/IMG_0129.PNG)
+![Alt Text](https://github.com/mrjlovetian/MRJARCode/blob/master/Example/MRJQRCode/IMG_0129.PNG)
 
 ## 扫描二维码
-![Alt Text](https://github.com/mrjlovetian/MRJ_ARCode/blob/master/Example/MRJ_QRCode/IMG_0130.PNG)
+![Alt Text](https://github.com/mrjlovetian/MRJARCode/blob/master/Example/MRJQRCode/IMG_0130.PNG)
 
 ## License
 
-MRJ_QRCode is available under the MIT license. See the LICENSE file for more info.
+MRJQRCode is available under the MIT license. See the LICENSE file for more info.
 

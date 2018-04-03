@@ -1,16 +1,16 @@
 //
-//  MRJ_QRCodeUtil.m
+//  MRJQRCodeUtil.m
 //  Pods
 //
 //  Created by Mr on 2017/6/23.
 //
 //
 
-#import "MRJ_QRCodeUtil.h"
+#import "MRJQRCodeUtil.h"
 #import "MRJRSAUtil.h"
-#import "MRJ_QRCodeConst.h"
+#import "MRJQRCodeConst.h"
 
-@implementation MRJ_QRCodeUtil
+@implementation MRJQRCodeUtil
 
 + (NSData *)encryptDicWithParmStr:(NSString *)parmStr EncryptType:(EncryptType)encryptType {
     NSData *resultData = nil;
@@ -25,7 +25,7 @@
         NSData *nsdataFromBase64Data = [nsdataFromBase64String base64EncodedDataWithOptions:0];
         resultData = nsdataFromBase64Data;
     } else {
-        NSString *string_data = [MRJRSAUtil encryptString:parmStr publicKey:MRJ_RSA_Public_key];
+        NSString *string_data = [MRJRSAUtil encryptString:parmStr publicKey:MRJRSA_Public_key];
         resultData = [string_data dataUsingEncoding:NSUTF8StringEncoding];
     }
     return resultData;
@@ -37,14 +37,14 @@
         return codeStr;
     }
     if (encryptType == EncryptTypeNone) {
-        result = [MRJ_QRCodeUtil dictionaryWithJsonString:codeStr];
+        result = [MRJQRCodeUtil dictionaryWithJsonString:codeStr];
     } else if (encryptType == EncryptTypeBase64) {
         NSData *data = [[NSData alloc]initWithBase64EncodedString:codeStr options:0];
         NSString *resultStr = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-        result = [MRJ_QRCodeUtil dictionaryWithJsonString:resultStr];
+        result = [MRJQRCodeUtil dictionaryWithJsonString:resultStr];
     } else if (encryptType == EncryptTypeRSA){
-        NSString *resultStr = [MRJRSAUtil decryptString:codeStr privateKey:MRJ_RSA_Privite_key];
-        result = [MRJ_QRCodeUtil dictionaryWithJsonString:resultStr];
+        NSString *resultStr = [MRJRSAUtil decryptString:codeStr privateKey:MRJRSA_Privite_key];
+        result = [MRJQRCodeUtil dictionaryWithJsonString:resultStr];
     }
     return result;
 }
@@ -64,7 +64,7 @@
 }
 
 /// 字典转json格式字符串：
-+ (NSString*)dictionaryToJson:(NSDictionary *)dic {
++ (NSString *)dictionaryToJson:(NSDictionary *)dic {
     if ([dic isKindOfClass:[NSDictionary class]]) {
         NSError *parseError = nil;
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:&parseError];
@@ -79,17 +79,17 @@
 + (UIImage *)imageSizeWithScreenImage:(UIImage *)image {
     CGFloat imageWidth = image.size.width;
     CGFloat imageHeight = image.size.height;
-    CGFloat screenWidth = MRJ_QRCodeScreenWidth;
-    CGFloat screenHeight = MRJ_QRCodeScreenHeight;
+    CGFloat screenWidth = MRJQRCodeScreenWidth;
+    CGFloat screenHeight = MRJQRCodeScreenHeight;
     // 如果读取的二维码照片宽和高小于屏幕尺寸，直接返回原图片
     if (imageWidth <= screenWidth && imageHeight <= screenHeight) {
         return image;
     }
-    /// MRJ_QRCodeLog(@"压缩前图片尺寸 － width：%.2f, height: %.2f", imageWidth, imageHeight);
+    /// MRJQRCodeLog(@"压缩前图片尺寸 － width：%.2f, height: %.2f", imageWidth, imageHeight);
     CGFloat max = MAX(imageWidth, imageHeight);
     // 如果是6plus等设备，比例应该是 3.0
     CGFloat scale = max / (screenHeight * 2.0f);
-    /// MRJ_QRCodeLog(@"压缩后图片尺寸 － width：%.2f, height: %.2f", imageWidth / scale, imageHeight / scale);
+    /// MRJQRCodeLog(@"压缩后图片尺寸 － width：%.2f, height: %.2f", imageWidth / scale, imageHeight / scale);
     return [self imageWithImage:image scaledToSize:CGSizeMake(imageWidth / scale, imageHeight / scale)];
 }
 

@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint MRJ_QRCode.podspec' to ensure this is a
+# Be sure to run `pod lib lint MRJQRCode.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -7,8 +7,8 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'MRJ_QRCode'
-  s.version          = '0.3.2.5'
+  s.name             = 'MRJQRCode'
+  s.version          = '0.3.3.0'
   s.summary          = '集成扫码和生成二维码功能，添加必要的加密.'
 
 # This description is used to generate tags and improve search results.
@@ -26,22 +26,22 @@ TODO: 通过修改资源，对二维码添加logo，增加加密算法，这个�
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'mrjyuhongjiang' => 'mrjlovetian@gmail.com' }
   s.source           = { :git => 'https://github.com/mrjlovetian/YHJARCode.git', :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/MRJ_YU'
+  s.social_media_url = 'https://twitter.com/MRJYU'
 
   s.ios.deployment_target = '8.0'
 
 
   # s.resource_bundles = {
-  #    'MRJ_QRCode' => ['MRJ_QRCode/KKQRCode/*.png'],
-  # 'MRJ_QRCode' => ['MRJ_QRCode/Assets/*.png']
+  #    'MRJQRCode' => ['MRJQRCode/KKQRCode/*.png'],
+  # 'MRJQRCode' => ['MRJQRCode/Assets/*.png']
   #  }
 
 #资源文件引入
-    s.resource      = 'MRJ_QRCode.bundle'
+    s.resource      = 'MRJQRCode.bundle'
 
 #文件夹创建
     s.subspec 'Code' do |yy|
-        yy.source_files = 'MRJ_QRCode/Classes/*.{h,m}'
+        yy.source_files = 'MRJQRCode/Classes/*.{h,m}'
 #yy.frameworks = 'QRCode'
     end
 

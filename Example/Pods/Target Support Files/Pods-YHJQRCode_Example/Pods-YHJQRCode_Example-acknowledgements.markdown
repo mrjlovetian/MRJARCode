@@ -1,7 +1,7 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## MRJ_QRCode
+## MRJQRCode
 
 
 MIT License

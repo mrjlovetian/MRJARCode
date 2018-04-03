@@ -1,24 +1,24 @@
 //
-//  MRJ_QRCodeTool.m
+//  MRJQRCodeTool.m
 //  Pods
 //
 //  Created by Mr on 2017/6/5.
 //
 //
 
-#import "MRJ_QRCodeTool.h"
+#import "MRJQRCodeTool.h"
 #import <CoreImage/CoreImage.h>
 #import <AVFoundation/AVFoundation.h>
 #import "MRJRSAUtil.h"
-#import "MRJ_QRCodeConst.h"
-#import "NSBundle+MRJ_QRCode.h"
+#import "MRJQRCodeConst.h"
+#import "NSBundle+MRJQRCode.h"
 
-@implementation MRJ_QRCodeTool
+@implementation MRJQRCodeTool
 
 + (UIImage *)MRJGenerateWithDefaultQRCodeStringData:(NSString *)str imageViewWidth:(CGFloat)imageViewWidth encryptType:(EncryptType)encryptType errorHandle:(ErrorHandle)errorHandle {
     
     if (str == nil || str.length == 0) {
-        errorHandle([NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeDataError]);
+        errorHandle([NSBundle QRCodeLocalizedStringForKey:MRJQRCodeDataError]);
         return nil;
     }
     
@@ -34,7 +34,7 @@
     // 3、获得滤镜输出的图像
     CIImage *outputImage = [filter outputImage];
     
-    return [MRJ_QRCodeTool createNonInterpolatedUIImageFormCIImage:outputImage withSize:imageViewWidth];
+    return [MRJQRCodeTool createNonInterpolatedUIImageFormCIImage:outputImage withSize:imageViewWidth];
     
 }
 
@@ -44,13 +44,13 @@
  *  @param dataDic    传入你要生成二维码的数据
  *  @param imageViewWidth    图片的宽度
  */
-+ (UIImage *)MRJ_generateWithDefaultQRCodeData:(NSDictionary *)dataDic imageViewWidth:(CGFloat)imageViewWidth encryptType:(EncryptType)encryptType errorHandle:(ErrorHandle)errorHandle {
++ (UIImage *)MRJgenerateWithDefaultQRCodeData:(NSDictionary *)dataDic imageViewWidth:(CGFloat)imageViewWidth encryptType:(EncryptType)encryptType errorHandle:(ErrorHandle)errorHandle {
     if (![self verifyDicValid:dataDic]) {
-        errorHandle([NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeDataError]);
+        errorHandle([NSBundle QRCodeLocalizedStringForKey:MRJQRCodeDataError]);
         return nil;
     }
     if (![self verifyCodeWidth:imageViewWidth]) {
-        errorHandle([NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeWidthError]);
+        errorHandle([NSBundle QRCodeLocalizedStringForKey:MRJQRCodeWidthError]);
         return nil;
     }
     // 1、创建滤镜对象
@@ -58,14 +58,14 @@
     // 恢复滤镜的默认属性
     [filter setDefaults];
     // 2、设置数据
-    NSString *info = [MRJ_QRCodeUtil dictionaryToJson:dataDic];//data;
+    NSString *info = [MRJQRCodeUtil dictionaryToJson:dataDic];//data;
     // 将字符串转换成
-    NSData *infoData = [MRJ_QRCodeUtil encryptDicWithParmStr:info EncryptType:encryptType];
+    NSData *infoData = [MRJQRCodeUtil encryptDicWithParmStr:info EncryptType:encryptType];
     // 通过KVC设置滤镜inputMessage数据
     [filter setValue:infoData forKeyPath:@"inputMessage"];
     // 3、获得滤镜输出的图像
     CIImage *outputImage = [filter outputImage];
-    return [MRJ_QRCodeTool createNonInterpolatedUIImageFormCIImage:outputImage withSize:imageViewWidth];
+    return [MRJQRCodeTool createNonInterpolatedUIImageFormCIImage:outputImage withSize:imageViewWidth];
 }
 
 /// 根据CIImage生成指定大小的UIImage
@@ -96,17 +96,17 @@
  *  @param logoImageName    logo的image名
  *  @param logoScaleToSuperView    logo相对于父视图的缩放比（取值范围：0-1，0，代表不显示，1，代表与父视图大小相同）
  */
-+ (UIImage *)MRJ_generateWithLogoQRCodeData:(NSDictionary *)dataDic logoImageName:(NSString *)logoImageName logoScaleToSuperView:(CGFloat)logoScaleToSuperView encryptType:(EncryptType)encryptType errorHandle:(ErrorHandle)errorHandle {
++ (UIImage *)MRJgenerateWithLogoQRCodeData:(NSDictionary *)dataDic logoImageName:(NSString *)logoImageName logoScaleToSuperView:(CGFloat)logoScaleToSuperView encryptType:(EncryptType)encryptType errorHandle:(ErrorHandle)errorHandle {
     if (![self verifyLogoImageValid:logoImageName]) {
-        errorHandle([NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeLogoImageError]);
+        errorHandle([NSBundle QRCodeLocalizedStringForKey:MRJQRCodeLogoImageError]);
         return nil;
     }
     if (![self verifyLogoScale:logoScaleToSuperView]) {
-        errorHandle([NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeLogoScaleError]);
+        errorHandle([NSBundle QRCodeLocalizedStringForKey:MRJQRCodeLogoScaleError]);
         return nil;
     }
     if (![self verifyDicValid:dataDic]) {
-        errorHandle([NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeDataError]);
+        errorHandle([NSBundle QRCodeLocalizedStringForKey:MRJQRCodeDataError]);
         return nil;
     }
     // 1、创建滤镜对象
@@ -114,9 +114,9 @@
     // 恢复滤镜的默认属性
     [filter setDefaults];
     // 2、设置数据
-    NSString *string_data = [MRJ_QRCodeUtil dictionaryToJson:dataDic];//data;
+    NSString *string_data = [MRJQRCodeUtil dictionaryToJson:dataDic];//data;
     // 将字符串转换成 NSdata (虽然二维码本质上是字符串, 但是这里需要转换, 不转换就崩溃)
-    NSData *qrImageData = [MRJ_QRCodeUtil encryptDicWithParmStr:string_data EncryptType:encryptType];
+    NSData *qrImageData = [MRJQRCodeUtil encryptDicWithParmStr:string_data EncryptType:encryptType];
     // 设置过滤器的输入值, KVC赋值
     [filter setValue:qrImageData forKey:@"inputMessage"];
     // 3、获得滤镜输出的图像
@@ -152,13 +152,13 @@
  *  @param backgroundColor    背景色
  *  @param mainColor    主颜色
  */
-+ (UIImage *)MRJ_generateWithColorQRCodeData:(NSDictionary *)dataDic backgroundColor:(CIColor *)backgroundColor mainColor:(CIColor *)mainColor {
++ (UIImage *)MRJgenerateWithColorQRCodeData:(NSDictionary *)dataDic backgroundColor:(CIColor *)backgroundColor mainColor:(CIColor *)mainColor {
     // 1、创建滤镜对象
     CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
     // 恢复滤镜的默认属性
     [filter setDefaults];
     // 2、设置数据
-    NSString *string_data = [MRJRSAUtil encryptString:[MRJ_QRCodeUtil dictionaryToJson:dataDic] publicKey:MRJ_RSA_Public_key];//data
+    NSString *string_data = [MRJRSAUtil encryptString:[MRJQRCodeUtil dictionaryToJson:dataDic] publicKey:MRJRSA_Public_key];//data
     // 将字符串转换成 NSdata (虽然二维码本质上是字符串, 但是这里需要转换, 不转换就崩溃)
     NSData *qrImageData = [string_data dataUsingEncoding:NSUTF8StringEncoding];
     // 设置过滤器的输入值, KVC赋值

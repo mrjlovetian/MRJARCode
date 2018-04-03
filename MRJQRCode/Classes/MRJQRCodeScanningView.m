@@ -1,22 +1,22 @@
 //
-//  MRJ_QRCodeScanningView.m
-//  MRJ_QRCodeExample
+//  MRJQRCodeScanningView.m
+//  MRJQRCodeExample
 //
 //  Created by Mr on 2017/6/5.
 //  Copyright © 2017年 余洪江. All rights reserved.
 //
 
-#import "MRJ_QRCodeScanningView.h"
+#import "MRJQRCodeScanningView.h"
 #import <AVFoundation/AVFoundation.h>
-#import "MRJ_QRCodeConst.h"
-#import "NSBundle+MRJ_QRCode.h"
+#import "MRJQRCodeConst.h"
+#import "NSBundle+MRJQRCode.h"
 
 /** 扫描内容的Y值 */
 #define scanContent_Y self.frame.size.height * 0.24
 /** 扫描内容的Y值 */
 #define scanContent_X self.frame.size.width * 0.15
 
-@interface MRJ_QRCodeScanningView ()
+@interface MRJQRCodeScanningView ()
 
 @property (nonatomic, strong) AVCaptureDevice *device;
 @property (nonatomic, strong) CALayer *tempLayer;
@@ -25,7 +25,7 @@
 
 @end
 
-@implementation MRJ_QRCodeScanningView
+@implementation MRJQRCodeScanningView
 
 /// 扫描动画线(冲击波) 的高度
 static CGFloat const scanninglineHeight = 12;
@@ -119,7 +119,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     promptLabel.textAlignment = NSTextAlignmentCenter;
     promptLabel.font = [UIFont boldSystemFontOfSize:13.0];
     promptLabel.textColor = [[UIColor whiteColor] colorWithAlphaComponent:0.6];
-    promptLabel.text = [NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeScaning];
+    promptLabel.text = [NSBundle QRCodeLocalizedStringForKey:MRJQRCodeScaning];
     [self addSubview:promptLabel];
     
     /// 添加闪光灯按钮
@@ -129,8 +129,8 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     CGFloat light_buttonW = self.frame.size.width;
     CGFloat light_buttonH = 25;
     light_button.frame = CGRectMake(light_buttonX, light_buttonY, light_buttonW, light_buttonH);
-    [light_button setTitle:[NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeOpenLight] forState:UIControlStateNormal];
-    [light_button setTitle:[NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeCloseLight] forState:UIControlStateSelected];
+    [light_button setTitle:[NSBundle QRCodeLocalizedStringForKey:MRJQRCodeOpenLight] forState:UIControlStateNormal];
+    [light_button setTitle:[NSBundle QRCodeLocalizedStringForKey:MRJQRCodeCloseLight] forState:UIControlStateSelected];
     [light_button setTitleColor:promptLabel.textColor forState:(UIControlStateNormal)];
     light_button.titleLabel.font = [UIFont systemFontOfSize:17];
     
@@ -141,7 +141,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     /// 左上侧的image
     CGFloat margin = 7;
     
-    UIImage *left_image = [UIImage imageNamed:[[NSBundle mrj_LibraryBundle] pathForResource:@"MRJ_CodeLeftTop@2x" ofType:@"png"]];
+    UIImage *left_image = [UIImage imageNamed:[[NSBundle LibraryBundle] pathForResource:@"MRJCodeLeftTop@2x" ofType:@"png"]];
     UIImageView *left_imageView = [[UIImageView alloc] init];
     CGFloat left_imageViewX = CGRectGetMinX(scanContent_layer.frame) - left_image.size.width * 0.5 + margin;
     CGFloat left_imageViewY = CGRectGetMinY(scanContent_layer.frame) - left_image.size.width * 0.5 + margin;
@@ -152,7 +152,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     [self.tempLayer addSublayer:left_imageView.layer];
     
     /// 右上侧的image
-    UIImage *right_image = [UIImage imageNamed:[[NSBundle mrj_LibraryBundle] pathForResource:@"MRJ_CodeRightTop@2x" ofType:@"png"]];
+    UIImage *right_image = [UIImage imageNamed:[[NSBundle LibraryBundle] pathForResource:@"MRJCodeRightTop@2x" ofType:@"png"]];
     UIImageView *right_imageView = [[UIImageView alloc] init];
     CGFloat right_imageViewX = CGRectGetMaxX(scanContent_layer.frame) - right_image.size.width * 0.5 - margin;
     CGFloat right_imageViewY = left_imageView.frame.origin.y;
@@ -163,7 +163,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     [self.tempLayer addSublayer:right_imageView.layer];
     
     /// 左下侧的image
-    UIImage *left_image_down = [UIImage imageNamed:[[NSBundle mrj_LibraryBundle] pathForResource:@"MRJ_CodeLeftBottom@2x" ofType:@"png"]];
+    UIImage *left_image_down = [UIImage imageNamed:[[NSBundle LibraryBundle] pathForResource:@"MRJCodeLeftBottom@2x" ofType:@"png"]];
     UIImageView *left_imageView_down = [[UIImageView alloc] init];
     CGFloat left_imageView_downX = left_imageView.frame.origin.x;
     CGFloat left_imageView_downY = CGRectGetMaxY(scanContent_layer.frame) - left_image_down.size.width * 0.5 - margin;
@@ -174,7 +174,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     [self.tempLayer addSublayer:left_imageView_down.layer];
     
     /// 右下侧的image
-    UIImage *right_image_down = [UIImage imageNamed:[[NSBundle mrj_LibraryBundle] pathForResource:@"MRJ_CodeRightBottom@2x" ofType:@"png"]];
+    UIImage *right_image_down = [UIImage imageNamed:[[NSBundle LibraryBundle] pathForResource:@"MRJCodeRightBottom@2x" ofType:@"png"]];
     UIImageView *right_imageView_down = [[UIImageView alloc] init];
     CGFloat right_imageView_downX = right_imageView.frame.origin.x;
     CGFloat right_imageView_downY = left_imageView_down.frame.origin.y;
@@ -213,7 +213,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
 - (UIImageView *)scanningline {
     if (!_scanningline) {
         _scanningline = [[UIImageView alloc] init];
-        _scanningline.image = [UIImage imageNamed:[[NSBundle mrj_LibraryBundle] pathForResource:@"MRJ_CodeScanningLine@2x"ofType:@"png"]];
+        _scanningline.image = [UIImage imageNamed:[[NSBundle LibraryBundle] pathForResource:@"MRJCodeScanningLine@2x"ofType:@"png"]];
         _scanningline.frame = CGRectMake(scanContent_X * 0.5, scanContent_Y, self.frame.size.width - scanContent_X , scanninglineHeight);
     }
     return _scanningline;
@@ -228,7 +228,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
 
 - (void)addTimer {
     [self addScanningline];
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:MRJ_QRCodeScanningLineAnimation target:self selector:@selector(timeAction) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:MRJQRCodeScanningLineAnimation target:self selector:@selector(timeAction) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
 }
 
@@ -249,7 +249,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     if (flag) {
         frame.origin.y = scanContent_Y;
         flag = NO;
-        [UIView animateWithDuration:MRJ_QRCodeScanningLineAnimation animations:^{
+        [UIView animateWithDuration:MRJQRCodeScanningLineAnimation animations:^{
             frame.origin.y += 5;
             _scanningline.frame = frame;
         } completion:nil];
@@ -261,7 +261,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
                 _scanningline.frame = frame;
                 flag = YES;
             } else {
-                [UIView animateWithDuration:MRJ_QRCodeScanningLineAnimation animations:^{
+                [UIView animateWithDuration:MRJQRCodeScanningLineAnimation animations:^{
                     frame.origin.y += 5;
                     _scanningline.frame = frame;
                 } completion:nil];

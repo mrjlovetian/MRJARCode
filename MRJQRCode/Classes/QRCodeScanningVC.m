@@ -1,13 +1,13 @@
 //
 //  QRCodeScanningVC.m
-//  MRJ_QRCodeExample
+//  MRJQRCodeExample
 //
 //  Created by Mr on 2017/6/5.
 //  Copyright © 2017年 余洪江. All rights reserved.
 //
 
 #import "QRCodeScanningVC.h"
-#import "MRJ_QRCodeConst.h"
+#import "MRJQRCodeConst.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface QRCodeScanningVC () {
@@ -26,10 +26,10 @@
             authorizationHander(state);
             if (AuthorizationStateAllowed == state) {
                 // 注册观察者
-                [MRJ_QRCodeNotificationCenter addObserver:self selector:@selector(MRJ_QRCodeInformationFromeAibum:) name:MRJ_QRCodeInformationFromeAibum object:nil];
-                [MRJ_QRCodeNotificationCenter addObserver:self selector:@selector(MRJ_QRCodeInformationFromeScanning:) name:MRJ_QRCodeInformationFromeScanning object:nil];
+                [MRJQRCodeNotificationCenter addObserver:self selector:@selector(MRJQRCodeInformationFromeAibum:) name:MRJQRCodeInformationFromeAibum object:nil];
+                [MRJQRCodeNotificationCenter addObserver:self selector:@selector(MRJQRCodeInformationFromeScanning:) name:MRJQRCodeInformationFromeScanning object:nil];
             } else {
-                MRJ_QRCodeLog(@"这是未获得状态");
+                MRJQRCodeLog(@"这是未获得状态");
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     [self dismissViewControllerAnimated:YES completion:^{
                         
@@ -45,19 +45,19 @@
     [super viewDidLoad];
 }
 
-- (void)MRJ_QRCodeInformationFromeAibum:(NSNotification *)noti {
+- (void)MRJQRCodeInformationFromeAibum:(NSNotification *)noti {
     [self handleQRCresult:noti.object];
 }
 
 /// 扫码成功操作
-- (void)MRJ_QRCodeInformationFromeScanning:(NSNotification *)noti {
+- (void)MRJQRCodeInformationFromeScanning:(NSNotification *)noti {
     [self handleQRCresult:noti.object];
 }
 
 - (void)handleQRCresult:(id)result {
     NSDictionary *qrcdic = nil;
     NSError *err = nil;
-    id resulta = [MRJ_QRCodeUtil decodeDataWithCodeStr:result EncryptType:_decodType];
+    id resulta = [MRJQRCodeUtil decodeDataWithCodeStr:result EncryptType:_decodType];
     if ([result integerValue] == -1) {
         err = [[NSError alloc] initWithDomain:@"error image core" code:-1 userInfo:nil];
     } else {
@@ -85,15 +85,15 @@
                     if (authorizationHander) {
                         authorizationHander(AuthorizationStateAllowed);
                     }
-                    MRJ_QRCodeLog(@"当前线程 - - %@", [NSThread currentThread]);
+                    MRJQRCodeLog(@"当前线程 - - %@", [NSThread currentThread]);
                     // 用户第一次同意了访问相机权限
-                    MRJ_QRCodeLog(@"用户第一次同意了访问相机权限");
+                    MRJQRCodeLog(@"用户第一次同意了访问相机权限");
                 } else {
                     if (authorizationHander) {
                         authorizationHander(AuthorizationStateDenied);
                     }
                     // 用户第一次拒绝了访问相机权限
-                    MRJ_QRCodeLog(@"用户第一次拒绝了访问相机权限");
+                    MRJQRCodeLog(@"用户第一次拒绝了访问相机权限");
                 }
             }];
         } else if (status == AVAuthorizationStatusAuthorized) { // 用户允许当前应用访问相机
@@ -102,23 +102,23 @@
             }
         } else if (status == AVAuthorizationStatusDenied) { // 用户拒绝当前应用访问相机
             if (authorizationHander) {
-                MRJ_QRCodeLog(@"未获得权限");
+                MRJQRCodeLog(@"未获得权限");
                 authorizationHander(AuthorizationStateDenied);
             }
         } else if (status == AVAuthorizationStatusRestricted) {
-            MRJ_QRCodeLog(@"因为系统原因, 无法访问相册");
+            MRJQRCodeLog(@"因为系统原因, 无法访问相册");
             if (authorizationHander) {
                 authorizationHander(AuthorizationStateAlbumDenied);
             }
         }
     } else {
-        MRJ_QRCodeLog(@"未检测到您的摄像头");
+        MRJQRCodeLog(@"未检测到您的摄像头");
     }
 }
 
 - (void)dealloc {
-    MRJ_QRCodeLog(@"QRCodeScanningVC - dealloc");
-    [MRJ_QRCodeNotificationCenter removeObserver:self];
+    MRJQRCodeLog(@"QRCodeScanningVC - dealloc");
+    [MRJQRCodeNotificationCenter removeObserver:self];
 }
 
 @end

@@ -1,13 +1,13 @@
 //
 //  QRCodeScanningVC.h
-//  MRJ_QRCodeExample
+//  MRJQRCodeExample
 //
 //  Created by Mr on 2017/6/5.
 //  Copyright © 2017年 余洪江. All rights reserved.
 //
 
-#import "MRJ_QRCodeScanningVC.h"
-#import "MRJ_QRCode.h"
+#import "MRJQRCodeScanningVC.h"
+#import "MRJQRCode.h"
 
 /// 获取相机的权限状态
 typedef enum : NSUInteger {
@@ -26,7 +26,7 @@ typedef enum : NSUInteger {
 typedef void(^AuthorizationStateBlock)(AuthorizationState state);
 /// 扫码结果返回
 typedef void(^QRCodeScanningVCBlock)(id result, NSError *err, UIViewController *vc);
-@interface QRCodeScanningVC : MRJ_QRCodeScanningVC
+@interface QRCodeScanningVC : MRJQRCodeScanningVC
 
 /// 初始化方法
 - (id)initRuleDecodeType:(EncryptType)decodType State:(AuthorizationStateBlock)authorizationHander;
