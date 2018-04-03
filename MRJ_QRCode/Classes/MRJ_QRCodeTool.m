@@ -15,6 +15,29 @@
 
 @implementation MRJ_QRCodeTool
 
++ (UIImage *)MRJGenerateWithDefaultQRCodeStringData:(NSString *)str imageViewWidth:(CGFloat)imageViewWidth encryptType:(EncryptType)encryptType errorHandle:(ErrorHandle)errorHandle {
+    
+    if (str == nil || str.length == 0) {
+        errorHandle([NSBundle mrj_QRCodeLocalizedStringForKey:MRJ_QRCodeDataError]);
+        return nil;
+    }
+    
+    // 1、创建滤镜对象
+    CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
+    
+    // 恢复滤镜的默认属性
+    [filter setDefaults];
+    
+    // 通过KVC设置滤镜inputMessage数据
+    [filter setValue:[str dataUsingEncoding:NSUTF8StringEncoding] forKeyPath:@"inputMessage"];
+    
+    // 3、获得滤镜输出的图像
+    CIImage *outputImage = [filter outputImage];
+    
+    return [MRJ_QRCodeTool createNonInterpolatedUIImageFormCIImage:outputImage withSize:imageViewWidth];
+    
+}
+
 /**
  *  生成一张普通的二维码
  *
