@@ -63,6 +63,10 @@
     NSData *infoData = [MRJQRCodeUtil encryptDicWithParmStr:info EncryptType:encryptType];
     // 通过KVC设置滤镜inputMessage数据
     [filter setValue:infoData forKeyPath:@"inputMessage"];
+    
+    // 设置 filter 容错等级 H\M\L 分别表示 高\中\低
+    [filter setValue:@"M" forKey:@"inputCorrectionLevel"];
+    
     // 3、获得滤镜输出的图像
     CIImage *outputImage = [filter outputImage];
     return [MRJQRCodeTool createNonInterpolatedUIImageFormCIImage:outputImage withSize:imageViewWidth];
