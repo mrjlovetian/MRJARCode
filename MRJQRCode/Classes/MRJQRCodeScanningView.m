@@ -35,7 +35,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
 
 - (CALayer *)tempLayer {
     if (!_tempLayer) {
-        _tempLayer = [[CALayer alloc] init];
+        _tempLayer = [CALayer layer];
     }
     return _tempLayer;
 }
@@ -55,7 +55,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
 
 - (void)setupSubviews {
     /// 扫描内容的创建
-    CALayer *scanContent_layer = [[CALayer alloc] init];
+    CALayer *scanContent_layer = [CALayer layer];
     CGFloat scanContent_layerX = scanContent_X;
     CGFloat scanContent_layerY = scanContent_Y;
     CGFloat scanContent_layerW = self.frame.size.width - 2 * scanContent_X;
@@ -69,7 +69,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
 #pragma mark - - - 扫描外部View的创建
     
     /// 顶部layer的创建
-    CALayer *top_layer = [[CALayer alloc] init];
+    CALayer *top_layer = [CALayer layer];
     CGFloat top_layerX = 0;
     CGFloat top_layerY = 0;
     CGFloat top_layerW = self.frame.size.width;
@@ -79,7 +79,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     [self.layer addSublayer:top_layer];
     
     /// 左侧layer的创建
-    CALayer *left_layer = [[CALayer alloc] init];
+    CALayer *left_layer = [CALayer layer];
     CGFloat left_layerX = 0;
     CGFloat left_layerY = scanContent_layerY;
     CGFloat left_layerW = scanContent_X;
@@ -89,7 +89,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     [self.layer addSublayer:left_layer];
     
     /// 右侧layer的创建
-    CALayer *right_layer = [[CALayer alloc] init];
+    CALayer *right_layer = [CALayer layer];
     CGFloat right_layerX = CGRectGetMaxX(scanContent_layer.frame);
     CGFloat right_layerY = scanContent_layerY;
     CGFloat right_layerW = scanContent_X;
@@ -99,7 +99,7 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     [self.layer addSublayer:right_layer];
     
     /// 下面layer的创建
-    CALayer *bottom_layer = [[CALayer alloc] init];
+    CALayer *bottom_layer = [CALayer layer];
     CGFloat bottom_layerX = 0;
     CGFloat bottom_layerY = CGRectGetMaxY(scanContent_layer.frame);
     CGFloat bottom_layerW = self.frame.size.width;

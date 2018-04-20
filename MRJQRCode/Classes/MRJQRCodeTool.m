@@ -31,6 +31,9 @@
     // 通过KVC设置滤镜inputMessage数据
     [filter setValue:[str dataUsingEncoding:NSUTF8StringEncoding] forKeyPath:@"inputMessage"];
     
+    // 设置 filter 容错等级 H\M\L 分别表示 高\中\低
+    [filter setValue:@"M" forKey:@"inputCorrectionLevel"];
+    
     // 3、获得滤镜输出的图像
     CIImage *outputImage = [filter outputImage];
     
