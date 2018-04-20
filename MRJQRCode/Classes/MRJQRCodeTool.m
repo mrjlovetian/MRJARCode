@@ -124,6 +124,8 @@
     NSString *string_data = [MRJQRCodeUtil dictionaryToJson:dataDic];//data;
     // 将字符串转换成 NSdata (虽然二维码本质上是字符串, 但是这里需要转换, 不转换就崩溃)
     NSData *qrImageData = [MRJQRCodeUtil encryptDicWithParmStr:string_data EncryptType:encryptType];
+    // 设置 filter 容错等级 H\M\L 分别表示 高\中\低
+    [filter setValue:@"M" forKey:@"inputCorrectionLevel"];
     // 设置过滤器的输入值, KVC赋值
     [filter setValue:qrImageData forKey:@"inputMessage"];
     // 3、获得滤镜输出的图像
