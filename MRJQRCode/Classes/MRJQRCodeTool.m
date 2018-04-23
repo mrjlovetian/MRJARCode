@@ -34,7 +34,6 @@
     CIImage *outputImage = [filter outputImage];
     
     return [MRJQRCodeTool createNonInterpolatedUIImageFormCIImage:outputImage withSize:imageViewWidth];
-    
 }
 
 /**

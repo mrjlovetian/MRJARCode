@@ -188,10 +188,12 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
 #pragma mark - - - 照明灯的点击事件
 
 - (void)light_buttonAction:(UIButton *)button {
-    if (button.selected == NO) { // 点击打开照明灯
+    // 点击打开照明灯
+    if (button.selected == NO) {
         [self turnOnLight:YES];
         button.selected = YES;
-    } else { // 点击关闭照明灯
+    } else {
+        // 点击关闭照明灯
         [self turnOnLight:NO];
         button.selected = NO;
     }
