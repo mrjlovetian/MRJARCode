@@ -33,11 +33,13 @@ NSString *const MRJQRCodeScaning = @"MRJQRCodeScaning";
 
 NSString *const MRJQRCodeOpenLight = @"MRJQRCodeOpenLight";
 NSString *const MRJQRCodeCloseLight = @"MRJQRCodeCloseLight";
-NSString *const MRJQRCodeDataError = @"MRJQRCodeDataError";
 
+/// 错误信息
+NSString *const MRJQRCodeDataError = @"MRJQRCodeDataError";
 NSString *const MRJQRCodeWidthError = @"MRJQRCodeWidthError";
 NSString *const MRJQRCodeLogoImageError = @"MRJQRCodeLogoImageError";
 NSString *const MRJQRCodeLogoScaleError = @"MRJQRCodeLogoScaleError";
 
+/// 资源
 NSString *const MRJQRCodeChongqingjzb = @"MRJQRCodeChongqingjzb";
 NSString *const MRJQRCodeAlbum = @"MRJQRCodeAlbum";

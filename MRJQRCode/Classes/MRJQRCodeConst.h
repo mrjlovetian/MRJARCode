@@ -27,13 +27,13 @@ UIKIT_EXTERN NSString *const MRJQRCodeInformationFromeScanning;
 /// 从相册里得到的二维码信息
 UIKIT_EXTERN NSString *const MRJQRCodeInformationFromeAibum;
 
-///公钥
+/// 公钥
 UIKIT_EXTERN NSString *const MRJRSA_Public_key;
 
-///私钥
+/// 私钥
 UIKIT_EXTERN NSString *const MRJRSA_Privite_key;
 
-///國際化
+/// 國際化
 UIKIT_EXTERN NSString *const MRJQRCodeMessage;
 UIKIT_EXTERN NSString *const MRJQRCodeTeachOpen;
 UIKIT_EXTERN NSString *const MRJQRCodeSure;

@@ -11,9 +11,9 @@
 #import "MRJQRCodeConst.h"
 #import "NSBundle+MRJQRCode.h"
 
-/** 扫描内容的Y值 */
+/// 扫描内容的Y值
 #define scanContent_Y self.frame.size.height * 0.24
-/** 扫描内容的Y值 */
+/// 扫描内容的Y值
 #define scanContent_X self.frame.size.width * 0.15
 
 @interface MRJQRCodeScanningView ()
@@ -67,7 +67,6 @@ static CGFloat const scanBorderOutsideViewAlpha = 0.4;
     [self.tempLayer addSublayer:scanContent_layer];
     
 #pragma mark - - - 扫描外部View的创建
-    
     /// 顶部layer的创建
     CALayer *top_layer = [CALayer layer];
     CGFloat top_layerX = 0;

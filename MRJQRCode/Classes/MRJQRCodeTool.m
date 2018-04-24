@@ -184,7 +184,7 @@
     return [UIImage imageWithCIImage:colorImage scale:[UIScreen mainScreen].scale orientation:UIImageOrientationUp];
 }
 
-///判断传入的数据是否为有效的参数
+/// 判断传入的数据是否为有效的参数
 + (BOOL)verifyDicValid:(id)parmater {
     if ([parmater isKindOfClass:[NSDictionary class]]) {
         return YES;
